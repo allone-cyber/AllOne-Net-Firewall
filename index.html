@@ -1,1928 +1,1152 @@
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AllOne Net Firewall — Blokir Internet & Iklan Android Tanpa Root</title>
 
-<title>AllOne Net Firewall — Blokir Internet Aplikasi Android Tanpa Root</title>
+<meta name="description" content="AllOne Net Firewall memblokir internet per aplikasi Android dan memfilter host iklan melalui VPN lokal. Tanpa root, tanpa server VPN eksternal, dengan trial gratis 7 hari.">
 
-<meta name="description" content="AllOne Net Firewall adalah firewall Android tanpa root untuk memblokir internet per aplikasi. Pilih aplikasi, aktifkan firewall, dan kendalikan akses internet langsung dari HP. Trial 7 hari.">
-
-<meta name="keywords" content="AllOne Net Firewall, firewall Android, firewall tanpa root, blokir internet aplikasi, blokir internet per aplikasi, aplikasi blokir internet Android, blokir iklan Android, hemat kuota Android, firewall Android tanpa root, kontrol internet aplikasi">
+<meta name="keywords" content="AllOne Net Firewall, firewall Android tanpa root, blokir internet per aplikasi, pemblokir iklan Android, filter DNS Android, blokir pelacak, DNS sinkhole, blokir DoH DoT, kontrol internet aplikasi Android">
 
 <meta name="author" content="AllOne Cyber">
-
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-
-<link rel="canonical" href="https://allone-cyber.github.io/AllOne-Net-Firewall/">
-
-<link rel="icon" type="image/png" href="https://allone-cyber.github.io/AllOne-Net-Firewall/favicon.png">
-
-<link rel="apple-touch-icon" href="https://allone-cyber.github.io/AllOne-Net-Firewall/favicon.png">
-
+<meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#07111f">
-
 <meta name="color-scheme" content="dark">
 
-
-<!-- =====================================================
-     OPEN GRAPH
-===================================================== -->
+<link rel="canonical" href="https://allone-cyber.github.io/AllOne-Net-Firewall/">
+<link rel="icon" type="image/png" href="https://allone-cyber.github.io/AllOne-Net-Firewall/favicon.png">
+<link rel="apple-touch-icon" href="https://allone-cyber.github.io/AllOne-Net-Firewall/favicon.png">
 
 <meta property="og:type" content="website">
-
 <meta property="og:site_name" content="AllOne Cyber">
-
 <meta property="og:locale" content="id_ID">
-
 <meta property="og:url" content="https://allone-cyber.github.io/AllOne-Net-Firewall/">
-
-<meta property="og:title" content="AllOne Net Firewall — Blokir Internet Per Aplikasi Android">
-
-<meta property="og:description" content="Firewall Android tanpa root untuk mengontrol akses internet setiap aplikasi. Pilih aplikasi, aktifkan firewall, dan kendalikan koneksi internet langsung dari HP.">
-
+<meta property="og:title" content="AllOne Net Firewall — Firewall & Filter Iklan Android">
+<meta property="og:description" content="Kontrol internet per aplikasi, filter host iklan dan pelacak, serta sinkhole DNS terenkripsi. Tanpa root dan tanpa server VPN eksternal.">
 <meta property="og:image" content="https://allone-cyber.github.io/AllOne-Net-Firewall/preview.png">
-
-<meta property="og:image:alt" content="AllOne Net Firewall — Firewall Android Tanpa Root">
-
-<meta property="og:image:type" content="image/png">
-
-
-<!-- =====================================================
-     TWITTER / X
-===================================================== -->
+<meta property="og:image:alt" content="AllOne Net Firewall untuk Android">
 
 <meta name="twitter:card" content="summary_large_image">
-
 <meta name="twitter:title" content="AllOne Net Firewall — Firewall Android Tanpa Root">
-
-<meta name="twitter:description" content="Blokir internet per aplikasi Android tanpa root. Pilih aplikasi dan kendalikan akses internet langsung dari HP.">
-
+<meta name="twitter:description" content="Blokir internet per aplikasi dan filter host iklan melalui VPN lokal Android.">
 <meta name="twitter:image" content="https://allone-cyber.github.io/AllOne-Net-Firewall/preview.png">
-
-<meta name="twitter:image:alt" content="AllOne Net Firewall">
-
-
-<!-- =====================================================
-     STRUCTURED DATA — SOFTWARE
-===================================================== -->
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "@id": "https://allone-cyber.github.io/AllOne-Net-Firewall/#software",
-
   "name": "AllOne Net Firewall",
-
-  "alternateName": [
-    "AllOne Net",
-    "AllOne Net Firewall Android"
-  ],
-
   "applicationCategory": "SecurityApplication",
-
-  "applicationSubCategory": "Firewall",
-
   "operatingSystem": "Android",
-
-  "description": "AllOne Net Firewall adalah aplikasi firewall Android tanpa root yang memungkinkan pengguna memblokir akses internet aplikasi secara individual menggunakan mekanisme VPN Service lokal Android tanpa terhubung ke server VPN eksternal.",
-
+  "description": "Aplikasi firewall Android tanpa root untuk memblokir akses internet per aplikasi, memfilter host iklan dan pelacak melalui DNS, serta membatasi sejumlah endpoint DNS terenkripsi.",
   "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/",
-
-  "downloadUrl": "https://github.com/allone-cyber/AllOne-Net-Firewall/releases/tag/v1.1.0",
-
-  "softwareVersion": "1.1.0",
-
-  "fileSize": "226 KB",
-
+  "downloadUrl": "https://drive.google.com/file/d/1Di9zAt82bh9VQFFxrmejPYjbqX2Wpr1F/view?usp=drivesdk",
   "author": {
     "@type": "Organization",
     "name": "AllOne Cyber",
     "url": "https://allone-cyber.github.io/"
   },
-
-  "publisher": {
-    "@type": "Organization",
-    "name": "AllOne Cyber"
-  },
-
   "offers": {
     "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "IDR",
-    "availability": "https://schema.org/InStock"
+    "description": "Tersedia trial gratis 7 hari dan lisensi sekali beli untuk aktivasi pada satu perangkat sesuai ketentuan lisensi."
   }
 }
 </script>
-
-
-<!-- =====================================================
-     STRUCTURED DATA — WEBSITE
-===================================================== -->
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-
   "@id": "https://allone-cyber.github.io/AllOne-Net-Firewall/#website",
-
   "name": "AllOne Net Firewall",
-
   "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/",
-
+  "inLanguage": "id-ID",
   "publisher": {
     "@type": "Organization",
     "name": "AllOne Cyber"
-  },
-
-  "inLanguage": "id-ID"
+  }
 }
 </script>
-
-
-<!-- =====================================================
-     STRUCTURED DATA — BREADCRUMB
-===================================================== -->
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-
-  "itemListElement": [
-
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "AllOne Cyber",
-      "item": "https://allone-cyber.github.io/"
-    },
-
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "AllOne Net Firewall",
-      "item": "https://allone-cyber.github.io/AllOne-Net-Firewall/"
-    }
-
-  ]
-}
-</script>
-
-
-<!-- =====================================================
-     STRUCTURED DATA — FAQ
-===================================================== -->
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-
   "mainEntity": [
-
     {
       "@type": "Question",
-
       "name": "Apa itu AllOne Net Firewall?",
-
       "acceptedAnswer": {
         "@type": "Answer",
-
-        "text": "AllOne Net Firewall adalah aplikasi firewall Android tanpa root yang memungkinkan pengguna memblokir akses internet aplikasi secara individual langsung dari perangkat."
+        "text": "AllOne Net Firewall adalah aplikasi Android tanpa root untuk memblokir akses internet aplikasi secara individual serta memfilter host iklan dan pelacak melalui mekanisme DNS."
       }
     },
-
     {
       "@type": "Question",
-
       "name": "Apakah AllOne Net Firewall membutuhkan root?",
-
       "acceptedAnswer": {
         "@type": "Answer",
-
-        "text": "Tidak. AllOne Net Firewall dirancang untuk bekerja tanpa membutuhkan akses root."
+        "text": "Tidak. Aplikasi menggunakan VPN Service bawaan Android untuk menjalankan fungsi firewall tanpa membutuhkan root."
       }
     },
-
     {
       "@type": "Question",
-
-      "name": "Mengapa Android meminta izin VPN?",
-
+      "name": "Apakah AllOne Net Firewall merupakan VPN untuk mengganti IP?",
       "acceptedAnswer": {
         "@type": "Answer",
-
-        "text": "AllOne Net Firewall menggunakan VPN Service yang disediakan Android sebagai mekanisme lokal untuk mengontrol dan memutus akses internet aplikasi. Ini bukan layanan VPN eksternal untuk mengganti IP atau lokasi."
+        "text": "Bukan. VPN Service digunakan sebagai mekanisme firewall lokal dan bukan untuk menyambungkan perangkat ke server VPN eksternal atau mengganti alamat IP dan lokasi."
       }
     },
-
     {
       "@type": "Question",
-
-      "name": "Apakah AllOne Net Firewall terhubung ke server VPN?",
-
+      "name": "Bagaimana cara kerja pemblokiran internet per aplikasi?",
       "acceptedAnswer": {
         "@type": "Answer",
-
-        "text": "Tidak. Mekanisme firewall digunakan secara lokal pada perangkat dan tidak membutuhkan server VPN eksternal untuk memblokir akses internet aplikasi."
+        "text": "Pengguna memilih aplikasi yang ingin diblokir. Saat firewall aktif, akses internet aplikasi yang dipilih akan diputus sesuai mekanisme pemfilteran aplikasi."
       }
     },
-
     {
       "@type": "Question",
-
-      "name": "Apakah AllOne Net Firewall bisa memblokir iklan?",
-
+      "name": "Apakah AllOne Net Firewall dapat memblokir iklan?",
       "acceptedAnswer": {
         "@type": "Answer",
-
-        "text": "AllOne Net Firewall dapat membantu mengurangi atau memblokir iklan pada aplikasi tertentu dengan memutus akses internet aplikasi tersebut. Hasilnya bergantung pada cara aplikasi menampilkan iklan."
+        "text": "Aplikasi dapat memfilter host iklan dan pelacak melalui DNS. Efektivitasnya bergantung pada sumber iklan dan cara aplikasi menggunakan jaringan. Iklan yang menggunakan IP langsung atau konten yang tidak bergantung pada DNS mungkin tidak terblokir."
       }
     },
-
     {
       "@type": "Question",
-
-      "name": "Berapa lama masa percobaan AllOne Net Firewall?",
-
+      "name": "Apakah aplikasi memblokir DNS-over-HTTPS dan DNS-over-TLS?",
       "acceptedAnswer": {
         "@type": "Answer",
-
-        "text": "AllOne Net Firewall menyediakan masa percobaan gratis selama 7 hari. Setelah masa percobaan berakhir, pengguna membutuhkan kode aktivasi untuk melanjutkan penggunaan."
+        "text": "Aplikasi berupaya memblokir sejumlah endpoint DNS-over-HTTPS dan DNS-over-TLS yang umum. Endpoint lain, terutama yang menggunakan IP atau metode di luar daftar pemblokiran, mungkin tetap dapat digunakan."
       }
     },
-
     {
       "@type": "Question",
-
-      "name": "Bagaimana cara mengaktifkan AllOne Net Firewall secara permanen?",
-
+      "name": "Apakah data dikirim ke server pengembang?",
       "acceptedAnswer": {
         "@type": "Answer",
-
-        "text": "Salin Device ID yang tersedia di dalam aplikasi kemudian kirimkan kepada penjual atau admin melalui WhatsApp atau Email untuk mendapatkan kode aktivasi."
+        "text": "Menurut rancangan aplikasi, tidak ada akun, telemetri, atau backend pengembang dan data aplikasi disimpan di perangkat. Namun, kueri DNS yang tidak diblokir dapat diteruskan ke resolver DNS publik sesuai konfigurasi filter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah lisensinya berlangganan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tidak. Lisensinya menggunakan sistem sekali beli dan berlaku seumur hidup pada perangkat yang diaktivasi, sesuai ketentuan lisensi. Tersedia trial gratis 7 hari."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bagaimana cara mendapatkan kode aktivasi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Salin Device ID dari aplikasi dan kirimkan kepada penjual atau admin melalui saluran kontak yang tersedia untuk memperoleh kode aktivasi."
       }
     }
-
   ]
 }
 </script>
 
-
 <style>
-
-/* =====================================================
-   RESET
-===================================================== */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+:root {
+    color-scheme: dark;
+    --bg: #07111f;
+    --panel: #0e1a2d;
+    --card: #101d30;
+    --border: #20304a;
+    --green: #00ff88;
+    --text: #f5f7fa;
+    --muted: #aeb9ca;
 }
 
-
-/* =====================================================
-   GLOBAL
-===================================================== */
-
-html{
-    scroll-behavior:smooth;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-
-    background:#07111f;
-
-    color:#f5f7fa;
-
-    line-height:1.7;
-
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
-
-    overflow-x:hidden;
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
 }
 
-a{
-    color:inherit;
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Roboto, Arial, sans-serif;
+    line-height: 1.7;
+    overflow-x: hidden;
 }
 
-img{
-    max-width:100%;
-    height:auto;
+a {
+    color: inherit;
 }
 
-
-/* =====================================================
-   NAVBAR
-===================================================== */
-
-.navbar{
-
-    position:sticky;
-
-    top:0;
-
-    z-index:1000;
-
-    background:rgba(7,17,31,.92);
-
-    backdrop-filter:blur(14px);
-
-    border-bottom:1px solid rgba(255,255,255,.07);
-
-    padding:13px 20px;
+a:focus-visible,
+summary:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 4px;
 }
 
-.nav-inner{
-
-    max-width:1100px;
-
-    margin:auto;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    gap:20px;
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(7, 17, 31, .95);
+    border-bottom: 1px solid rgba(255,255,255,.07);
+    backdrop-filter: blur(14px);
+    padding: 13px 20px;
 }
 
-.logo{
-
-    font-weight:900;
-
-    font-size:18px;
-
-    text-decoration:none;
+.nav-inner {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-.logo span{
-    color:#00ff88;
+.logo {
+    font-size: 18px;
+    font-weight: 900;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
-.nav-links{
-
-    display:flex;
-
-    gap:20px;
-
-    font-size:14px;
+.logo span,
+.highlight {
+    color: var(--green);
 }
 
-.nav-links a{
-
-    color:#aeb9ca;
-
-    text-decoration:none;
-
-    transition:.2s;
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    font-size: 14px;
 }
 
-.nav-links a:hover{
-    color:#00ff88;
+.nav-links a {
+    color: var(--muted);
+    text-decoration: none;
 }
 
+.nav-links a:hover {
+    color: var(--green);
+}
 
-/* =====================================================
-   HERO
-===================================================== */
-
-.hero{
-
-    position:relative;
-
-    text-align:center;
-
-    padding:80px 20px 70px;
-
+.hero {
+    text-align: center;
+    padding: 82px 20px 68px;
     background:
-
-        radial-gradient(
-            circle at 50% 0%,
-            rgba(0,255,136,.15),
-            transparent 42%
-        ),
-
-        linear-gradient(
-            180deg,
-            #0c1b30 0%,
-            #07111f 100%
-        );
-
-    border-bottom:1px solid rgba(255,255,255,.05);
+        radial-gradient(circle at 50% 0%, rgba(0,255,136,.15), transparent 44%),
+        linear-gradient(180deg, #0c1b30 0%, var(--bg) 100%);
+    border-bottom: 1px solid rgba(255,255,255,.05);
 }
 
-.badge{
-
-    display:inline-block;
-
-    padding:7px 15px;
-
-    border-radius:30px;
-
-    background:#00ff88;
-
-    color:#00150b;
-
-    font-size:12px;
-
-    font-weight:900;
-
-    letter-spacing:.4px;
+.badge {
+    display: inline-block;
+    padding: 7px 15px;
+    border-radius: 30px;
+    background: var(--green);
+    color: #00150b;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .4px;
 }
 
-.hero h1{
-
-    max-width:900px;
-
-    margin:20px auto 15px;
-
-    font-size:clamp(
-        32px,
-        7vw,
-        58px
-    );
-
-    line-height:1.1;
-
-    letter-spacing:-1.5px;
+.hero h1 {
+    max-width: 900px;
+    margin: 20px auto 16px;
+    font-size: clamp(34px, 7vw, 58px);
+    line-height: 1.12;
+    letter-spacing: -1.4px;
 }
 
-.hero h1 span{
-    color:#00ff88;
+.hero h1 span {
+    color: var(--green);
 }
 
-.hero-description{
-
-    max-width:760px;
-
-    margin:auto;
-
-    color:#c3ccda;
-
-    font-size:18px;
+.hero-description {
+    max-width: 780px;
+    margin: auto;
+    color: #c3ccda;
+    font-size: 18px;
 }
 
-.hero-note{
-
-    margin-top:14px;
-
-    color:#8d99aa;
-
-    font-size:13px;
+.hero-note {
+    margin-top: 15px;
+    color: #8d99aa;
+    font-size: 13px;
 }
 
-
-/* =====================================================
-   BUTTONS
-===================================================== */
-
-.buttons{
-
-    margin-top:25px;
-
-    display:flex;
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:10px;
+.buttons,
+.download-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 11px;
+    margin-top: 25px;
 }
 
-.btn{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:8px;
-
-    min-height:50px;
-
-    padding:13px 24px;
-
-    border-radius:12px;
-
-    font-weight:900;
-
-    text-decoration:none;
-
-    transition:
-        transform .2s,
-        opacity .2s,
-        box-shadow .2s;
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 49px;
+    padding: 12px 23px;
+    border-radius: 12px;
+    font-weight: 850;
+    text-decoration: none;
+    transition: transform .2s, opacity .2s;
 }
 
-.btn:hover{
-
-    transform:translateY(-2px);
-
-    opacity:.94;
+.btn:hover {
+    transform: translateY(-2px);
+    opacity: .92;
 }
 
-.btn-green{
-
-    background:#00ff88;
-
-    color:#00150b;
-
-    box-shadow:
-        0 8px 25px rgba(0,255,136,.16);
+.btn-green {
+    background: var(--green);
+    color: #00150b;
 }
 
-.btn-dark{
-
-    background:#101d30;
-
-    border:1px solid #2a3950;
-
-    color:#fff;
+.btn-dark {
+    background: var(--card);
+    border: 1px solid #2a3950;
+    color: white;
 }
 
-.btn-blue{
-
-    background:#1677ff;
-
-    color:#fff;
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 1px 0 30px;
 }
 
-
-/* =====================================================
-   CONTAINER
-===================================================== */
-
-.container{
-
-    width:100%;
-
-    max-width:1080px;
-
-    margin:auto;
-
-    padding:1px 0 30px;
+.section {
+    background: var(--panel);
+    border: 1px solid #1c2a40;
+    border-radius: 20px;
+    padding: 32px 25px;
+    margin: 24px 16px;
 }
 
-
-/* =====================================================
-   SECTION
-===================================================== */
-
-.section{
-
-    background:#0e1a2d;
-
-    border:1px solid #1c2a40;
-
-    border-radius:20px;
-
-    padding:32px 25px;
-
-    margin:24px 16px;
+.section h2 {
+    font-size: clamp(23px, 4vw, 29px);
+    line-height: 1.3;
+    margin-bottom: 13px;
+    letter-spacing: -.4px;
 }
 
-.section h2{
-
-    font-size:28px;
-
-    line-height:1.25;
-
-    margin-bottom:12px;
-
-    letter-spacing:-.4px;
+.section-intro,
+.section p {
+    color: var(--muted);
 }
 
-.section-intro{
-
-    color:#aeb9ca;
-
-    margin-bottom:22px;
+.section p + p {
+    margin-top: 13px;
 }
 
-.section p + p{
-    margin-top:13px;
+.section strong {
+    color: var(--text);
 }
 
-
-/* =====================================================
-   HIGHLIGHT
-===================================================== */
-
-.highlight{
-
-    color:#00ff88;
-
-    font-weight:800;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    gap: 14px;
+    margin-top: 22px;
 }
 
-
-/* =====================================================
-   FEATURE GRID
-===================================================== */
-
-.grid{
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(
-            auto-fit,
-            minmax(230px,1fr)
-        );
-
-    gap:14px;
+.card,
+.license-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 20px;
 }
 
-.card{
-
-    background:#101d30;
-
-    border:1px solid #20304a;
-
-    border-radius:15px;
-
-    padding:20px;
-
-    transition:
-        transform .2s,
-        border-color .2s;
+.card {
+    transition: transform .2s, border-color .2s;
 }
 
-.card:hover{
-
-    transform:translateY(-3px);
-
-    border-color:#00aF66;
+.card:hover {
+    transform: translateY(-3px);
+    border-color: #00af66;
 }
 
-.card-icon{
-
-    font-size:25px;
-
-    margin-bottom:8px;
+.card-icon {
+    font-size: 26px;
+    margin-bottom: 8px;
 }
 
-.card strong{
-
-    display:block;
-
-    font-size:17px;
-
-    margin-bottom:5px;
+.card h3,
+.license-card h3 {
+    font-size: 17px;
+    line-height: 1.4;
+    margin-bottom: 7px;
 }
 
-.card p{
-
-    color:#aeb9ca;
-
-    font-size:14px;
+.card p,
+.license-card p {
+    color: var(--muted);
+    font-size: 14px;
 }
 
-
-/* =====================================================
-   HOW IT WORKS
-===================================================== */
-
-.steps{
-
-    counter-reset:step;
+.vpn-box {
+    background: linear-gradient(135deg, rgba(0,255,136,.08), rgba(0,120,255,.06));
+    border: 1px solid rgba(0,255,136,.18);
+    border-radius: 16px;
+    padding: 22px;
+    margin: 20px 0;
 }
 
-.step{
-
-    position:relative;
-
-    padding:
-        19px
-        20px
-        19px
-        65px;
-
-    margin:12px 0;
-
-    background:#101d30;
-
-    border:1px solid #20304a;
-
-    border-radius:15px;
+.vpn-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .7px;
+    text-transform: uppercase;
 }
 
-.step::before{
-
-    counter-increment:step;
-
-    content:counter(step);
-
-    position:absolute;
-
-    left:20px;
-
-    top:18px;
-
-    width:31px;
-
-    height:31px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    border-radius:50%;
-
-    background:#00ff88;
-
-    color:#00150b;
-
-    font-weight:900;
+.steps {
+    counter-reset: step;
 }
 
-.step strong{
-
-    display:block;
-
-    margin-bottom:3px;
+.step {
+    position: relative;
+    padding: 18px 20px 18px 65px;
+    margin: 12px 0;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 15px;
 }
 
+.step::before {
+    counter-increment: step;
+    content: counter(step);
+    position: absolute;
+    left: 19px;
+    top: 18px;
+    width: 31px;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--green);
+    color: #00150b;
+    font-weight: 900;
+}
 
-/* =====================================================
-   VPN EXPLANATION
-===================================================== */
+.step strong {
+    display: block;
+    margin-bottom: 3px;
+}
 
-.vpn-box{
+.license {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin-top: 20px;
+}
 
+.download-box {
+    text-align: center;
     background:
-        linear-gradient(
-            135deg,
-            rgba(0,255,136,.08),
-            rgba(0,120,255,.06)
-        );
-
-    border:1px solid rgba(0,255,136,.18);
-
-    border-radius:16px;
-
-    padding:22px;
+        radial-gradient(circle at top, rgba(0,255,136,.12), transparent 60%),
+        var(--panel);
 }
 
-.vpn-label{
-
-    display:inline-block;
-
-    margin-bottom:10px;
-
-    color:#00ff88;
-
-    font-weight:900;
-
-    font-size:13px;
-
-    text-transform:uppercase;
-
-    letter-spacing:.7px;
+.faq details {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    margin: 10px 0;
+    padding: 16px 18px;
 }
 
-
-/* =====================================================
-   LICENSE
-===================================================== */
-
-.license{
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(
-            auto-fit,
-            minmax(220px,1fr)
-        );
-
-    gap:14px;
-
-    margin-top:20px;
+.faq summary {
+    cursor: pointer;
+    list-style: none;
+    padding-right: 25px;
+    font-weight: 800;
 }
 
-.license-card{
-
-    background:#101d30;
-
-    border:1px solid #20304a;
-
-    border-radius:15px;
-
-    padding:21px;
+.faq summary::-webkit-details-marker {
+    display: none;
 }
 
-.license-card strong{
-
-    display:block;
-
-    margin-bottom:7px;
-
-    font-size:18px;
+.faq summary::after {
+    content: "+";
+    float: right;
+    color: var(--green);
+    font-size: 20px;
+    margin-right: -22px;
 }
 
-.license-card p{
-
-    color:#aeb9ca;
-
-    font-size:14px;
+.faq details[open] summary::after {
+    content: "−";
 }
 
-
-/* =====================================================
-   DOWNLOAD
-===================================================== */
-
-.download-box{
-
-    text-align:center;
-
-    background:
-
-        radial-gradient(
-            circle at top,
-            rgba(0,255,136,.12),
-            transparent 60%
-        ),
-
-        #0e1a2d;
+.faq details p {
+    margin-top: 12px;
+    font-size: 14px;
 }
 
-.download-buttons{
-
-    display:flex;
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:10px;
-
-    margin-top:20px;
+.cta {
+    text-align: center;
+    background: linear-gradient(135deg, #10243a, #0c182a);
 }
 
-
-/* =====================================================
-   FAQ
-===================================================== */
-
-.faq details{
-
-    background:#101d30;
-
-    border:1px solid #20304a;
-
-    border-radius:14px;
-
-    margin:10px 0;
-
-    padding:16px 18px;
+.cta p {
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-.faq summary{
-
-    cursor:pointer;
-
-    font-weight:800;
-
-    list-style:none;
+footer {
+    padding: 34px 20px;
+    text-align: center;
+    color: #7e8a9d;
+    font-size: 13px;
+    border-top: 1px solid rgba(255,255,255,.05);
 }
 
-.faq summary::-webkit-details-marker{
-    display:none;
+footer strong {
+    color: #c3ccda;
 }
 
-.faq summary::after{
-
-    content:"+";
-
-    float:right;
-
-    color:#00ff88;
-
-    font-size:20px;
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin: 13px 0;
 }
 
-.faq details[open] summary::after{
-    content:"−";
+.footer-links a {
+    color: var(--green);
+    text-decoration: none;
 }
 
-.faq p{
-
-    margin-top:12px;
-
-    color:#aeb9ca;
-
-    font-size:14px;
+.footer-links a:hover {
+    text-decoration: underline;
 }
 
-
-/* =====================================================
-   CTA
-===================================================== */
-
-.cta{
-
-    text-align:center;
-
-    background:
-
-        linear-gradient(
-            135deg,
-            #10243a,
-            #0c182a
-        );
-}
-
-.cta p{
-
-    max-width:650px;
-
-    margin:0 auto;
-
-    color:#b8c2d1;
-}
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-footer{
-
-    padding:35px 20px;
-
-    text-align:center;
-
-    color:#6f7b8d;
-
-    font-size:13px;
-
-    border-top:1px solid rgba(255,255,255,.05);
-}
-
-footer strong{
-    color:#9aa6b8;
-}
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media(max-width:700px){
-
-    .navbar{
-        padding:12px 15px;
+@media (max-width: 700px) {
+    .navbar {
+        padding: 12px 15px;
     }
 
-    .nav-links{
-        display:none;
+    .nav-links {
+        display: none;
     }
 
-    .hero{
-
-        padding:
-            58px
-            18px
-            52px;
+    .hero {
+        padding: 58px 18px 52px;
     }
 
-    .hero-description{
-        font-size:16px;
+    .hero-description {
+        font-size: 16px;
     }
 
-    .section{
-
-        margin:
-            16px 10px;
-
-        padding:
-            25px 18px;
+    .section {
+        margin: 16px 10px;
+        padding: 25px 18px;
     }
 
-    .section h2{
-        font-size:24px;
+    .btn {
+        width: 100%;
+        max-width: 360px;
     }
 
-    .btn{
-
-        width:100%;
-
-        max-width:360px;
-    }
-
-    .step{
-
-        padding-left:58px;
+    .step {
+        padding-left: 58px;
     }
 }
 
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+}
 </style>
-
 </head>
-
 
 <body>
 
-
-<!-- =====================================================
-     NAVIGATION
-===================================================== -->
-
-<nav class="navbar">
-
+<nav class="navbar" aria-label="Navigasi utama">
     <div class="nav-inner">
-
-        <a
-            class="logo"
-            href="#top"
-            aria-label="AllOne Net Firewall"
-        >
+        <a class="logo" href="#top" aria-label="AllOne Net Firewall">
             AllOne <span>Net Firewall</span>
         </a>
 
         <div class="nav-links">
-
-            <a href="#fitur">
-                Fitur
-            </a>
-
-            <a href="#cara-kerja">
-                Cara Kerja
-            </a>
-
-            <a href="#lisensi">
-                Lisensi
-            </a>
-
-            <a href="#faq">
-                FAQ
-            </a>
-
-            <a href="#download">
-                Download
-            </a>
-
+            <a href="#fitur">Fitur</a>
+            <a href="#cara-kerja">Cara Kerja</a>
+            <a href="#privasi">Privasi</a>
+            <a href="#lisensi">Lisensi</a>
+            <a href="#faq">FAQ</a>
+            <a href="#download">Download</a>
         </div>
-
     </div>
-
 </nav>
 
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
 <header class="hero" id="top">
-
-    <div class="badge">
-        FIREWALL ANDROID • TANPA ROOT
-    </div>
+    <div class="badge">FIREWALL ANDROID • TANPA ROOT</div>
 
     <h1>
-        Blokir Internet
-        <span>Per Aplikasi</span>
-        dari HP
+        Kendalikan Internet Aplikasi,
+        <span>Filter Host Iklan</span>
     </h1>
 
     <p class="hero-description">
-
-        <strong>AllOne Net Firewall</strong> membantu Anda
-        mengontrol akses internet setiap aplikasi Android
-        secara individual tanpa membutuhkan root.
-
+        <strong>AllOne Net Firewall</strong> membantu memutus akses internet
+        aplikasi yang Anda pilih dan memfilter host iklan serta pelacak
+        melalui VPN lokal Android. Tanpa root, tanpa server VPN eksternal,
+        dan tanpa iklan di dalam aplikasi.
     </p>
 
     <div class="buttons">
-
-        <a
-            class="btn btn-green"
-            href="https://github.com/allone-cyber/AllOne-Net-Firewall/releases/tag/v1.1.0"
-            aria-label="Download APK AllOne Net Firewall"
-        >
-            ⬇️ Download APK
+        <a class="btn btn-green"
+           href="https://drive.google.com/file/d/1Di9zAt82bh9VQFFxrmejPYjbqX2Wpr1F/view?usp=drivesdk"
+           target="_blank"
+           rel="noopener noreferrer">
+            ⬇ Download APK
         </a>
 
-        <a
-            class="btn btn-dark"
-            href="#cara-kerja"
-        >
-            ▶ Cara Menggunakan
+        <a class="btn btn-dark" href="#fitur">
+            Jelajahi Fitur
         </a>
-
     </div>
 
     <p class="hero-note">
-        Versi 1.1.0 • Android • Ukuran APK sekitar 226 KB • Trial 7 Hari
+        Tanpa root • Trial gratis 7 hari • Lisensi sekali beli
     </p>
-
 </header>
-
 
 <main class="container">
 
-
-<!-- =====================================================
-     INTRO
-===================================================== -->
-
-<section class="section">
-
-    <h2>
-        Apa Itu AllOne Net Firewall?
-    </h2>
-
-    <p>
-
-        <strong>AllOne Net Firewall</strong> adalah
-        <span class="highlight">
-            firewall Android tanpa root
-        </span>
-        yang dirancang untuk membantu pengguna mengontrol
-        akses internet aplikasi secara individual.
-
-    </p>
-
-    <p>
-
-        Tidak perlu mengatur satu perangkat secara rumit.
-        Pilih aplikasi yang ingin diblokir, aktifkan firewall,
-        lalu akses internet aplikasi tersebut akan dibatasi.
-
-    </p>
-
-</section>
-
-
-<!-- =====================================================
-     FEATURES
-===================================================== -->
-
-<section
-    class="section"
-    id="fitur"
->
-
-    <h2>
-        Fitur Utama AllOne Net Firewall
-    </h2>
-
-    <p class="section-intro">
-
-        Kontrol akses internet aplikasi Android
-        dengan pengaturan yang sederhana dan mudah dipahami.
-
-    </p>
-
-    <div class="grid">
-
-
-        <div class="card">
-
-            <div class="card-icon">
-                🛡️
-            </div>
-
-            <strong>
-                Blokir Internet Per Aplikasi
-            </strong>
-
-            <p>
-                Pilih aplikasi satu per satu
-                untuk dibatasi akses internetnya.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="card-icon">
-                🔍
-            </div>
-
-            <strong>
-                Pencarian Aplikasi
-            </strong>
-
-            <p>
-                Cari aplikasi dengan cepat
-                dari daftar aplikasi yang tersedia.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="card-icon">
-                ⚙️
-            </div>
-
-            <strong>
-                Tampilkan Aplikasi Sistem
-            </strong>
-
-            <p>
-                Aktifkan tampilan aplikasi sistem
-                jika Anda membutuhkan kontrol yang lebih luas.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="card-icon">
-                🔴
-            </div>
-
-            <strong>
-                Firewall ON / OFF
-            </strong>
-
-            <p>
-                Aktifkan atau nonaktifkan firewall
-                kapan saja sesuai kebutuhan.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="card-icon">
-                🔄
-            </div>
-
-            <strong>
-                Auto-Aktif Saat HP Menyala
-            </strong>
-
-            <p>
-                Firewall dapat diatur agar kembali aktif
-                ketika perangkat Android dinyalakan.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="card-icon">
-                🔔
-            </div>
-
-            <strong>
-                Notifikasi Firewall
-            </strong>
-
-            <p>
-                Mendapatkan notifikasi ketika
-                firewall sedang berjalan.
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     HOW IT WORKS
-===================================================== -->
-
-<section
-    class="section"
-    id="cara-kerja"
->
-
-    <h2>
-        Cara Kerja AllOne Net Firewall
-    </h2>
-
-    <div class="vpn-box">
-
-        <div class="vpn-label">
-            Cara kerja VPN Android
-        </div>
+    <section class="section">
+        <h2>Apa Itu AllOne Net Firewall?</h2>
 
         <p>
-
-            AllOne Net Firewall menggunakan fitur
-            <strong>VPN Service bawaan Android</strong>
-            sebagai mekanisme lokal untuk mengontrol
-            akses jaringan aplikasi.
-
+            AllOne Net Firewall adalah aplikasi firewall Android yang
+            memungkinkan Anda memilih aplikasi mana yang boleh mengakses
+            internet. Aplikasi ini juga menyediakan filter host iklan dan
+            pelacak berbasis DNS serta pemblokiran sejumlah endpoint DNS
+            terenkripsi.
         </p>
 
         <p>
+            Pengaturan dilakukan langsung dari perangkat tanpa membutuhkan
+            akses root atau server VPN eksternal. Anda dapat memilih aplikasi,
+            mengatur filter, lalu mengaktifkan firewall sesuai kebutuhan.
+        </p>
+    </section>
 
-            Ini <strong>bukan layanan VPN</strong> untuk mengganti
-            alamat IP, lokasi, atau menyambungkan Anda ke server
-            VPN di internet.
+    <section class="section" id="fitur">
+        <h2>Fitur AllOne Net Firewall</h2>
 
+        <p class="section-intro">
+            Kontrol jaringan dan filter DNS dalam satu aplikasi Android.
         </p>
 
-        <p>
+        <div class="grid">
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">🛡️</div>
+                <h3>Blokir Internet Per Aplikasi</h3>
+                <p>
+                    Pilih aplikasi yang ingin diblokir. Saat firewall aktif,
+                    akses internet aplikasi tersebut diputus sesuai aturan.
+                    Aplikasi lain yang tidak diblokir tetap dapat terhubung.
+                </p>
+            </article>
 
-            Firewall tidak membutuhkan
-            <strong>server VPN eksternal</strong>
-            untuk menjalankan fungsi pemblokiran aplikasi.
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">🚫</div>
+                <h3>Filter Host Iklan dan Pelacak</h3>
+                <p>
+                    Filter DNS menggunakan daftar domain iklan dan pelacak
+                    yang tersedia di aplikasi untuk membantu membatasi
+                    koneksi ke host tersebut.
+                </p>
+            </article>
 
-        </p>
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">🌐</div>
+                <h3>DNS Sinkhole</h3>
+                <p>
+                    Kueri DNS ke domain yang diblokir dijawab dengan respons
+                    kosong sesuai mekanisme sinkhole, sehingga koneksi ke
+                    host tersebut dapat dicegah melalui DNS.
+                </p>
+            </article>
 
-    </div>
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">➕</div>
+                <h3>Host Kustom</h3>
+                <p>
+                    Tambahkan host yang ingin Anda blokir sendiri untuk
+                    menyesuaikan filter dengan kebutuhan perangkat.
+                </p>
+            </article>
 
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">🔒</div>
+                <h3>Sinkhole DoH dan DoT</h3>
+                <p>
+                    Memblokir sejumlah endpoint DNS-over-HTTPS dan
+                    DNS-over-TLS yang umum agar sebagian jalur DNS
+                    terenkripsi tidak mudah melewati filter.
+                </p>
+            </article>
 
-    <div class="steps">
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">🔍</div>
+                <h3>Pencarian Aplikasi</h3>
+                <p>
+                    Cari aplikasi dengan lebih mudah untuk menentukan
+                    aplikasi mana yang akses internetnya ingin dibatasi.
+                </p>
+            </article>
 
-        <div class="step">
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">⚙️</div>
+                <h3>Aplikasi Sistem</h3>
+                <p>
+                    Tampilkan aplikasi sistem jika Anda ingin mengatur
+                    aplikasi bawaan Android yang tersedia dalam daftar.
+                </p>
+            </article>
 
-            <strong>
-                Instal AllOne Net Firewall
-            </strong>
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">🔄</div>
+                <h3>Mulai Otomatis</h3>
+                <p>
+                    Pilihan untuk menjalankan kembali firewall setelah
+                    perangkat menyala atau selesai reboot.
+                </p>
+            </article>
 
-            Download dan instal APK pada perangkat Android Anda.
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">🔔</div>
+                <h3>Notifikasi Status</h3>
+                <p>
+                    Lihat notifikasi saat firewall berjalan, termasuk
+                    tombol untuk mematikan firewall.
+                </p>
+            </article>
 
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">🌙</div>
+                <h3>Tema dan Bahasa</h3>
+                <p>
+                    Pilih Bahasa Indonesia atau English, serta tema terang,
+                    gelap, atau mengikuti pengaturan sistem.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">📵</div>
+                <h3>Tanpa Iklan di Dalam Aplikasi</h3>
+                <p>
+                    Antarmuka AllOne Net Firewall sendiri tidak menampilkan
+                    iklan.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">🔐</div>
+                <h3>Tanpa Root</h3>
+                <p>
+                    Menggunakan VPN Service bawaan Android sebagai mekanisme
+                    firewall lokal, tanpa memerlukan root.
+                </p>
+            </article>
         </div>
+    </section>
 
+    <section class="section" id="cara-kerja">
+        <h2>Bagaimana Cara Kerjanya?</h2>
 
-        <div class="step">
-
-            <strong>
-                Mulai Trial Gratis 7 Hari
-            </strong>
-
-            Buka aplikasi dan pilih
-            <strong>Coba Gratis 7 Hari</strong>
-            untuk mulai menggunakan aplikasi.
-
-        </div>
-
-
-        <div class="step">
-
-            <strong>
-                Pilih aplikasi
-            </strong>
-
-            Centang aplikasi yang ingin
-            diblokir akses internetnya.
-
-        </div>
-
-
-        <div class="step">
-
-            <strong>
-                Aktifkan Firewall
-            </strong>
-
-            Tekan
-            <strong>Aktifkan Firewall</strong>.
-            Android kemudian akan meminta izin VPN.
-
-        </div>
-
-
-        <div class="step">
-
-            <strong>
-                Izinkan VPN
-            </strong>
-
-            Izin tersebut diperlukan karena
-            Android menggunakan VPN Service sebagai
-            mekanisme untuk mengontrol koneksi aplikasi.
-
-        </div>
-
-
-        <div class="step">
-
-            <strong>
-                Firewall Aktif
-            </strong>
-
-            Aplikasi yang dipilih akan dibatasi
-            akses internetnya selama firewall aktif.
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     NO ROOT
-===================================================== -->
-
-<section class="section">
-
-    <h2>
-        Firewall Android Tanpa Root
-    </h2>
-
-    <p>
-
-        AllOne Net Firewall tidak membutuhkan
-        <strong>root</strong> untuk menjalankan fungsi firewall.
-
-        Aplikasi menggunakan mekanisme resmi
-        <strong>VPN Service Android</strong>
-        untuk melakukan kontrol jaringan dari perangkat.
-
-    </p>
-
-    <p>
-
-        Saat pertama kali firewall diaktifkan,
-        Android akan menampilkan permintaan izin VPN.
-        Ini adalah perilaku normal dari sistem Android.
-
-    </p>
-
-</section>
-
-
-<!-- =====================================================
-     AD BLOCKING
-===================================================== -->
-
-<section class="section">
-
-    <h2>
-        Bantu Kurangi Iklan dan Penggunaan Kuota
-    </h2>
-
-    <p>
-
-        Beberapa aplikasi membutuhkan koneksi internet
-        untuk mengambil dan menampilkan iklan.
-
-        Dengan memblokir akses internet aplikasi tersebut,
-        AllOne Net Firewall dapat membantu
-        <strong>mengurangi iklan tertentu</strong> sekaligus
-        membatasi penggunaan data aplikasi.
-
-    </p>
-
-    <p>
-
-        Hasilnya dapat berbeda tergantung pada cara
-        masing-masing aplikasi menangani iklan dan koneksi jaringan.
-
-    </p>
-
-</section>
-
-
-<!-- =====================================================
-     LICENSE
-===================================================== -->
-
-<section
-    class="section"
-    id="lisensi"
->
-
-    <h2>
-        Trial 7 Hari dan Aktivasi
-    </h2>
-
-    <p class="section-intro">
-
-        Gunakan terlebih dahulu selama masa percobaan,
-        kemudian aktivasi jika ingin melanjutkan penggunaan.
-
-    </p>
-
-
-    <div class="license">
-
-
-        <div class="license-card">
-
-            <strong>
-                🆓 Trial Gratis 7 Hari
-            </strong>
+        <div class="vpn-box">
+            <div class="vpn-label">VPN lokal Android</div>
 
             <p>
-
-                Coba fitur AllOne Net Firewall
-                selama 7 hari sebelum melakukan aktivasi.
-
+                Android menyediakan <strong>VPN Service</strong> yang dapat
+                digunakan aplikasi untuk membuat mekanisme pemfilteran
+                jaringan pada perangkat. AllOne Net Firewall menggunakan
+                kemampuan ini untuk menjalankan fungsi firewall.
             </p>
-
-        </div>
-
-
-        <div class="license-card">
-
-            <strong>
-                🔑 Aktivasi Permanen
-            </strong>
 
             <p>
-
-                Setelah masa trial berakhir,
-                diperlukan kode aktivasi untuk melanjutkan penggunaan.
-
+                Ini bukan layanan VPN untuk mengganti alamat IP atau lokasi.
+                Lalu lintas tidak diteruskan melalui server VPN eksternal
+                milik pengembang.
             </p>
-
-        </div>
-
-
-        <div class="license-card">
-
-            <strong>
-                📱 Device ID
-            </strong>
 
             <p>
-
-                Salin Device ID yang tersedia
-                di aplikasi dan kirimkan kepada penjual
-                melalui WhatsApp atau Email.
-
+                <strong>Catatan DNS:</strong> ketika filter iklan aktif,
+                kueri DNS yang tidak diblokir dapat diteruskan ke resolver
+                DNS publik sesuai konfigurasi aplikasi. Karena itu, jangan
+                mengartikan “tanpa server VPN eksternal” sebagai “tidak ada
+                komunikasi jaringan dengan pihak mana pun”.
             </p>
-
         </div>
 
+        <div class="steps">
+            <div class="step">
+                <strong>Instal aplikasi</strong>
+                Download APK melalui tautan Google Drive resmi yang tersedia
+                di halaman ini, kemudian instal pada perangkat Android.
+            </div>
 
-    </div>
+            <div class="step">
+                <strong>Mulai trial gratis 7 hari</strong>
+                Buka aplikasi dan mulai masa percobaan sesuai petunjuk
+                yang ditampilkan di aplikasi.
+            </div>
 
-</section>
+            <div class="step">
+                <strong>Pilih aplikasi</strong>
+                Centang aplikasi yang ingin diblokir akses internetnya.
+                Atur daftar host iklan atau host kustom jika diperlukan.
+            </div>
 
+            <div class="step">
+                <strong>Aktifkan firewall</strong>
+                Tekan tombol untuk mengaktifkan firewall. Android akan
+                meminta izin VPN karena mekanisme ini menggunakan
+                VPN Service lokal.
+            </div>
 
-<!-- =====================================================
-     PRIVACY
-===================================================== -->
+            <div class="step">
+                <strong>Atur filter DNS</strong>
+                Gunakan filter host iklan dan pelacak yang tersedia.
+                Perhatikan bahwa pemblokiran DNS tidak mencakup semua
+                metode distribusi iklan.
+            </div>
 
-<section class="section">
+            <div class="step">
+                <strong>Pantau status firewall</strong>
+                Gunakan notifikasi untuk melihat status firewall dan
+                mematikannya ketika diperlukan.
+            </div>
+        </div>
+    </section>
 
-    <h2>
-        Keamanan dan Privasi
-    </h2>
-
-    <p>
-
-        Fungsi firewall berjalan menggunakan mekanisme
-        jaringan pada perangkat Android.
-
-        AllOne Net Firewall tidak membutuhkan
-        server VPN eksternal untuk menjalankan
-        pemblokiran akses internet aplikasi.
-
-    </p>
-
-    <p>
-
-        Dengan pendekatan tersebut, lalu lintas jaringan
-        tidak perlu diarahkan ke server VPN milik AllOne Cyber
-        hanya untuk melakukan fungsi firewall.
-
-    </p>
-
-</section>
-
-
-<!-- =====================================================
-     DOWNLOAD
-===================================================== -->
-
-<section
-    class="section download-box"
-    id="download"
->
-
-    <h2>
-        Download AllOne Net Firewall
-    </h2>
-
-    <p>
-
-        Download APK AllOne Net Firewall versi terbaru
-        dari sumber resmi yang tersedia.
-
-    </p>
-
-
-    <div class="download-buttons">
-
-
-        <a
-            class="btn btn-green"
-            href="https://github.com/allone-cyber/AllOne-Net-Firewall/releases/tag/v1.1.0"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Download AllOne Net Firewall dari GitHub"
-        >
-            ⬇️ GitHub Release
-        </a>
-
-
-        <a
-            class="btn btn-blue"
-            href="https://drive.google.com/file/d/1xvxjkZBiz_JuoI1frArOH231OwtYzjGl/view?usp=drivesdk"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Download AllOne Net Firewall dari Google Drive"
-        >
-            ☁️ Google Drive
-        </a>
-
-
-    </div>
-
-
-    <p class="hero-note">
-
-        Versi 1.1.0 • Android • ±226 KB • Trial 7 Hari
-
-    </p>
-
-</section>
-
-
-<!-- =====================================================
-     FAQ
-===================================================== -->
-
-<section
-    class="section faq"
-    id="faq"
->
-
-    <h2>
-        Pertanyaan yang Sering Ditanyakan
-    </h2>
-
-
-    <details>
-
-        <summary>
-            Apa itu AllOne Net Firewall?
-        </summary>
+    <section class="section">
+        <h2>Filter Iklan, Pelacak, DoH, dan DoT</h2>
 
         <p>
-
-            AllOne Net Firewall adalah aplikasi firewall Android
-            tanpa root yang memungkinkan Anda memblokir akses
-            internet aplikasi secara individual.
-
+            Filter DNS membantu mencegah koneksi ke domain iklan atau
+            pelacak yang tercantum dalam daftar pemblokiran. Anda juga
+            dapat menambahkan host kustom sesuai kebutuhan.
         </p>
 
-    </details>
-
-
-    <details>
-
-        <summary>
-            Apakah membutuhkan root?
-        </summary>
-
         <p>
-
-            Tidak. AllOne Net Firewall dirancang
-            untuk bekerja tanpa akses root.
-
+            Aplikasi turut memblokir sejumlah endpoint DNS-over-HTTPS
+            (DoH) dan DNS-over-TLS (DoT) yang umum, termasuk endpoint
+            tertentu dan port DNS terenkripsi yang menjadi sasaran filter.
         </p>
 
-    </details>
+        <p>
+            <strong>Batasan penting:</strong> filter DNS tidak menjamin
+            semua iklan akan hilang. Iklan yang menggunakan alamat IP
+            langsung, konten yang sudah tertanam di aplikasi, atau jalur
+            jaringan yang tidak bergantung pada DNS mungkin tetap tampil.
+            Endpoint DoH yang tidak tercakup dalam daftar pemblokiran juga
+            mungkin tetap dapat digunakan.
+        </p>
+    </section>
 
-
-    <details>
-
-        <summary>
-            Mengapa Android meminta izin VPN?
-        </summary>
+    <section class="section" id="privasi">
+        <h2>Privasi dan Perlindungan Data</h2>
 
         <p>
+            Menurut rancangan AllOne Net Firewall, aplikasi tidak
+            menyediakan akun pengguna, telemetri, atau backend pengembang.
+            Data aplikasi disimpan di perangkat dan fitur pencadangan
+            Android dinonaktifkan melalui pengaturan
+            <code>allowBackup</code>.
+        </p>
 
-            Karena aplikasi menggunakan
-            <strong>VPN Service bawaan Android</strong>
-            sebagai mekanisme lokal untuk mengontrol
+        <p>
+            Aplikasi menggunakan VPN Service lokal untuk fungsi firewall
+            dan tidak membutuhkan server VPN eksternal untuk memfilter
             koneksi aplikasi.
-
-            Izin tersebut merupakan bagian dari mekanisme
-            keamanan Android.
-
         </p>
-
-    </details>
-
-
-    <details>
-
-        <summary>
-            Apakah ini VPN untuk mengganti IP?
-        </summary>
 
         <p>
-
-            Bukan.
-
-            AllOne Net Firewall bukan layanan VPN
-            untuk mengganti IP, lokasi, atau menyambungkan
-            pengguna ke server VPN eksternal.
-
+            Namun, ketika filter DNS meneruskan kueri yang tidak diblokir,
+            kueri tersebut dapat dikirim ke resolver DNS publik yang
+            dikonfigurasi. Resolver tersebut dapat memproses informasi
+            DNS sesuai kebijakan privasinya sendiri.
         </p>
-
-    </details>
-
-
-    <details>
-
-        <summary>
-            Apakah terhubung ke server VPN luar?
-        </summary>
 
         <p>
+            Untuk informasi lebih lengkap mengenai privasi, silakan baca
+            <a href="https://sites.google.com/view/allonenetfirewall/halaman-muka"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="highlight">Kebijakan Privasi AllOne Net Firewall</a>.
+        </p>
+    </section>
 
-            Tidak untuk menjalankan fungsi firewall.
+    <section class="section" id="lisensi">
+        <h2>Trial Gratis 7 Hari dan Lisensi Sekali Beli</h2>
 
-            Mekanisme pemblokiran dilakukan secara lokal
-            menggunakan VPN Service Android.
-
+        <p class="section-intro">
+            Coba aplikasi terlebih dahulu. Jika ingin melanjutkan penggunaan,
+            tersedia aktivasi dengan lisensi sekali beli.
         </p>
 
-    </details>
+        <div class="license">
+            <div class="license-card">
+                <h3>🆓 Trial Gratis</h3>
+                <p>
+                    Gunakan aplikasi selama 7 hari untuk mencoba
+                    fitur yang tersedia sebelum melakukan aktivasi.
+                </p>
+            </div>
 
+            <div class="license-card">
+                <h3>🔑 Sekali Beli</h3>
+                <p>
+                    Lisensi bukan langganan. Setelah pembelian dan aktivasi,
+                    lisensi berlaku seumur hidup pada perangkat yang
+                    diaktivasi sesuai ketentuan lisensi.
+                </p>
+            </div>
 
-    <details>
+            <div class="license-card">
+                <h3>📱 Aktivasi Perangkat</h3>
+                <p>
+                    Salin Device ID dari aplikasi dan kirimkan kepada
+                    penjual atau admin melalui saluran kontak yang tersedia
+                    untuk memperoleh kode aktivasi.
+                </p>
+            </div>
+        </div>
+    </section>
 
-        <summary>
-            Apakah bisa memblokir iklan?
-        </summary>
+    <section class="section">
+        <h2>Cocok untuk Kebutuhan Apa?</h2>
+
+        <div class="grid">
+            <article class="card">
+                <h3>Mengontrol Akses Internet</h3>
+                <p>
+                    Batasi koneksi aplikasi tertentu tanpa memutus
+                    internet semua aplikasi lain.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Membatasi Koneksi Latar Belakang</h3>
+                <p>
+                    Blokir internet aplikasi yang tidak membutuhkan
+                    koneksi jaringan saat digunakan secara offline.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Mengurangi Koneksi ke Host Iklan</h3>
+                <p>
+                    Gunakan filter DNS untuk membatasi koneksi ke domain
+                    iklan dan pelacak yang tercantum dalam daftar filter.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Perangkat Bersama</h3>
+                <p>
+                    Bantu mengelola akses internet aplikasi pada perangkat
+                    bersama. Untuk penggunaan anak, tetap kombinasikan
+                    dengan pengawasan dan pengaturan keluarga yang sesuai.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <section class="section faq" id="faq">
+        <h2>Pertanyaan yang Sering Ditanyakan</h2>
+
+        <details>
+            <summary>Apa itu AllOne Net Firewall?</summary>
+            <p>
+                AllOne Net Firewall adalah aplikasi Android tanpa root
+                untuk memblokir akses internet per aplikasi dan memfilter
+                host iklan serta pelacak melalui DNS.
+            </p>
+        </details>
+
+        <details>
+            <summary>Apakah aplikasi membutuhkan root?</summary>
+            <p>
+                Tidak. Aplikasi menggunakan VPN Service bawaan Android
+                untuk menjalankan fungsi firewall tanpa root.
+            </p>
+        </details>
+
+        <details>
+            <summary>Apakah ini VPN untuk mengganti IP atau lokasi?</summary>
+            <p>
+                Bukan. VPN Service digunakan sebagai mekanisme firewall
+                lokal, bukan untuk menyambungkan perangkat ke server VPN
+                eksternal atau mengganti IP dan lokasi.
+            </p>
+        </details>
+
+        <details>
+            <summary>Apakah semua iklan bisa diblokir?</summary>
+            <p>
+                Tidak selalu. Filter DNS dapat membantu memblokir host
+                iklan dan pelacak yang tercantum dalam daftar. Iklan yang
+                menggunakan IP langsung atau konten yang tidak bergantung
+                pada DNS mungkin tetap tampil.
+            </p>
+        </details>
+
+        <details>
+            <summary>Apakah DoH dan DoT bisa diblokir?</summary>
+            <p>
+                Aplikasi berupaya memblokir sejumlah endpoint DoH dan DoT
+                yang umum. Endpoint lain di luar daftar pemblokiran
+                mungkin tetap dapat digunakan.
+            </p>
+        </details>
+
+        <details>
+            <summary>Apakah data saya dikirim ke server pengembang?</summary>
+            <p>
+                Menurut rancangan aplikasi, tidak ada akun, telemetri,
+                atau backend pengembang dan data aplikasi disimpan di
+                perangkat. Namun, kueri DNS yang tidak diblokir dapat
+                diteruskan ke resolver DNS publik sesuai konfigurasi filter.
+                Baca juga
+                <a href="https://sites.google.com/view/allonenetfirewall/halaman-muka"
+                   target="_blank"
+                   rel="noopener noreferrer">Kebijakan Privasi</a>.
+            </p>
+        </details>
+
+        <details>
+            <summary>Apakah lisensinya berlangganan?</summary>
+            <p>
+                Tidak. Lisensi menggunakan sistem sekali beli dan berlaku
+                seumur hidup pada perangkat yang diaktivasi sesuai
+                ketentuan lisensi. Trial gratis tersedia selama 7 hari.
+            </p>
+        </details>
+
+        <details>
+            <summary>Bagaimana cara mendapatkan kode aktivasi?</summary>
+            <p>
+                Salin Device ID dari aplikasi dan kirimkan kepada penjual
+                atau admin untuk mendapatkan kode aktivasi.
+            </p>
+        </details>
+
+        <details>
+            <summary>Apakah firewall otomatis aktif setelah reboot?</summary>
+            <p>
+                Tersedia opsi untuk memulai firewall secara otomatis
+                setelah perangkat menyala. Perilaku aktual dapat bergantung
+                pada pengaturan Android dan izin sistem.
+            </p>
+        </details>
+    </section>
+
+    <section class="section download-box" id="download">
+        <h2>Download AllOne Net Firewall</h2>
 
         <p>
-
-            AllOne Net Firewall dapat membantu mengurangi
-            iklan pada aplikasi tertentu dengan membatasi
-            akses internet aplikasi tersebut.
-
-            Namun hasilnya bergantung pada cara aplikasi
-            tersebut menampilkan iklan.
-
+            Dapatkan APK AllOne Net Firewall melalui tautan Google Drive
+            berikut. Pastikan Anda mengunduh file dari sumber resmi.
         </p>
 
-    </details>
+        <div class="download-buttons">
+            <a class="btn btn-green"
+               href="https://drive.google.com/file/d/1Di9zAt82bh9VQFFxrmejPYjbqX2Wpr1F/view?usp=drivesdk"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Download APK AllOne Net Firewall melalui Google Drive">
+                ⬇ Download APK dari Google Drive
+            </a>
+        </div>
 
+        <p class="hero-note">
+            Android • Tanpa root • Trial gratis 7 hari • Lisensi sekali beli
+        </p>
+    </section>
 
-    <details>
-
-        <summary>
-            Berapa lama trial gratis?
-        </summary>
+    <section class="section cta">
+        <h2>Ambil Kendali atas Koneksi Aplikasi Anda</h2>
 
         <p>
-
-            Masa percobaan gratis adalah
-            <strong>7 hari</strong>.
-
+            Pilih aplikasi yang akses internetnya ingin diputus, atur
+            filter host iklan, dan gunakan firewall sesuai kebutuhan.
         </p>
 
-    </details>
+        <div class="buttons">
+            <a class="btn btn-green"
+               href="https://drive.google.com/file/d/1Di9zAt82bh9VQFFxrmejPYjbqX2Wpr1F/view?usp=drivesdk"
+               target="_blank"
+               rel="noopener noreferrer">
+                ⬇ Download AllOne Net Firewall
+            </a>
 
-
-    <details>
-
-        <summary>
-            Bagaimana cara aktivasi setelah trial?
-        </summary>
-
-        <p>
-
-            Salin Device ID dari aplikasi kemudian
-            kirimkan kepada penjual atau admin melalui
-            WhatsApp atau Email untuk mendapatkan
-            kode aktivasi.
-
-        </p>
-
-    </details>
-
-
-    <details>
-
-        <summary>
-            Apa yang terjadi jika izin VPN ditolak?
-        </summary>
-
-        <p>
-
-            Firewall tidak dapat berjalan karena
-            izin VPN Android diperlukan untuk menjalankan
-            mekanisme kontrol jaringan aplikasi.
-
-        </p>
-
-    </details>
-
-
-</section>
-
-
-<!-- =====================================================
-     FINAL CTA
-===================================================== -->
-
-<section class="section cta">
-
-    <h2>
-        Siap Mengontrol Internet Aplikasi Anda?
-    </h2>
-
-    <p>
-
-        Coba AllOne Net Firewall selama 7 hari
-        dan kendalikan akses internet aplikasi
-        langsung dari perangkat Android Anda.
-
-    </p>
-
-
-    <div class="buttons">
-
-        <a
-            class="btn btn-green"
-            href="https://github.com/allone-cyber/AllOne-Net-Firewall/releases/tag/v1.1.0"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            ⬇️ Download APK
-        </a>
-
-
-        <a
-            class="btn btn-dark"
-            href="https://wa.me/628176007215?text=Halo%20Admin%2C%20saya%20ingin%20aktivasi%20AllOne%20Net%20Firewall"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            💬 Hubungi Admin
-        </a>
-
-    </div>
-
-</section>
+            <a class="btn btn-dark"
+               href="https://wa.me/628176007215?text=Halo%20Admin%2C%20saya%20ingin%20bertanya%20tentang%20AllOne%20Net%20Firewall"
+               target="_blank"
+               rel="noopener noreferrer">
+                💬 Hubungi Admin
+            </a>
+        </div>
+    </section>
 
 </main>
 
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-
 <footer>
+    <p><strong>AllOne Net Firewall</strong></p>
 
     <p>
-        <strong>AllOne Net Firewall</strong>
+        Firewall Android tanpa root dengan kontrol internet per aplikasi
+        dan filter host iklan berbasis DNS.
     </p>
 
-    <p>
-        Firewall Android tanpa root untuk
-        mengontrol akses internet aplikasi.
-    </p>
-
-    <p>
-        <a
-            href="https://sites.google.com/view/allonenetfirewall/halaman-muka"
-            target="_blank"
-            rel="noopener noreferrer"
-            style="color:#00ff88; text-decoration:none;"
-        >
-            Kebijakan Privasi (Privacy Policy)
+    <div class="footer-links">
+        <a href="https://sites.google.com/view/allonenetfirewall/halaman-muka"
+           target="_blank"
+           rel="noopener noreferrer">
+            Kebijakan Privasi
         </a>
-    </p>
 
-    <p>
-        © 2026 AllOne Cyber. All rights reserved.
-    </p>
+        <a href="#fitur">Fitur</a>
+        <a href="#download">Download</a>
+    </div>
 
+    <p>© 2026 AllOne Cyber. All rights reserved.</p>
 </footer>
 
+</body>
+</html>
+```
