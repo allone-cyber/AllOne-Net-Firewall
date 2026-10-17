@@ -1,22 +1,66 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
+<!--
+=====================================================================
+CHANGELOG (v2 — optimasi SEO + screenshot)
+=====================================================================
+[SEO — head]
+- Title dirapikan (±62 karakter) dan memuat kata kunci utama di awal.
+- Meta description dipadatkan ≤160 karakter agar tidak terpotong di Google.
+- Ditambah: hreflang (id + x-default), max-snippet/max-video-preview,
+  og:image:width/height tidak diisi (ukuran preview.png tidak diketahui),
+  og:image tetap preview.png, twitter:image:alt, format-detection.
+- Meta keywords dipertahankan (tidak merusak, hanya diabaikan Google).
+
+[SEO — JSON-LD]
+- SoftwareApplication: ditambah screenshot (4 ImageObject), featureList,
+  inLanguage, applicationSubCategory, image, isAccessibleForFree TIDAK
+  ditambahkan (tidak ada harga resmi yang pasti).
+- FAQPage: disinkronkan dengan FAQ yang tampil (pertanyaan ke-10
+  "otomatis aktif setelah reboot" sebelumnya hilang dari schema).
+- WebSite dipertahankan; ditambah WebPage + primaryImageOfPage.
+
+[SEO — konten & struktur]
+- H1 kini memuat kata kunci "Firewall Android Tanpa Root".
+- Section baru "Tampilan Aplikasi" (galeri 4 screenshot) setelah Fitur.
+- Section baru "AllOne Net Firewall vs VPN Biasa" (tabel; peluang
+  featured snippet & menjawab maksud pencarian).
+- Semua section diberi aria-labelledby + id heading.
+- Ditambah skip-link & link "Tampilan" di navigasi.
+- Navigasi mobile: sebelumnya disembunyikan total (link internal hilang
+  di HP) → kini menjadi bar horizontal yang bisa digeser.
+
+[Gambar]
+- Semua screenshot: file di root repo (tanpa folder), alt deskriptif,
+  width/height (cegah layout shift), loading="lazy", decoding="async",
+  bisa diklik untuk melihat ukuran penuh.
+
+[Dipertahankan tanpa perubahan]
+- Seluruh fitur, 12 kartu fitur, 6 langkah, VPN box, privasi, lisensi,
+  "cocok untuk", 9 FAQ, tombol download, tombol WhatsApp admin, footer,
+  tautan Google Drive & Kebijakan Privasi, tema gelap, animasi,
+  prefers-reduced-motion.
+=====================================================================
+-->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>AllOne Net Firewall — Blokir Internet & Iklan Android Tanpa Root</title>
+<title>AllOne Net Firewall — Firewall Android Tanpa Root &amp; Blokir Iklan</title>
 
-<meta name="description" content="AllOne Net Firewall memblokir internet per aplikasi Android dan memfilter host iklan melalui VPN lokal. Tanpa root, tanpa server VPN eksternal, dengan trial gratis 7 hari.">
+<meta name="description" content="AllOne Net Firewall: firewall Android tanpa root untuk blokir internet per aplikasi dan filter host iklan via VPN lokal. Trial gratis 7 hari, sekali beli.">
 
 <meta name="keywords" content="AllOne Net Firewall, firewall Android tanpa root, blokir internet per aplikasi, pemblokir iklan Android, filter DNS Android, blokir pelacak, DNS sinkhole, blokir DoH DoT, kontrol internet aplikasi Android">
 
 <meta name="author" content="AllOne Cyber">
-<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="theme-color" content="#07111f">
 <meta name="color-scheme" content="dark">
+<meta name="format-detection" content="telephone=no">
 
 <link rel="canonical" href="https://allone-cyber.github.io/AllOne-Net-Firewall/">
+<link rel="alternate" hreflang="id" href="https://allone-cyber.github.io/AllOne-Net-Firewall/">
+<link rel="alternate" hreflang="x-default" href="https://allone-cyber.github.io/AllOne-Net-Firewall/">
 <link rel="icon" type="image/png" href="https://allone-cyber.github.io/AllOne-Net-Firewall/favicon.png">
 <link rel="apple-touch-icon" href="https://allone-cyber.github.io/AllOne-Net-Firewall/favicon.png">
 
@@ -24,7 +68,7 @@
 <meta property="og:site_name" content="AllOne Cyber">
 <meta property="og:locale" content="id_ID">
 <meta property="og:url" content="https://allone-cyber.github.io/AllOne-Net-Firewall/">
-<meta property="og:title" content="AllOne Net Firewall — Firewall & Filter Iklan Android">
+<meta property="og:title" content="AllOne Net Firewall — Firewall &amp; Filter Iklan Android Tanpa Root">
 <meta property="og:description" content="Kontrol internet per aplikasi, filter host iklan dan pelacak, serta sinkhole DNS terenkripsi. Tanpa root dan tanpa server VPN eksternal.">
 <meta property="og:image" content="https://allone-cyber.github.io/AllOne-Net-Firewall/preview.png">
 <meta property="og:image:alt" content="AllOne Net Firewall untuk Android">
@@ -33,6 +77,7 @@
 <meta name="twitter:title" content="AllOne Net Firewall — Firewall Android Tanpa Root">
 <meta name="twitter:description" content="Blokir internet per aplikasi dan filter host iklan melalui VPN lokal Android.">
 <meta name="twitter:image" content="https://allone-cyber.github.io/AllOne-Net-Firewall/preview.png">
+<meta name="twitter:image:alt" content="AllOne Net Firewall untuk Android">
 
 <script type="application/ld+json">
 {
@@ -41,10 +86,45 @@
   "@id": "https://allone-cyber.github.io/AllOne-Net-Firewall/#software",
   "name": "AllOne Net Firewall",
   "applicationCategory": "SecurityApplication",
+  "applicationSubCategory": "Firewall dan pemblokir iklan",
   "operatingSystem": "Android",
+  "inLanguage": ["id-ID", "en"],
   "description": "Aplikasi firewall Android tanpa root untuk memblokir akses internet per aplikasi, memfilter host iklan dan pelacak melalui DNS, serta membatasi sejumlah endpoint DNS terenkripsi.",
   "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/",
+  "image": "https://allone-cyber.github.io/AllOne-Net-Firewall/preview.png",
   "downloadUrl": "https://drive.google.com/file/d/1Di9zAt82bh9VQFFxrmejPYjbqX2Wpr1F/view?usp=drivesdk",
+  "featureList": [
+    "Blokir internet per aplikasi",
+    "Filter host iklan dan pelacak berbasis DNS",
+    "DNS sinkhole",
+    "Host kustom",
+    "Sinkhole endpoint DoH dan DoT yang umum",
+    "Mulai otomatis setelah reboot",
+    "Tanpa root",
+    "Tanpa iklan di dalam aplikasi"
+  ],
+  "screenshot": [
+    {
+      "@type": "ImageObject",
+      "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-1-daftar-aplikasi.png",
+      "caption": "Daftar aplikasi untuk memilih aplikasi yang akses internetnya diblokir"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-2-filter-iklan-dns.png",
+      "caption": "Pengaturan filter host iklan, pelacak, dan host kustom"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-3-firewall-aktif.png",
+      "caption": "Tampilan saat firewall aktif"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-4-pengaturan.png",
+      "caption": "Pengaturan tema, bahasa, mulai otomatis, dan aplikasi sistem"
+    }
+  ],
   "author": {
     "@type": "Organization",
     "name": "AllOne Cyber",
@@ -68,6 +148,23 @@
   "publisher": {
     "@type": "Organization",
     "name": "AllOne Cyber"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://allone-cyber.github.io/AllOne-Net-Firewall/#webpage",
+  "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/",
+  "name": "AllOne Net Firewall — Firewall Android Tanpa Root & Blokir Iklan",
+  "inLanguage": "id-ID",
+  "isPartOf": { "@id": "https://allone-cyber.github.io/AllOne-Net-Firewall/#website" },
+  "about": { "@id": "https://allone-cyber.github.io/AllOne-Net-Firewall/#software" },
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/preview.png"
   }
 }
 </script>
@@ -148,6 +245,14 @@
         "@type": "Answer",
         "text": "Salin Device ID dari aplikasi dan kirimkan kepada penjual atau admin melalui saluran kontak yang tersedia untuk memperoleh kode aktivasi."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah firewall otomatis aktif setelah reboot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tersedia opsi untuk memulai firewall secara otomatis setelah perangkat menyala. Perilaku aktual dapat bergantung pada pengaturan Android dan izin sistem."
+      }
     }
   ]
 }
@@ -193,6 +298,32 @@ a:focus-visible,
 summary:focus-visible {
     outline: 2px solid var(--green);
     outline-offset: 4px;
+}
+
+/* [BARU] Skip link untuk aksesibilitas keyboard */
+.skip-link {
+    position: absolute;
+    left: 12px;
+    top: -60px;
+    z-index: 100;
+    padding: 10px 16px;
+    border-radius: 10px;
+    background: var(--green);
+    color: #00150b;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 12px;
+}
+
+code {
+    padding: 1px 6px;
+    border-radius: 6px;
+    background: rgba(255,255,255,.07);
+    color: var(--text);
+    font-size: .92em;
 }
 
 .navbar {
@@ -265,8 +396,8 @@ summary:focus-visible {
 .hero h1 {
     max-width: 900px;
     margin: 20px auto 16px;
-    font-size: clamp(34px, 7vw, 58px);
-    line-height: 1.12;
+    font-size: clamp(32px, 6.4vw, 54px);
+    line-height: 1.14;
     letter-spacing: -1.4px;
 }
 
@@ -401,6 +532,58 @@ summary:focus-visible {
     font-size: 14px;
 }
 
+/* [BARU] Galeri screenshot */
+.shots {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.shot {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 12px 12px 16px;
+    text-align: center;
+    transition: transform .2s, border-color .2s;
+}
+
+.shot:hover {
+    transform: translateY(-3px);
+    border-color: #00af66;
+}
+
+.shot a {
+    display: block;
+    text-decoration: none;
+}
+
+.shot img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 9 / 19.5;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: #0a1424;
+}
+
+.shot figcaption {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.shot figcaption strong {
+    display: block;
+    margin-bottom: 2px;
+    color: var(--text);
+    font-size: 14px;
+}
+
 .vpn-box {
     background: linear-gradient(135deg, rgba(0,255,136,.08), rgba(0,120,255,.06));
     border: 1px solid rgba(0,255,136,.18);
@@ -452,6 +635,51 @@ summary:focus-visible {
 .step strong {
     display: block;
     margin-bottom: 3px;
+}
+
+/* [BARU] Tabel perbandingan */
+.table-wrap {
+    overflow-x: auto;
+    margin-top: 20px;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+}
+
+.compare {
+    width: 100%;
+    min-width: 560px;
+    border-collapse: collapse;
+    background: var(--card);
+    font-size: 14px;
+}
+
+.compare th,
+.compare td {
+    padding: 14px 16px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border);
+    color: var(--muted);
+}
+
+.compare thead th {
+    color: var(--text);
+    background: #0c1829;
+    font-size: 14px;
+}
+
+.compare thead th.us {
+    color: var(--green);
+}
+
+.compare tbody th {
+    color: var(--text);
+    font-weight: 800;
+}
+
+.compare tr:last-child th,
+.compare tr:last-child td {
+    border-bottom: 0;
 }
 
 .license {
@@ -543,13 +771,42 @@ footer strong {
     text-decoration: underline;
 }
 
+@media (max-width: 980px) {
+    .shots {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 700px) {
     .navbar {
         padding: 12px 15px;
     }
 
+    .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    /* [DIUBAH] Sebelumnya display:none. Kini bar horizontal yang bisa digeser
+       agar link internal tetap terlihat & bisa dirayapi di mobile. */
     .nav-links {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+        gap: 16px;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .nav-links::-webkit-scrollbar {
         display: none;
+    }
+
+    .nav-links a {
+        white-space: nowrap;
     }
 
     .hero {
@@ -573,6 +830,21 @@ footer strong {
     .step {
         padding-left: 58px;
     }
+
+    /* Galeri jadi carousel geser horizontal di HP */
+    .shots {
+        display: flex;
+        overflow-x: auto;
+        gap: 14px;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .shot {
+        flex: 0 0 68%;
+        scroll-snap-align: center;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -591,6 +863,8 @@ footer strong {
 
 <body>
 
+<a class="skip-link" href="#konten">Lewati ke konten utama</a>
+
 <nav class="navbar" aria-label="Navigasi utama">
     <div class="nav-inner">
         <a class="logo" href="#top" aria-label="AllOne Net Firewall">
@@ -599,6 +873,7 @@ footer strong {
 
         <div class="nav-links">
             <a href="#fitur">Fitur</a>
+            <a href="#screenshot">Tampilan</a>
             <a href="#cara-kerja">Cara Kerja</a>
             <a href="#privasi">Privasi</a>
             <a href="#lisensi">Lisensi</a>
@@ -612,8 +887,8 @@ footer strong {
     <div class="badge">FIREWALL ANDROID • TANPA ROOT</div>
 
     <h1>
-        Kendalikan Internet Aplikasi,
-        <span>Filter Host Iklan</span>
+        Firewall Android Tanpa Root:
+        <span>Blokir Internet Per Aplikasi &amp; Filter Host Iklan</span>
     </h1>
 
     <p class="hero-description">
@@ -641,10 +916,10 @@ footer strong {
     </p>
 </header>
 
-<main class="container">
+<main class="container" id="konten">
 
-    <section class="section">
-        <h2>Apa Itu AllOne Net Firewall?</h2>
+    <section class="section" aria-labelledby="apa-itu">
+        <h2 id="apa-itu">Apa Itu AllOne Net Firewall?</h2>
 
         <p>
             AllOne Net Firewall adalah aplikasi firewall Android yang
@@ -661,8 +936,8 @@ footer strong {
         </p>
     </section>
 
-    <section class="section" id="fitur">
-        <h2>Fitur AllOne Net Firewall</h2>
+    <section class="section" id="fitur" aria-labelledby="judul-fitur">
+        <h2 id="judul-fitur">Fitur AllOne Net Firewall</h2>
 
         <p class="section-intro">
             Kontrol jaringan dan filter DNS dalam satu aplikasi Android.
@@ -783,8 +1058,78 @@ footer strong {
         </div>
     </section>
 
-    <section class="section" id="cara-kerja">
-        <h2>Bagaimana Cara Kerjanya?</h2>
+    <!-- [BARU] Galeri 4 screenshot. File gambar diletakkan di root repo,
+         sejajar dengan index.html (tanpa folder). -->
+    <section class="section" id="screenshot" aria-labelledby="judul-screenshot">
+        <h2 id="judul-screenshot">Tampilan Aplikasi AllOne Net Firewall</h2>
+
+        <p class="section-intro">
+            Lihat langsung antarmuka AllOne Net Firewall di Android: dari
+            memilih aplikasi yang akan diblokir, mengatur filter host iklan,
+            sampai memantau status firewall.
+        </p>
+
+        <div class="shots">
+            <figure class="shot">
+                <a href="allone-net-firewall-1-daftar-aplikasi.png"
+                   target="_blank" rel="noopener">
+                    <img src="allone-net-firewall-1-daftar-aplikasi.png"
+                         alt="Daftar aplikasi di AllOne Net Firewall untuk memilih aplikasi Android yang akses internetnya diblokir"
+                         width="540" height="1170"
+                         loading="lazy" decoding="async">
+                </a>
+                <figcaption>
+                    <strong>Pilih Aplikasi</strong>
+                    Centang aplikasi yang ingin diputus akses internetnya.
+                </figcaption>
+            </figure>
+
+            <figure class="shot">
+                <a href="allone-net-firewall-2-filter-iklan-dns.png"
+                   target="_blank" rel="noopener">
+                    <img src="allone-net-firewall-2-filter-iklan-dns.png"
+                         alt="Pengaturan filter host iklan, pelacak, dan host kustom berbasis DNS di AllOne Net Firewall"
+                         width="540" height="1170"
+                         loading="lazy" decoding="async">
+                </a>
+                <figcaption>
+                    <strong>Filter Iklan &amp; DNS</strong>
+                    Atur filter host iklan, pelacak, dan host kustom.
+                </figcaption>
+            </figure>
+
+            <figure class="shot">
+                <a href="allone-net-firewall-3-firewall-aktif.png"
+                   target="_blank" rel="noopener">
+                    <img src="allone-net-firewall-3-firewall-aktif.png"
+                         alt="Tampilan AllOne Net Firewall saat firewall Android aktif berjalan tanpa root"
+                         width="540" height="1170"
+                         loading="lazy" decoding="async">
+                </a>
+                <figcaption>
+                    <strong>Firewall Aktif</strong>
+                    Pantau status firewall dan matikan kapan saja.
+                </figcaption>
+            </figure>
+
+            <figure class="shot">
+                <a href="allone-net-firewall-4-pengaturan.png"
+                   target="_blank" rel="noopener">
+                    <img src="allone-net-firewall-4-pengaturan.png"
+                         alt="Pengaturan AllOne Net Firewall: tema, bahasa, mulai otomatis, dan aplikasi sistem"
+                         width="540" height="1170"
+                         loading="lazy" decoding="async">
+                </a>
+                <figcaption>
+                    <strong>Pengaturan</strong>
+                    Tema, bahasa, mulai otomatis, dan aplikasi sistem.
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="section" id="cara-kerja" aria-labelledby="judul-cara-kerja">
+        <h2 id="judul-cara-kerja">Bagaimana Cara Kerjanya?</h2>
 
         <div class="vpn-box">
             <div class="vpn-label">VPN lokal Android</div>
@@ -852,8 +1197,58 @@ footer strong {
         </div>
     </section>
 
-    <section class="section">
-        <h2>Filter Iklan, Pelacak, DoH, dan DoT</h2>
+    <!-- [BARU] Perbandingan dengan VPN biasa -->
+    <section class="section" id="vs-vpn" aria-labelledby="judul-vs-vpn">
+        <h2 id="judul-vs-vpn">AllOne Net Firewall vs VPN Biasa</h2>
+
+        <p class="section-intro">
+            Keduanya sama-sama memakai VPN Service Android, tetapi tujuannya
+            berbeda. AllOne Net Firewall adalah firewall lokal, bukan layanan
+            VPN untuk mengganti IP.
+        </p>
+
+        <div class="table-wrap">
+            <table class="compare">
+                <thead>
+                    <tr>
+                        <th scope="col">Aspek</th>
+                        <th scope="col" class="us">AllOne Net Firewall</th>
+                        <th scope="col">VPN Biasa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Tujuan utama</th>
+                        <td>Memblokir internet per aplikasi dan memfilter host iklan</td>
+                        <td>Menyambungkan perangkat ke server VPN</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Server VPN eksternal</th>
+                        <td>Tidak dibutuhkan</td>
+                        <td>Dibutuhkan</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Mengganti IP / lokasi</th>
+                        <td>Tidak</td>
+                        <td>Umumnya ya</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Kontrol per aplikasi</th>
+                        <td>Pilih aplikasi yang diputus aksesnya</td>
+                        <td>Bergantung pada layanan VPN</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Root</th>
+                        <td>Tidak diperlukan</td>
+                        <td>Tidak diperlukan</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="section" aria-labelledby="judul-filter">
+        <h2 id="judul-filter">Filter Iklan, Pelacak, DoH, dan DoT</h2>
 
         <p>
             Filter DNS membantu mencegah koneksi ke domain iklan atau
@@ -877,8 +1272,8 @@ footer strong {
         </p>
     </section>
 
-    <section class="section" id="privasi">
-        <h2>Privasi dan Perlindungan Data</h2>
+    <section class="section" id="privasi" aria-labelledby="judul-privasi">
+        <h2 id="judul-privasi">Privasi dan Perlindungan Data</h2>
 
         <p>
             Menurut rancangan AllOne Net Firewall, aplikasi tidak
@@ -910,8 +1305,8 @@ footer strong {
         </p>
     </section>
 
-    <section class="section" id="lisensi">
-        <h2>Trial Gratis 7 Hari dan Lisensi Sekali Beli</h2>
+    <section class="section" id="lisensi" aria-labelledby="judul-lisensi">
+        <h2 id="judul-lisensi">Trial Gratis 7 Hari dan Lisensi Sekali Beli</h2>
 
         <p class="section-intro">
             Coba aplikasi terlebih dahulu. Jika ingin melanjutkan penggunaan,
@@ -947,8 +1342,8 @@ footer strong {
         </div>
     </section>
 
-    <section class="section">
-        <h2>Cocok untuk Kebutuhan Apa?</h2>
+    <section class="section" aria-labelledby="judul-cocok">
+        <h2 id="judul-cocok">Cocok untuk Kebutuhan Apa?</h2>
 
         <div class="grid">
             <article class="card">
@@ -986,8 +1381,8 @@ footer strong {
         </div>
     </section>
 
-    <section class="section faq" id="faq">
-        <h2>Pertanyaan yang Sering Ditanyakan</h2>
+    <section class="section faq" id="faq" aria-labelledby="judul-faq">
+        <h2 id="judul-faq">Pertanyaan yang Sering Ditanyakan</h2>
 
         <details>
             <summary>Apa itu AllOne Net Firewall?</summary>
@@ -1075,8 +1470,8 @@ footer strong {
         </details>
     </section>
 
-    <section class="section download-box" id="download">
-        <h2>Download AllOne Net Firewall</h2>
+    <section class="section download-box" id="download" aria-labelledby="judul-download">
+        <h2 id="judul-download">Download AllOne Net Firewall</h2>
 
         <p>
             Dapatkan APK AllOne Net Firewall melalui tautan Google Drive
@@ -1098,8 +1493,8 @@ footer strong {
         </p>
     </section>
 
-    <section class="section cta">
-        <h2>Ambil Kendali atas Koneksi Aplikasi Anda</h2>
+    <section class="section cta" aria-labelledby="judul-cta">
+        <h2 id="judul-cta">Ambil Kendali atas Koneksi Aplikasi Anda</h2>
 
         <p>
             Pilih aplikasi yang akses internetnya ingin diputus, atur
@@ -1141,6 +1536,7 @@ footer strong {
         </a>
 
         <a href="#fitur">Fitur</a>
+        <a href="#screenshot">Tampilan</a>
         <a href="#download">Download</a>
     </div>
 
@@ -1149,4 +1545,3 @@ footer strong {
 
 </body>
 </html>
-
