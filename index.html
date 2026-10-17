@@ -57,6 +57,27 @@ CHANGELOG (v2 — optimasi SEO + screenshot)
 - JS murni inline (tanpa pustaka luar), fallback copy via execCommand,
   notifikasi toast beraria-live.
 
+[Revisi 4 — AllOne Net Firewall v1.3.0 (fitur blokir host iklan dihapus)]
+- Link Google Drive APK diganti ke ID file baru (1998Up0...) di 4 tempat.
+- SEMUA konten filter iklan/DNS dihapus: title, meta, keywords, OG/Twitter,
+  H1, hero, 4 kartu fitur (filter host, DNS sinkhole, host kustom, DoH/DoT),
+  section "Filter Iklan, Pelacak, DoH, dan DoT", catatan DNS di kotak VPN,
+  paragraf resolver DNS di Privasi, 2 FAQ iklan/DoH, teks tombol bagikan.
+- Ditambah catatan jujur: aplikasi TIDAK menyaring iklan, hanya memutus
+  seluruh internet aplikasi yang dicentang (di "Apa Itu" dan FAQ).
+- Section baru "Apa Fungsi AllOne Net Firewall?" (#fungsi): analogi saklar
+  internet + 3 manfaat (hemat kuota, aplikasi penuh iklan, data latar belakang).
+- Section baru "Panduan Penggunaan" (#panduan) dari panduan di dalam
+  aplikasi: 6 langkah, 6 poin Penting Diketahui, 3 solusi masalah.
+- Tabel baru "Fungsi Setiap Bagian Aplikasi" di Cara Kerja.
+- 4 kartu fitur baru: label DIBLOKIR, perubahan langsung berlaku, panduan
+  di dalam aplikasi, info versi & pengembang. 12 kartu total.
+- Screenshot diganti ke 4 gambar v1.3.0 (daftar aplikasi, aktivasi,
+  panduan, pengaturan); ?v=130 pada URL gambar untuk memaksa cache segar.
+- JSON-LD: softwareVersion 1.3.0, creator, featureList & screenshot baru;
+  FAQ HTML dan schema dibuat dari satu daftar (15 pertanyaan, selalu sinkron).
+- Footer: versi 1.3.0 dan nama pengembang.
+
 [Dipertahankan tanpa perubahan]
 - Seluruh fitur, 12 kartu fitur, 6 langkah, VPN box, privasi, lisensi,
   "cocok untuk", 9 FAQ, tombol download, tombol WhatsApp admin, footer,
@@ -67,11 +88,11 @@ CHANGELOG (v2 — optimasi SEO + screenshot)
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>AllOne Net Firewall — Firewall Android Tanpa Root &amp; Blokir Iklan</title>
+<title>AllOne Net Firewall: Blokir Internet Per Aplikasi Tanpa Root</title>
 
-<meta name="description" content="AllOne Net Firewall: firewall Android tanpa root untuk blokir internet per aplikasi dan filter host iklan via VPN lokal. Trial gratis 7 hari, sekali beli.">
+<meta name="description" content="AllOne Net Firewall memutus internet aplikasi Android pilihan Anda tanpa root, lewat VPN lokal. Hemat kuota, cegah data latar belakang. Trial gratis 7 hari.">
 
-<meta name="keywords" content="AllOne Net Firewall, firewall Android tanpa root, blokir internet per aplikasi, pemblokir iklan Android, filter DNS Android, blokir pelacak, DNS sinkhole, blokir DoH DoT, kontrol internet aplikasi Android">
+<meta name="keywords" content="AllOne Net Firewall, firewall Android tanpa root, blokir internet per aplikasi, putus internet aplikasi Android, hemat kuota Android, cegah data latar belakang, kontrol internet aplikasi Android, firewall VPN lokal">
 
 <meta name="author" content="AllOne Cyber">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -89,14 +110,14 @@ CHANGELOG (v2 — optimasi SEO + screenshot)
 <meta property="og:site_name" content="AllOne Cyber">
 <meta property="og:locale" content="id_ID">
 <meta property="og:url" content="https://allone-cyber.github.io/AllOne-Net-Firewall/">
-<meta property="og:title" content="AllOne Net Firewall — Firewall &amp; Filter Iklan Android Tanpa Root">
-<meta property="og:description" content="Kontrol internet per aplikasi, filter host iklan dan pelacak, serta sinkhole DNS terenkripsi. Tanpa root dan tanpa server VPN eksternal.">
+<meta property="og:title" content="AllOne Net Firewall: Blokir Internet Per Aplikasi Tanpa Root">
+<meta property="og:description" content="Ketuk aplikasi, internetnya putus. Hemat kuota dan cegah data latar belakang tanpa root dan tanpa server VPN eksternal.">
 <meta property="og:image" content="https://allone-cyber.github.io/AllOne-Net-Firewall/preview.png">
 <meta property="og:image:alt" content="AllOne Net Firewall untuk Android">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="AllOne Net Firewall — Firewall Android Tanpa Root">
-<meta name="twitter:description" content="Blokir internet per aplikasi dan filter host iklan melalui VPN lokal Android.">
+<meta name="twitter:description" content="Blokir internet per aplikasi Android dengan satu ketukan, tanpa root.">
 <meta name="twitter:image" content="https://allone-cyber.github.io/AllOne-Net-Firewall/preview.png">
 <meta name="twitter:image:alt" content="AllOne Net Firewall untuk Android">
 
@@ -107,20 +128,26 @@ CHANGELOG (v2 — optimasi SEO + screenshot)
   "@id": "https://allone-cyber.github.io/AllOne-Net-Firewall/#software",
   "name": "AllOne Net Firewall",
   "applicationCategory": "SecurityApplication",
-  "applicationSubCategory": "Firewall dan pemblokir iklan",
+  "applicationSubCategory": "Firewall per aplikasi",
   "operatingSystem": "Android",
-  "inLanguage": ["id-ID", "en"],
-  "description": "Aplikasi firewall Android tanpa root untuk memblokir akses internet per aplikasi, memfilter host iklan dan pelacak melalui DNS, serta membatasi sejumlah endpoint DNS terenkripsi.",
+  "softwareVersion": "1.3.0",
+  "inLanguage": [
+    "id-ID",
+    "en"
+  ],
+  "description": "Aplikasi firewall Android tanpa root untuk memutus akses internet aplikasi yang dipilih, per aplikasi, melalui VPN Service lokal bawaan Android.",
   "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/",
   "image": "https://allone-cyber.github.io/AllOne-Net-Firewall/preview.png",
-  "downloadUrl": "https://drive.google.com/file/d/1ephwXXWHveWHkGbahITk5fcHfbnZFJqF/view?usp=drivesdk",
+  "downloadUrl": "https://drive.google.com/file/d/1998Up0ugZqedrHo7-F9bjELG88krd8Ac/view?usp=drivesdk",
   "featureList": [
-    "Blokir internet per aplikasi",
-    "Filter host iklan dan pelacak berbasis DNS",
-    "DNS sinkhole",
-    "Host kustom",
-    "Sinkhole endpoint DoH dan DoT yang umum",
-    "Mulai otomatis setelah reboot",
+    "Blokir internet per aplikasi (WiFi dan data seluler)",
+    "Label DIBLOKIR dan perubahan langsung berlaku",
+    "Pencarian aplikasi",
+    "Tampilkan aplikasi sistem",
+    "Mulai otomatis saat perangkat menyala",
+    "Notifikasi status dengan tombol matikan",
+    "Panduan penggunaan di dalam aplikasi",
+    "Pilihan bahasa Indonesia atau English dan tema terang, gelap, atau ikuti sistem",
     "Tanpa root",
     "Tanpa iklan di dalam aplikasi"
   ],
@@ -128,28 +155,32 @@ CHANGELOG (v2 — optimasi SEO + screenshot)
     {
       "@type": "ImageObject",
       "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-1-daftar-aplikasi.jpg",
-      "caption": "Daftar aplikasi dengan checkbox untuk memblokir internet per aplikasi"
+      "caption": "Daftar aplikasi dengan kotak centang dan label DIBLOKIR"
     },
     {
       "@type": "ImageObject",
-      "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-2-filter-iklan-dns.jpg",
-      "caption": "Kelola host iklan bawaan dan tambah domain kustom"
-    },
-    {
-      "@type": "ImageObject",
-      "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-3-aktivasi-lisensi.jpg",
+      "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-2-aktivasi-lisensi.jpg",
       "caption": "Layar aktivasi lisensi sekali beli dan Device ID"
     },
     {
       "@type": "ImageObject",
+      "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-3-panduan-penggunaan.jpg",
+      "caption": "Panduan penggunaan di dalam aplikasi"
+    },
+    {
+      "@type": "ImageObject",
       "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-4-pengaturan.jpg",
-      "caption": "Pengaturan bahasa dan tema"
+      "caption": "Pengaturan bahasa, tema, panduan, dan tentang aplikasi"
     }
   ],
   "author": {
     "@type": "Organization",
     "name": "AllOne Cyber",
     "url": "https://allone-cyber.github.io/"
+  },
+  "creator": {
+    "@type": "Person",
+    "name": "Wawan Alwani"
   },
   "offers": {
     "@type": "Offer",
@@ -179,10 +210,14 @@ CHANGELOG (v2 — optimasi SEO + screenshot)
   "@type": "WebPage",
   "@id": "https://allone-cyber.github.io/AllOne-Net-Firewall/#webpage",
   "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/",
-  "name": "AllOne Net Firewall — Firewall Android Tanpa Root & Blokir Iklan",
+  "name": "AllOne Net Firewall: Blokir Internet Per Aplikasi Tanpa Root",
   "inLanguage": "id-ID",
-  "isPartOf": { "@id": "https://allone-cyber.github.io/AllOne-Net-Firewall/#website" },
-  "about": { "@id": "https://allone-cyber.github.io/AllOne-Net-Firewall/#software" },
+  "isPartOf": {
+    "@id": "https://allone-cyber.github.io/AllOne-Net-Firewall/#website"
+  },
+  "about": {
+    "@id": "https://allone-cyber.github.io/AllOne-Net-Firewall/#software"
+  },
   "primaryImageOfPage": {
     "@type": "ImageObject",
     "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/preview.png"
@@ -200,55 +235,95 @@ CHANGELOG (v2 — optimasi SEO + screenshot)
       "name": "Apa itu AllOne Net Firewall?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "AllOne Net Firewall adalah aplikasi Android tanpa root untuk memblokir akses internet aplikasi secara individual serta memfilter host iklan dan pelacak melalui mekanisme DNS."
+        "text": "AllOne Net Firewall adalah aplikasi Android tanpa root untuk memutus akses internet aplikasi yang Anda pilih, per aplikasi, memakai VPN Service lokal bawaan Android."
       }
     },
     {
       "@type": "Question",
-      "name": "Apakah AllOne Net Firewall membutuhkan root?",
+      "name": "Apakah aplikasi membutuhkan root?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Tidak. Aplikasi menggunakan VPN Service bawaan Android untuk menjalankan fungsi firewall tanpa membutuhkan root."
+        "text": "Tidak. Aplikasi menggunakan VPN Service bawaan Android untuk menjalankan fungsi firewall tanpa root."
       }
     },
     {
       "@type": "Question",
-      "name": "Apakah AllOne Net Firewall merupakan VPN untuk mengganti IP?",
+      "name": "Apakah ini VPN untuk mengganti IP atau lokasi?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Bukan. VPN Service digunakan sebagai mekanisme firewall lokal dan bukan untuk menyambungkan perangkat ke server VPN eksternal atau mengganti alamat IP dan lokasi."
+        "text": "Bukan. VPN Service digunakan sebagai mekanisme firewall lokal, bukan untuk menyambungkan perangkat ke server VPN eksternal atau mengganti IP dan lokasi."
       }
     },
     {
       "@type": "Question",
-      "name": "Bagaimana cara kerja pemblokiran internet per aplikasi?",
+      "name": "Kenapa ada ikon kunci atau VPN di bilah status?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Pengguna memilih aplikasi yang ingin diblokir. Saat firewall aktif, akses internet aplikasi yang dipilih akan diputus sesuai mekanisme pemfilteran aplikasi."
+        "text": "Itu normal. Android menandai setiap VPN, termasuk VPN lokal yang dipakai AllOne Net Firewall. Menurut panduan di dalam aplikasi, tidak ada data yang keluar dari perangkat."
       }
     },
     {
       "@type": "Question",
-      "name": "Apakah AllOne Net Firewall dapat memblokir iklan?",
+      "name": "Bagaimana cara memblokir internet satu aplikasi?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Aplikasi dapat memfilter host iklan dan pelacak melalui DNS. Efektivitasnya bergantung pada sumber iklan dan cara aplikasi menggunakan jaringan. Iklan yang menggunakan IP langsung atau konten yang tidak bergantung pada DNS mungkin tidak terblokir."
+        "text": "Di daftar aplikasi, ketuk aplikasi yang ingin diblokir sampai kotak tercentang dan label DIBLOKIR muncul, lalu tekan Aktifkan Firewall. Saat pertama kali, setujui penjelasan dan izinkan permintaan VPN dari Android."
       }
     },
     {
       "@type": "Question",
-      "name": "Apakah aplikasi memblokir DNS-over-HTTPS dan DNS-over-TLS?",
+      "name": "Apakah aplikasi yang tidak dicentang ikut terpengaruh?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Aplikasi berupaya memblokir sejumlah endpoint DNS-over-HTTPS dan DNS-over-TLS yang umum. Endpoint lain, terutama yang menggunakan IP atau metode di luar daftar pemblokiran, mungkin tetap dapat digunakan."
+        "text": "Tidak. Aplikasi yang tidak dicentang tidak terpengaruh dan internetnya tetap normal."
       }
     },
     {
       "@type": "Question",
-      "name": "Apakah data dikirim ke server pengembang?",
+      "name": "Apakah AllOne Net Firewall bisa memblokir iklan?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Menurut rancangan aplikasi, tidak ada akun, telemetri, atau backend pengembang dan data aplikasi disimpan di perangkat. Namun, kueri DNS yang tidak diblokir dapat diteruskan ke resolver DNS publik sesuai konfigurasi filter."
+        "text": "AllOne Net Firewall tidak memiliki filter iklan. Fungsinya memutus seluruh akses internet aplikasi yang Anda centang, sehingga aplikasi tersebut tidak dapat memuat konten online, termasuk iklan, selama diblokir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bisakah dipakai bersamaan dengan VPN lain?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tidak bersamaan. Android hanya mengizinkan satu VPN aktif. Jika Anda menyalakan VPN lain, firewall ini berhenti dan perlu diaktifkan lagi."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Aplikasi apa yang sebaiknya tidak diblokir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jangan blokir aplikasi sistem penting, misalnya Google Play Services, kecuali Anda paham akibatnya."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kenapa firewall mati sendiri?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kemungkinan VPN lain mengambil alih, atau masa trial atau aktivasi berakhir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kenapa aplikasi tertentu masih bisa online?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pastikan aplikasinya tercentang dan status firewall Aktif."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah data saya dikirim ke server pengembang?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Menurut rancangan aplikasi, tidak ada akun, telemetri, atau backend pengembang, data aplikasi disimpan di perangkat, dan menurut panduan di dalam aplikasi tidak ada data yang keluar dari perangkat."
       }
     },
     {
@@ -256,7 +331,7 @@ CHANGELOG (v2 — optimasi SEO + screenshot)
       "name": "Apakah lisensinya berlangganan?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Tidak. Lisensinya menggunakan sistem sekali beli dan berlaku seumur hidup pada perangkat yang diaktivasi, sesuai ketentuan lisensi. Tersedia trial gratis 7 hari."
+        "text": "Tidak. Lisensi menggunakan sistem sekali beli dan berlaku seumur hidup pada perangkat yang diaktivasi sesuai ketentuan lisensi. Trial gratis tersedia selama 7 hari."
       }
     },
     {
@@ -272,13 +347,12 @@ CHANGELOG (v2 — optimasi SEO + screenshot)
       "name": "Apakah firewall otomatis aktif setelah reboot?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Tersedia opsi untuk memulai firewall secara otomatis setelah perangkat menyala. Perilaku aktual dapat bergantung pada pengaturan Android dan izin sistem."
+        "text": "Tersedia opsi Mulai otomatis saat perangkat menyala. Perilaku aktual dapat bergantung pada pengaturan Android dan izin sistem."
       }
     }
   ]
 }
 </script>
-
 <style>
 :root {
     color-scheme: dark;
@@ -879,6 +953,48 @@ footer strong {
     transform: translate(-50%, 0);
 }
 
+
+/* [BARU] Panduan & fungsi */
+.sub-title {
+    margin: 30px 0 4px;
+    font-size: 20px;
+    line-height: 1.35;
+}
+
+.card h4 {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 7px;
+}
+
+.card .tag {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 2px 10px;
+    border-radius: 20px;
+    background: rgba(255,255,255,.07);
+    color: var(--green);
+    font-size: 11.5px;
+    font-weight: 900;
+    letter-spacing: .4px;
+    text-transform: uppercase;
+}
+
+.card .tag.warn {
+    background: rgba(255,90,90,.14);
+    color: #ff8f8f;
+}
+
+.analogy {
+    margin-top: 18px;
+    padding: 18px 20px;
+    border: 1px solid rgba(0,255,136,.2);
+    border-radius: 15px;
+    background: linear-gradient(135deg, rgba(0,255,136,.08), rgba(0,120,255,.05));
+    color: var(--text);
+    font-size: 17px;
+}
+
 @media (max-width: 980px) {
     .shots {
         grid-template-columns: repeat(2, 1fr);
@@ -983,6 +1099,7 @@ footer strong {
             <a href="#fitur">Fitur</a>
             <a href="#screenshot">Tampilan</a>
             <a href="#cara-kerja">Cara Kerja</a>
+            <a href="#panduan">Panduan</a>
             <a href="#privasi">Privasi</a>
             <a href="#lisensi">Lisensi</a>
             <a href="#faq">FAQ</a>
@@ -996,19 +1113,19 @@ footer strong {
 
     <h1>
         Firewall Android Tanpa Root:
-        <span>Blokir Internet Per Aplikasi &amp; Filter Host Iklan</span>
+        <span>Blokir Internet Per Aplikasi dengan Satu Ketukan</span>
     </h1>
 
     <p class="hero-description">
-        <strong>AllOne Net Firewall</strong> membantu memutus akses internet
-        aplikasi yang Anda pilih dan memfilter host iklan serta pelacak
-        melalui VPN lokal Android. Tanpa root, tanpa server VPN eksternal,
-        dan tanpa iklan di dalam aplikasi.
+        <strong>AllOne Net Firewall</strong> memutus akses internet aplikasi
+        yang Anda pilih, per aplikasi, tanpa root. Cocok untuk menghentikan
+        aplikasi yang boros kuota, penuh iklan, atau mengirim data di latar
+        belakang. Tanpa server VPN eksternal dan tanpa iklan di dalam aplikasi.
     </p>
 
     <div class="buttons">
         <a class="btn btn-green"
-           href="https://drive.google.com/file/d/1ephwXXWHveWHkGbahITk5fcHfbnZFJqF/view?usp=drivesdk"
+           href="https://drive.google.com/file/d/1998Up0ugZqedrHo7-F9bjELG88krd8Ac/view?usp=drivesdk"
            target="_blank"
            rel="noopener noreferrer">
             ⬇ Download APK
@@ -1032,23 +1149,72 @@ footer strong {
         <p>
             AllOne Net Firewall adalah aplikasi firewall Android yang
             memungkinkan Anda memilih aplikasi mana yang boleh mengakses
-            internet. Aplikasi ini juga menyediakan filter host iklan dan
-            pelacak berbasis DNS serta pemblokiran sejumlah endpoint DNS
-            terenkripsi.
+            internet. Aplikasi yang Anda centang akan diputus koneksinya,
+            baik lewat WiFi maupun data seluler.
         </p>
 
         <p>
             Pengaturan dilakukan langsung dari perangkat tanpa membutuhkan
-            akses root atau server VPN eksternal. Anda dapat memilih aplikasi,
-            mengatur filter, lalu mengaktifkan firewall sesuai kebutuhan.
+            akses root atau server VPN eksternal. Anda cukup memilih aplikasi,
+            lalu mengaktifkan firewall.
         </p>
+
+        <p>
+            <strong>Catatan:</strong> AllOne Net Firewall tidak menyaring
+            iklan di dalam aplikasi. Yang dilakukan adalah memutus seluruh
+            akses internet aplikasi yang Anda centang.
+        </p>
+    </section>
+
+    <section class="section" id="fungsi" aria-labelledby="judul-fungsi">
+        <h2 id="judul-fungsi">Apa Fungsi AllOne Net Firewall?</h2>
+
+        <p class="section-intro">
+            Fungsinya sederhana: memutus akses internet aplikasi yang Anda
+            pilih, satu per satu, tanpa root.
+        </p>
+
+        <p class="analogy">
+            💡 Bayangkan firewall ini sebagai <strong>saklar internet untuk
+            setiap aplikasi</strong>. Aplikasi dicentang berarti internetnya
+            mati. Aplikasi yang tidak dicentang tetap berjalan normal.
+        </p>
+
+        <div class="grid">
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">📶</div>
+                <h3>Hemat Kuota Data</h3>
+                <p>
+                    Hentikan aplikasi yang boros kuota supaya paket data
+                    Anda tidak habis tanpa terasa.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">🚫</div>
+                <h3>Hentikan Aplikasi Penuh Iklan</h3>
+                <p>
+                    Putus internet aplikasi yang sering menampilkan iklan.
+                    Selama diblokir, aplikasi tidak bisa memuat konten online.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">🔕</div>
+                <h3>Cegah Data di Latar Belakang</h3>
+                <p>
+                    Cegah aplikasi mengirim atau menerima data diam-diam
+                    saat tidak sedang Anda pakai.
+                </p>
+            </article>
+        </div>
     </section>
 
     <section class="section" id="fitur" aria-labelledby="judul-fitur">
         <h2 id="judul-fitur">Fitur AllOne Net Firewall</h2>
 
         <p class="section-intro">
-            Kontrol jaringan dan filter DNS dalam satu aplikasi Android.
+            Kontrol internet per aplikasi dalam satu aplikasi Android.
         </p>
 
         <div class="grid">
@@ -1056,48 +1222,23 @@ footer strong {
                 <div class="card-icon" aria-hidden="true">🛡️</div>
                 <h3>Blokir Internet Per Aplikasi</h3>
                 <p>
-                    Pilih aplikasi yang ingin diblokir. Saat firewall aktif,
-                    akses internet aplikasi tersebut diputus sesuai aturan.
-                    Aplikasi lain yang tidak diblokir tetap dapat terhubung.
+                    Pilih aplikasi yang ingin diblokir. Saat firewall aktif, akses internet aplikasi tersebut diputus, baik lewat WiFi maupun data seluler. Aplikasi lain yang tidak diblokir tetap dapat terhubung.
                 </p>
             </article>
 
             <article class="card">
-                <div class="card-icon" aria-hidden="true">🚫</div>
-                <h3>Filter Host Iklan dan Pelacak</h3>
+                <div class="card-icon" aria-hidden="true">🏷️</div>
+                <h3>Label DIBLOKIR yang Jelas</h3>
                 <p>
-                    Filter DNS menggunakan daftar domain iklan dan pelacak
-                    yang tersedia di aplikasi untuk membantu membatasi
-                    koneksi ke host tersebut.
+                    Aplikasi yang diblokir ditandai kotak centang dan label DIBLOKIR, sehingga Anda langsung tahu aplikasi mana yang internetnya diputus.
                 </p>
             </article>
 
             <article class="card">
-                <div class="card-icon" aria-hidden="true">🌐</div>
-                <h3>DNS Sinkhole</h3>
+                <div class="card-icon" aria-hidden="true">⚡</div>
+                <h3>Perubahan Langsung Berlaku</h3>
                 <p>
-                    Kueri DNS ke domain yang diblokir dijawab dengan respons
-                    kosong sesuai mekanisme sinkhole, sehingga koneksi ke
-                    host tersebut dapat dicegah melalui DNS.
-                </p>
-            </article>
-
-            <article class="card">
-                <div class="card-icon" aria-hidden="true">➕</div>
-                <h3>Host Kustom</h3>
-                <p>
-                    Tambahkan host yang ingin Anda blokir sendiri untuk
-                    menyesuaikan filter dengan kebutuhan perangkat.
-                </p>
-            </article>
-
-            <article class="card">
-                <div class="card-icon" aria-hidden="true">🔒</div>
-                <h3>Sinkhole DoH dan DoT</h3>
-                <p>
-                    Memblokir sejumlah endpoint DNS-over-HTTPS dan
-                    DNS-over-TLS yang umum agar sebagian jalur DNS
-                    terenkripsi tidak mudah melewati filter.
+                    Ketuk aplikasi untuk memblokir atau membuka blokir. Perubahan berlaku otomatis tanpa perlu mematikan firewall.
                 </p>
             </article>
 
@@ -1105,8 +1246,7 @@ footer strong {
                 <div class="card-icon" aria-hidden="true">🔍</div>
                 <h3>Pencarian Aplikasi</h3>
                 <p>
-                    Cari aplikasi dengan lebih mudah untuk menentukan
-                    aplikasi mana yang akses internetnya ingin dibatasi.
+                    Cari aplikasi dengan lebih mudah untuk menentukan aplikasi mana yang akses internetnya ingin dibatasi.
                 </p>
             </article>
 
@@ -1114,8 +1254,7 @@ footer strong {
                 <div class="card-icon" aria-hidden="true">⚙️</div>
                 <h3>Aplikasi Sistem</h3>
                 <p>
-                    Tampilkan aplikasi sistem jika Anda ingin mengatur
-                    aplikasi bawaan Android yang tersedia dalam daftar.
+                    Tampilkan aplikasi sistem jika Anda ingin mengatur aplikasi bawaan Android yang tersedia dalam daftar.
                 </p>
             </article>
 
@@ -1123,8 +1262,7 @@ footer strong {
                 <div class="card-icon" aria-hidden="true">🔄</div>
                 <h3>Mulai Otomatis</h3>
                 <p>
-                    Pilihan untuk menjalankan kembali firewall setelah
-                    perangkat menyala atau selesai reboot.
+                    Pilihan untuk menjalankan kembali firewall setelah perangkat menyala atau selesai reboot.
                 </p>
             </article>
 
@@ -1132,8 +1270,15 @@ footer strong {
                 <div class="card-icon" aria-hidden="true">🔔</div>
                 <h3>Notifikasi Status</h3>
                 <p>
-                    Lihat notifikasi saat firewall berjalan, termasuk
-                    tombol untuk mematikan firewall.
+                    Lihat notifikasi saat firewall berjalan, termasuk tombol untuk mematikan firewall.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">📖</div>
+                <h3>Panduan di Dalam Aplikasi</h3>
+                <p>
+                    Tersedia Panduan Penggunaan lengkap dari menu Pengaturan: fungsi, cara memakai, hal penting, dan solusi masalah.
                 </p>
             </article>
 
@@ -1141,8 +1286,15 @@ footer strong {
                 <div class="card-icon" aria-hidden="true">🌙</div>
                 <h3>Tema dan Bahasa</h3>
                 <p>
-                    Pilih Bahasa Indonesia atau English, serta tema terang,
-                    gelap, atau mengikuti pengaturan sistem.
+                    Pilih Bahasa Indonesia atau English, serta tema terang, gelap, atau mengikuti pengaturan sistem.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">ℹ️</div>
+                <h3>Info Versi dan Pengembang</h3>
+                <p>
+                    Menu Tentang aplikasi dan Pengaturan menampilkan versi terpasang serta nama pengembang.
                 </p>
             </article>
 
@@ -1150,8 +1302,7 @@ footer strong {
                 <div class="card-icon" aria-hidden="true">📵</div>
                 <h3>Tanpa Iklan di Dalam Aplikasi</h3>
                 <p>
-                    Antarmuka AllOne Net Firewall sendiri tidak menampilkan
-                    iklan.
+                    Antarmuka AllOne Net Firewall sendiri tidak menampilkan iklan.
                 </p>
             </article>
 
@@ -1159,8 +1310,7 @@ footer strong {
                 <div class="card-icon" aria-hidden="true">🔐</div>
                 <h3>Tanpa Root</h3>
                 <p>
-                    Menggunakan VPN Service bawaan Android sebagai mekanisme
-                    firewall lokal, tanpa memerlukan root.
+                    Menggunakan VPN Service bawaan Android sebagai mekanisme firewall lokal, tanpa memerlukan root.
                 </p>
             </article>
         </div>
@@ -1172,44 +1322,30 @@ footer strong {
         <h2 id="judul-screenshot">Tampilan Aplikasi AllOne Net Firewall</h2>
 
         <p class="section-intro">
-            Lihat langsung antarmuka AllOne Net Firewall di Android: dari
-            memilih aplikasi yang akan diblokir, mengelola host iklan,
-            sampai aktivasi lisensi dan pengaturan.
+            Lihat langsung antarmuka AllOne Net Firewall di Android: daftar
+            aplikasi dengan label DIBLOKIR, aktivasi lisensi, panduan
+            penggunaan, dan pengaturan.
         </p>
 
         <div class="shots">
             <figure class="shot">
-                <a href="allone-net-firewall-1-daftar-aplikasi.jpg"
+                <a href="allone-net-firewall-1-daftar-aplikasi.jpg?v=130"
                    target="_blank" rel="noopener">
-                    <img src="allone-net-firewall-1-daftar-aplikasi.jpg"
-                         alt="Daftar aplikasi AllOne Net Firewall dengan checkbox blokir internet per aplikasi dan pencarian aplikasi"
+                    <img src="allone-net-firewall-1-daftar-aplikasi.jpg?v=130"
+                         alt="Daftar aplikasi AllOne Net Firewall dengan kotak centang, label DIBLOKIR, dan tombol Matikan Firewall"
                          width="720" height="1600"
                          loading="lazy" decoding="async">
                 </a>
                 <figcaption>
-                    <strong>Pilih Aplikasi</strong>
-                    Cari aplikasi, lalu centang yang ingin diputus akses internetnya.
+                    <strong>Daftar Aplikasi</strong>
+                    Ketuk aplikasi untuk memblokir. Label DIBLOKIR muncul.
                 </figcaption>
             </figure>
 
             <figure class="shot">
-                <a href="allone-net-firewall-2-filter-iklan-dns.jpg"
+                <a href="allone-net-firewall-2-aktivasi-lisensi.jpg?v=130"
                    target="_blank" rel="noopener">
-                    <img src="allone-net-firewall-2-filter-iklan-dns.jpg"
-                         alt="Dialog kelola host iklan AllOne Net Firewall: tambah domain kustom dan daftar host iklan bawaan"
-                         width="720" height="1600"
-                         loading="lazy" decoding="async">
-                </a>
-                <figcaption>
-                    <strong>Host Iklan &amp; DNS</strong>
-                    Kelola host iklan bawaan dan tambah domain kustom.
-                </figcaption>
-            </figure>
-
-            <figure class="shot">
-                <a href="allone-net-firewall-3-aktivasi-lisensi.jpg"
-                   target="_blank" rel="noopener">
-                    <img src="allone-net-firewall-3-aktivasi-lisensi.jpg"
+                    <img src="allone-net-firewall-2-aktivasi-lisensi.jpg?v=130"
                          alt="Layar aktivasi AllOne Net Firewall: lisensi sekali beli seumur hidup, Device ID, dan kontak penjual"
                          width="720" height="1600"
                          loading="lazy" decoding="async">
@@ -1221,16 +1357,30 @@ footer strong {
             </figure>
 
             <figure class="shot">
-                <a href="allone-net-firewall-4-pengaturan.jpg"
+                <a href="allone-net-firewall-3-panduan-penggunaan.jpg?v=130"
                    target="_blank" rel="noopener">
-                    <img src="allone-net-firewall-4-pengaturan.jpg"
-                         alt="Pengaturan AllOne Net Firewall: pilihan bahasa Indonesia atau English dan tema terang, gelap, atau ikuti sistem"
+                    <img src="allone-net-firewall-3-panduan-penggunaan.jpg?v=130"
+                         alt="Dialog Panduan Penggunaan AllOne Net Firewall: apa fungsinya, cara memakai, penting diketahui, dan jika ada masalah"
+                         width="720" height="1600"
+                         loading="lazy" decoding="async">
+                </a>
+                <figcaption>
+                    <strong>Panduan di Aplikasi</strong>
+                    Fungsi, cara memakai, dan solusi jika ada masalah.
+                </figcaption>
+            </figure>
+
+            <figure class="shot">
+                <a href="allone-net-firewall-4-pengaturan.jpg?v=130"
+                   target="_blank" rel="noopener">
+                    <img src="allone-net-firewall-4-pengaturan.jpg?v=130"
+                         alt="Pengaturan AllOne Net Firewall v1.3.0: bahasa, tema, panduan penggunaan, tentang aplikasi, dan kebijakan privasi"
                          width="720" height="1600"
                          loading="lazy" decoding="async">
                 </a>
                 <figcaption>
                     <strong>Pengaturan</strong>
-                    Bahasa dan tema: terang, gelap, atau ikuti sistem.
+                    Bahasa, tema, panduan, dan tentang aplikasi.
                 </figcaption>
             </figure>
         </div>
@@ -1246,66 +1396,166 @@ footer strong {
                 Android menyediakan <strong>VPN Service</strong> yang dapat
                 digunakan aplikasi untuk membuat mekanisme pemfilteran
                 jaringan pada perangkat. AllOne Net Firewall menggunakan
-                kemampuan ini untuk menjalankan fungsi firewall.
+                kemampuan ini untuk memutus koneksi aplikasi yang Anda centang.
             </p>
 
             <p>
                 Ini bukan layanan VPN untuk mengganti alamat IP atau lokasi.
                 Lalu lintas tidak diteruskan melalui server VPN eksternal
-                milik pengembang.
-            </p>
-
-            <p>
-                <strong>Catatan DNS:</strong> ketika filter iklan aktif,
-                kueri DNS yang tidak diblokir dapat diteruskan ke resolver
-                DNS publik sesuai konfigurasi aplikasi. Karena itu, jangan
-                mengartikan “tanpa server VPN eksternal” sebagai “tidak ada
-                komunikasi jaringan dengan pihak mana pun”.
+                milik pengembang. Menurut panduan di dalam aplikasi, ini VPN
+                lokal dan tidak ada data yang keluar dari perangkat.
             </p>
         </div>
+
+        <h3 class="sub-title">Fungsi Setiap Bagian Aplikasi</h3>
+
+        <div class="table-wrap">
+            <table class="compare">
+                <thead>
+                    <tr>
+                        <th scope="col">Bagian di aplikasi</th>
+                        <th scope="col">Fungsinya</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Status Firewall aktif</th>
+                        <td>Menampilkan firewall sedang berjalan, beserta jumlah aplikasi berinternet dan jumlah yang dipilih untuk diblokir.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Tombol Aktifkan / Matikan Firewall</th>
+                        <td>Menyalakan atau menghentikan firewall.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Kotak centang + label DIBLOKIR</th>
+                        <td>Menandai aplikasi yang internetnya diputus. Ketuk lagi untuk membuka blokir.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Cari aplikasi</th>
+                        <td>Menemukan aplikasi di daftar dengan cepat.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Tampilkan aplikasi sistem</th>
+                        <td>Menampilkan aplikasi bawaan Android di daftar.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Mulai otomatis saat perangkat menyala</th>
+                        <td>Menyalakan lagi firewall setelah HP dihidupkan ulang.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Banner Teraktivasi / Device ID</th>
+                        <td>Menunjukkan status lisensi. Ketuk untuk melihat dan menyalin Device ID.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Pengaturan</th>
+                        <td>Memilih bahasa dan tema, membuka Panduan penggunaan, Tentang aplikasi, dan Kebijakan privasi.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="section" id="panduan" aria-labelledby="judul-panduan">
+        <h2 id="judul-panduan">Panduan Penggunaan AllOne Net Firewall</h2>
+
+        <p class="section-intro">
+            Ikuti 6 langkah ini untuk mulai memblokir internet aplikasi.
+            Panduan yang sama juga tersedia di dalam aplikasi lewat
+            Pengaturan, Panduan penggunaan.
+        </p>
 
         <div class="steps">
             <div class="step">
                 <strong>Instal aplikasi</strong>
-                Download APK melalui tautan Google Drive resmi yang tersedia
-                di halaman ini, kemudian instal pada perangkat Android.
+                Download APK melalui tautan Google Drive resmi yang tersedia di halaman ini, kemudian instal pada perangkat Android.
             </div>
 
             <div class="step">
                 <strong>Mulai trial gratis 7 hari</strong>
-                Buka aplikasi dan mulai masa percobaan sesuai petunjuk
-                yang ditampilkan di aplikasi.
+                Buka aplikasi dan mulai masa percobaan sesuai petunjuk yang ditampilkan di aplikasi.
             </div>
 
             <div class="step">
-                <strong>Pilih aplikasi</strong>
-                Centang aplikasi yang ingin diblokir akses internetnya.
-                Atur daftar host iklan atau host kustom jika diperlukan.
+                <strong>Ketuk aplikasi yang ingin diblokir</strong>
+                Di daftar aplikasi, ketuk aplikasi yang ingin diblokir. Kotak centang dan label DIBLOKIR akan muncul. Gunakan kolom Cari aplikasi untuk menemukannya lebih cepat.
             </div>
 
             <div class="step">
-                <strong>Aktifkan firewall</strong>
-                Tekan tombol untuk mengaktifkan firewall. Android akan
-                meminta izin VPN karena mekanisme ini menggunakan
-                VPN Service lokal.
+                <strong>Tekan Aktifkan Firewall</strong>
+                Saat pertama kali, setujui penjelasan lalu izinkan permintaan VPN dari Android. Izin ini diperlukan karena firewall memakai VPN Service lokal.
             </div>
 
             <div class="step">
-                <strong>Atur filter DNS</strong>
-                Gunakan filter host iklan dan pelacak yang tersedia.
-                Perhatikan bahwa pemblokiran DNS tidak mencakup semua
-                metode distribusi iklan.
+                <strong>Selesai: aplikasi terblokir tidak bisa online</strong>
+                Aplikasi yang dicentang tidak bisa memakai internet, baik lewat WiFi maupun data seluler.
             </div>
 
             <div class="step">
-                <strong>Pantau status firewall</strong>
-                Gunakan notifikasi untuk melihat status firewall dan
-                mematikannya ketika diperlukan.
+                <strong>Buka blokir kapan saja</strong>
+                Ketuk lagi aplikasinya (centang hilang) atau tekan Matikan Firewall. Perubahan berlaku otomatis tanpa perlu mematikan firewall.
             </div>
+
+        </div>
+
+        <h3 class="sub-title">Penting Diketahui</h3>
+
+        <div class="grid">
+            <article class="card">
+                <h4>Ikon kunci/VPN itu normal</h4>
+                <p>Android menandai setiap VPN dengan ikon kunci di bilah status. Ini VPN lokal, tidak ada data yang keluar dari perangkat.</p>
+            </article>
+
+            <article class="card">
+                <h4>Aplikasi lain tidak terpengaruh</h4>
+                <p>Aplikasi yang tidak dicentang tidak terpengaruh dan internetnya tetap normal.</p>
+            </article>
+
+            <article class="card">
+                <h4>Hanya satu VPN aktif</h4>
+                <p>Android hanya mengizinkan satu VPN aktif. Jika Anda menyalakan VPN lain, firewall ini berhenti dan perlu diaktifkan lagi.</p>
+            </article>
+
+            <article class="card">
+                <h4>Pesan “tidak ada koneksi” itu wajar</h4>
+                <p>Aplikasi yang diblokir akan menampilkan pesan tidak ada koneksi. Itu memang tujuannya.</p>
+            </article>
+
+            <article class="card">
+                <h4>Hati-hati dengan aplikasi sistem</h4>
+                <p>Jangan blokir aplikasi sistem penting (misalnya Google Play Services) kecuali Anda paham akibatnya.</p>
+            </article>
+
+            <article class="card">
+                <h4>Mulai otomatis</h4>
+                <p>Opsi Mulai otomatis menyalakan lagi firewall setelah HP dihidupkan ulang.</p>
+            </article>
+
+        </div>
+
+        <h3 class="sub-title">Jika Ada Masalah</h3>
+
+        <div class="grid">
+            <article class="card">
+                <span class="tag warn">Masalah</span>
+                <h4>Tombol Aktifkan hanya menampilkan pesan</h4>
+                <p><strong>Solusi:</strong> Centang minimal satu aplikasi lebih dulu, lalu tekan Aktifkan Firewall lagi.</p>
+            </article>
+
+            <article class="card">
+                <span class="tag warn">Masalah</span>
+                <h4>Firewall mati sendiri</h4>
+                <p><strong>Solusi:</strong> Kemungkinan VPN lain mengambil alih, atau masa trial/aktivasi berakhir.</p>
+            </article>
+
+            <article class="card">
+                <span class="tag warn">Masalah</span>
+                <h4>Aplikasi tertentu masih online</h4>
+                <p><strong>Solusi:</strong> Pastikan aplikasinya tercentang dan status firewall Aktif.</p>
+            </article>
+
         </div>
     </section>
 
-    <!-- [BARU] Perbandingan dengan VPN biasa -->
     <section class="section" id="vs-vpn" aria-labelledby="judul-vs-vpn">
         <h2 id="judul-vs-vpn">AllOne Net Firewall vs VPN Biasa</h2>
 
@@ -1327,7 +1577,7 @@ footer strong {
                 <tbody>
                     <tr>
                         <th scope="row">Tujuan utama</th>
-                        <td>Memblokir internet per aplikasi dan memfilter host iklan</td>
+                        <td>Memutus internet per aplikasi yang dipilih</td>
                         <td>Menyambungkan perangkat ke server VPN</td>
                     </tr>
                     <tr>
@@ -1355,31 +1605,6 @@ footer strong {
         </div>
     </section>
 
-    <section class="section" aria-labelledby="judul-filter">
-        <h2 id="judul-filter">Filter Iklan, Pelacak, DoH, dan DoT</h2>
-
-        <p>
-            Filter DNS membantu mencegah koneksi ke domain iklan atau
-            pelacak yang tercantum dalam daftar pemblokiran. Anda juga
-            dapat menambahkan host kustom sesuai kebutuhan.
-        </p>
-
-        <p>
-            Aplikasi turut memblokir sejumlah endpoint DNS-over-HTTPS
-            (DoH) dan DNS-over-TLS (DoT) yang umum, termasuk endpoint
-            tertentu dan port DNS terenkripsi yang menjadi sasaran filter.
-        </p>
-
-        <p>
-            <strong>Batasan penting:</strong> filter DNS tidak menjamin
-            semua iklan akan hilang. Iklan yang menggunakan alamat IP
-            langsung, konten yang sudah tertanam di aplikasi, atau jalur
-            jaringan yang tidak bergantung pada DNS mungkin tetap tampil.
-            Endpoint DoH yang tidak tercakup dalam daftar pemblokiran juga
-            mungkin tetap dapat digunakan.
-        </p>
-    </section>
-
     <section class="section" id="privasi" aria-labelledby="judul-privasi">
         <h2 id="judul-privasi">Privasi dan Perlindungan Data</h2>
 
@@ -1393,15 +1618,9 @@ footer strong {
 
         <p>
             Aplikasi menggunakan VPN Service lokal untuk fungsi firewall
-            dan tidak membutuhkan server VPN eksternal untuk memfilter
-            koneksi aplikasi.
-        </p>
-
-        <p>
-            Namun, ketika filter DNS meneruskan kueri yang tidak diblokir,
-            kueri tersebut dapat dikirim ke resolver DNS publik yang
-            dikonfigurasi. Resolver tersebut dapat memproses informasi
-            DNS sesuai kebijakan privasinya sendiri.
+            dan tidak membutuhkan server VPN eksternal. Menurut panduan di
+            dalam aplikasi, tidak ada data yang keluar dari perangkat, dan
+            aplikasi yang tidak Anda centang tidak terpengaruh.
         </p>
 
         <p>
@@ -1471,10 +1690,10 @@ footer strong {
             </article>
 
             <article class="card">
-                <h3>Mengurangi Koneksi ke Host Iklan</h3>
+                <h3>Menghemat Kuota Data</h3>
                 <p>
-                    Gunakan filter DNS untuk membatasi koneksi ke domain
-                    iklan dan pelacak yang tercantum dalam daftar filter.
+                    Putus internet aplikasi yang boros kuota atau penuh
+                    iklan agar paket data Anda lebih awet.
                 </p>
             </article>
 
@@ -1495,85 +1714,105 @@ footer strong {
         <details>
             <summary>Apa itu AllOne Net Firewall?</summary>
             <p>
-                AllOne Net Firewall adalah aplikasi Android tanpa root
-                untuk memblokir akses internet per aplikasi dan memfilter
-                host iklan serta pelacak melalui DNS.
+                AllOne Net Firewall adalah aplikasi Android tanpa root untuk memutus akses internet aplikasi yang Anda pilih, per aplikasi, memakai VPN Service lokal bawaan Android.
             </p>
         </details>
 
         <details>
             <summary>Apakah aplikasi membutuhkan root?</summary>
             <p>
-                Tidak. Aplikasi menggunakan VPN Service bawaan Android
-                untuk menjalankan fungsi firewall tanpa root.
+                Tidak. Aplikasi menggunakan VPN Service bawaan Android untuk menjalankan fungsi firewall tanpa root.
             </p>
         </details>
 
         <details>
             <summary>Apakah ini VPN untuk mengganti IP atau lokasi?</summary>
             <p>
-                Bukan. VPN Service digunakan sebagai mekanisme firewall
-                lokal, bukan untuk menyambungkan perangkat ke server VPN
-                eksternal atau mengganti IP dan lokasi.
+                Bukan. VPN Service digunakan sebagai mekanisme firewall lokal, bukan untuk menyambungkan perangkat ke server VPN eksternal atau mengganti IP dan lokasi.
             </p>
         </details>
 
         <details>
-            <summary>Apakah semua iklan bisa diblokir?</summary>
+            <summary>Kenapa ada ikon kunci atau VPN di bilah status?</summary>
             <p>
-                Tidak selalu. Filter DNS dapat membantu memblokir host
-                iklan dan pelacak yang tercantum dalam daftar. Iklan yang
-                menggunakan IP langsung atau konten yang tidak bergantung
-                pada DNS mungkin tetap tampil.
+                Itu normal. Android menandai setiap VPN, termasuk VPN lokal yang dipakai AllOne Net Firewall. Menurut panduan di dalam aplikasi, tidak ada data yang keluar dari perangkat.
             </p>
         </details>
 
         <details>
-            <summary>Apakah DoH dan DoT bisa diblokir?</summary>
+            <summary>Bagaimana cara memblokir internet satu aplikasi?</summary>
             <p>
-                Aplikasi berupaya memblokir sejumlah endpoint DoH dan DoT
-                yang umum. Endpoint lain di luar daftar pemblokiran
-                mungkin tetap dapat digunakan.
+                Di daftar aplikasi, ketuk aplikasi yang ingin diblokir sampai kotak tercentang dan label DIBLOKIR muncul, lalu tekan Aktifkan Firewall. Saat pertama kali, setujui penjelasan dan izinkan permintaan VPN dari Android.
+            </p>
+        </details>
+
+        <details>
+            <summary>Apakah aplikasi yang tidak dicentang ikut terpengaruh?</summary>
+            <p>
+                Tidak. Aplikasi yang tidak dicentang tidak terpengaruh dan internetnya tetap normal.
+            </p>
+        </details>
+
+        <details>
+            <summary>Apakah AllOne Net Firewall bisa memblokir iklan?</summary>
+            <p>
+                AllOne Net Firewall tidak memiliki filter iklan. Fungsinya memutus seluruh akses internet aplikasi yang Anda centang, sehingga aplikasi tersebut tidak dapat memuat konten online, termasuk iklan, selama diblokir.
+            </p>
+        </details>
+
+        <details>
+            <summary>Bisakah dipakai bersamaan dengan VPN lain?</summary>
+            <p>
+                Tidak bersamaan. Android hanya mengizinkan satu VPN aktif. Jika Anda menyalakan VPN lain, firewall ini berhenti dan perlu diaktifkan lagi.
+            </p>
+        </details>
+
+        <details>
+            <summary>Aplikasi apa yang sebaiknya tidak diblokir?</summary>
+            <p>
+                Jangan blokir aplikasi sistem penting, misalnya Google Play Services, kecuali Anda paham akibatnya.
+            </p>
+        </details>
+
+        <details>
+            <summary>Kenapa firewall mati sendiri?</summary>
+            <p>
+                Kemungkinan VPN lain mengambil alih, atau masa trial atau aktivasi berakhir.
+            </p>
+        </details>
+
+        <details>
+            <summary>Kenapa aplikasi tertentu masih bisa online?</summary>
+            <p>
+                Pastikan aplikasinya tercentang dan status firewall Aktif.
             </p>
         </details>
 
         <details>
             <summary>Apakah data saya dikirim ke server pengembang?</summary>
             <p>
-                Menurut rancangan aplikasi, tidak ada akun, telemetri,
-                atau backend pengembang dan data aplikasi disimpan di
-                perangkat. Namun, kueri DNS yang tidak diblokir dapat
-                diteruskan ke resolver DNS publik sesuai konfigurasi filter.
-                Baca juga
-                <a href="https://sites.google.com/view/allonenetfirewall/halaman-muka"
-                   target="_blank"
-                   rel="noopener noreferrer">Kebijakan Privasi</a>.
+                Menurut rancangan aplikasi, tidak ada akun, telemetri, atau backend pengembang, data aplikasi disimpan di perangkat, dan menurut panduan di dalam aplikasi tidak ada data yang keluar dari perangkat. Baca juga <a href="https://sites.google.com/view/allonenetfirewall/halaman-muka" target="_blank" rel="noopener noreferrer">Kebijakan Privasi</a>.
             </p>
         </details>
 
         <details>
             <summary>Apakah lisensinya berlangganan?</summary>
             <p>
-                Tidak. Lisensi menggunakan sistem sekali beli dan berlaku
-                seumur hidup pada perangkat yang diaktivasi sesuai
-                ketentuan lisensi. Trial gratis tersedia selama 7 hari.
+                Tidak. Lisensi menggunakan sistem sekali beli dan berlaku seumur hidup pada perangkat yang diaktivasi sesuai ketentuan lisensi. Trial gratis tersedia selama 7 hari.
             </p>
         </details>
 
         <details>
             <summary>Bagaimana cara mendapatkan kode aktivasi?</summary>
             <p>
-                Salin Device ID dari aplikasi dan kirimkan kepada penjual
-                atau admin untuk mendapatkan kode aktivasi.
+                Salin Device ID dari aplikasi dan kirimkan kepada penjual atau admin melalui saluran kontak yang tersedia untuk memperoleh kode aktivasi.
             </p>
         </details>
 
         <details>
             <summary>Apakah firewall otomatis aktif setelah reboot?</summary>
             <p>
-                Tersedia opsi untuk memulai firewall secara otomatis
-                setelah perangkat menyala. Perilaku aktual dapat bergantung
-                pada pengaturan Android dan izin sistem.
+                Tersedia opsi Mulai otomatis saat perangkat menyala. Perilaku aktual dapat bergantung pada pengaturan Android dan izin sistem.
             </p>
         </details>
     </section>
@@ -1588,7 +1827,7 @@ footer strong {
 
         <div class="download-buttons">
             <a class="btn btn-green"
-               href="https://drive.google.com/file/d/1ephwXXWHveWHkGbahITk5fcHfbnZFJqF/view?usp=drivesdk"
+               href="https://drive.google.com/file/d/1998Up0ugZqedrHo7-F9bjELG88krd8Ac/view?usp=drivesdk"
                target="_blank"
                rel="noopener noreferrer"
                aria-label="Download APK AllOne Net Firewall melalui Google Drive">
@@ -1617,7 +1856,7 @@ footer strong {
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 16.1c-.8 0-1.5.3-2 .8l-7.1-4.2c.1-.2.1-.5.1-.7s0-.5-.1-.7L16 7.2c.5.5 1.2.8 2 .8a3 3 0 1 0-3-3c0 .2 0 .5.1.7L8 9.8A3 3 0 1 0 6 15c.8 0 1.5-.3 2-.8l7.1 4.2c-.1.2-.1.4-.1.6a2.9 2.9 0 1 0 3-2.9z"/></svg> Bagikan…
             </button>
 
-            <a class="share-btn share-wa" href="https://wa.me/?text=AllOne%20Net%20Firewall%3A%20firewall%20Android%20tanpa%20root%20untuk%20blokir%20internet%20per%20aplikasi%20%26%20filter%20host%20iklan.%20Coba%20gratis%207%20hari%21%20https%3A%2F%2Fallone-cyber.github.io%2FAllOne-Net-Firewall%2F%3Futm_source%3Dwhatsapp"
+            <a class="share-btn share-wa" href="https://wa.me/?text=AllOne%20Net%20Firewall%3A%20firewall%20Android%20tanpa%20root%20untuk%20blokir%20internet%20per%20aplikasi%20dengan%20satu%20ketukan.%20Hemat%20kuota%2C%20coba%20gratis%207%20hari%21%20https%3A%2F%2Fallone-cyber.github.io%2FAllOne-Net-Firewall%2F%3Futm_source%3Dwhatsapp"
                target="_blank" rel="noopener noreferrer"
                aria-label="Bagikan ke WhatsApp">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-1.5-.7-2.5-1.3-3.4-2.9-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.6-.9 2.6.3 1.3 1 2.5 2 3.5 1.4 1.4 3.2 2.3 5.2 2.6 1 .1 2-.3 2.5-1.1.2-.4.2-.8.1-1-.1-.1-.3-.2-.6-.3z"/></svg> WhatsApp
@@ -1629,7 +1868,7 @@ footer strong {
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-.9.4-1.7 1.8-1.7h1.6V3.8c-.3 0-1.3-.2-2.4-.2-2.5 0-4.1 1.5-4.1 4.2v2.7H7.6v3.3h2.8V22h3.1z"/></svg> Facebook
             </a>
 
-            <a class="share-btn share-x" href="https://x.com/intent/post?text=AllOne%20Net%20Firewall%3A%20firewall%20Android%20tanpa%20root%20untuk%20blokir%20internet%20per%20aplikasi%20%26%20filter%20host%20iklan.%20Coba%20gratis%207%20hari%21&url=https%3A%2F%2Fallone-cyber.github.io%2FAllOne-Net-Firewall%2F%3Futm_source%3Dx"
+            <a class="share-btn share-x" href="https://x.com/intent/post?text=AllOne%20Net%20Firewall%3A%20firewall%20Android%20tanpa%20root%20untuk%20blokir%20internet%20per%20aplikasi%20dengan%20satu%20ketukan.%20Hemat%20kuota%2C%20coba%20gratis%207%20hari%21&url=https%3A%2F%2Fallone-cyber.github.io%2FAllOne-Net-Firewall%2F%3Futm_source%3Dx"
                target="_blank" rel="noopener noreferrer"
                aria-label="Bagikan ke X (Twitter)">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.3L5.3 21H2.2l7.3-8.3L2 3h6.4l4.4 5.8L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg> X / Twitter
@@ -1664,13 +1903,13 @@ footer strong {
         <h2 id="judul-cta">Ambil Kendali atas Koneksi Aplikasi Anda</h2>
 
         <p>
-            Pilih aplikasi yang akses internetnya ingin diputus, atur
-            filter host iklan, dan gunakan firewall sesuai kebutuhan.
+            Ketuk aplikasi yang akses internetnya ingin diputus, aktifkan
+            firewall, dan hemat kuota data Anda tanpa root.
         </p>
 
         <div class="buttons">
             <a class="btn btn-green"
-               href="https://drive.google.com/file/d/1ephwXXWHveWHkGbahITk5fcHfbnZFJqF/view?usp=drivesdk"
+               href="https://drive.google.com/file/d/1998Up0ugZqedrHo7-F9bjELG88krd8Ac/view?usp=drivesdk"
                target="_blank"
                rel="noopener noreferrer">
                 ⬇ Download AllOne Net Firewall
@@ -1691,8 +1930,8 @@ footer strong {
     <p><strong>AllOne Net Firewall</strong></p>
 
     <p>
-        Firewall Android tanpa root dengan kontrol internet per aplikasi
-        dan filter host iklan berbasis DNS.
+        Firewall Android tanpa root dengan kontrol internet per aplikasi.
+        Versi 1.3.0 • Pengembang: Wawan Alwani.
     </p>
 
     <div class="footer-links">
@@ -1720,7 +1959,7 @@ footer strong {
 
     var BASE  = "https://allone-cyber.github.io/AllOne-Net-Firewall/";
     var TITLE = "AllOne Net Firewall — Firewall Android Tanpa Root";
-    var TEXT  = "Firewall Android tanpa root: blokir internet per aplikasi dan filter host iklan. Coba gratis 7 hari!";
+    var TEXT  = "Firewall Android tanpa root: blokir internet per aplikasi dengan satu ketukan. Hemat kuota, coba gratis 7 hari!";
     var toast = document.getElementById("toast");
     var timer = null;
 
