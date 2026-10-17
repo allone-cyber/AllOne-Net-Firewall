@@ -44,6 +44,19 @@ CHANGELOG (v2 — optimasi SEO + screenshot)
   caption, dan schema disesuaikan. Device ID di gambar ini diburamkan.
 - Rasio gambar diperbarui 9:20 (sesuai 1080x2400); width/height 720x1600.
 
+[Revisi 3 — link download & fitur bagikan]
+- Link Google Drive APK diganti ke ID file baru (1ephwXX...) di 4 tempat:
+  downloadUrl pada JSON-LD, tombol hero, tombol section download, tombol CTA.
+- Section baru "Bagikan AllOne Net Firewall" (#bagikan), sebelum CTA:
+  WhatsApp, Facebook, X/Twitter memakai tautan share resmi (tanpa JS);
+  Instagram & TikTok: salin link + buka situsnya (kedua platform tidak
+  punya URL share web); Salin Link; tombol "Bagikan..." bawaan HP
+  (Web Share API, tampil hanya jika browser mendukung).
+- Tiap tautan memakai ?utm_source=<platform> untuk pelacakan; canonical
+  tetap mengarah ke URL bersih sehingga tidak ada konten duplikat.
+- JS murni inline (tanpa pustaka luar), fallback copy via execCommand,
+  notifikasi toast beraria-live.
+
 [Dipertahankan tanpa perubahan]
 - Seluruh fitur, 12 kartu fitur, 6 langkah, VPN box, privasi, lisensi,
   "cocok untuk", 9 FAQ, tombol download, tombol WhatsApp admin, footer,
@@ -100,7 +113,7 @@ CHANGELOG (v2 — optimasi SEO + screenshot)
   "description": "Aplikasi firewall Android tanpa root untuk memblokir akses internet per aplikasi, memfilter host iklan dan pelacak melalui DNS, serta membatasi sejumlah endpoint DNS terenkripsi.",
   "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/",
   "image": "https://allone-cyber.github.io/AllOne-Net-Firewall/preview.png",
-  "downloadUrl": "https://drive.google.com/file/d/1Di9zAt82bh9VQFFxrmejPYjbqX2Wpr1F/view?usp=drivesdk",
+  "downloadUrl": "https://drive.google.com/file/d/1ephwXXWHveWHkGbahITk5fcHfbnZFJqF/view?usp=drivesdk",
   "featureList": [
     "Blokir internet per aplikasi",
     "Filter host iklan dan pelacak berbasis DNS",
@@ -779,6 +792,93 @@ footer strong {
     text-decoration: underline;
 }
 
+
+/* [BARU] Bagikan halaman */
+.share-box {
+    text-align: center;
+}
+
+.share-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    min-height: 46px;
+    padding: 10px 18px;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--brand, var(--green));
+    border-radius: 12px;
+    background: var(--card);
+    color: var(--text);
+    font: inherit;
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform .2s, border-color .2s;
+}
+
+.share-btn:hover {
+    transform: translateY(-2px);
+    border-color: var(--brand, var(--green));
+}
+
+.share-btn svg {
+    width: 18px;
+    height: 18px;
+    flex: none;
+    fill: currentColor;
+}
+
+.share-btn[hidden] {
+    display: none;
+}
+
+.share-wa  { --brand: #25d366; }
+.share-fb  { --brand: #1877f2; }
+.share-ig  { --brand: #e1306c; }
+.share-tt  { --brand: #25f4ee; }
+.share-x   { --brand: #e7e9ea; }
+.share-cp  { --brand: var(--green); }
+
+.share-hint {
+    max-width: 640px;
+    margin: 14px auto 0;
+    color: #8d99aa;
+    font-size: 12.5px;
+}
+
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: 24px;
+    z-index: 50;
+    max-width: calc(100% - 32px);
+    padding: 12px 18px;
+    border-radius: 12px;
+    background: var(--green);
+    color: #00150b;
+    font-size: 14px;
+    font-weight: 800;
+    text-align: center;
+    transform: translate(-50%, 24px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s, transform .25s;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
 @media (max-width: 980px) {
     .shots {
         grid-template-columns: repeat(2, 1fr);
@@ -908,7 +1008,7 @@ footer strong {
 
     <div class="buttons">
         <a class="btn btn-green"
-           href="https://drive.google.com/file/d/1Di9zAt82bh9VQFFxrmejPYjbqX2Wpr1F/view?usp=drivesdk"
+           href="https://drive.google.com/file/d/1ephwXXWHveWHkGbahITk5fcHfbnZFJqF/view?usp=drivesdk"
            target="_blank"
            rel="noopener noreferrer">
             ⬇ Download APK
@@ -1488,7 +1588,7 @@ footer strong {
 
         <div class="download-buttons">
             <a class="btn btn-green"
-               href="https://drive.google.com/file/d/1Di9zAt82bh9VQFFxrmejPYjbqX2Wpr1F/view?usp=drivesdk"
+               href="https://drive.google.com/file/d/1ephwXXWHveWHkGbahITk5fcHfbnZFJqF/view?usp=drivesdk"
                target="_blank"
                rel="noopener noreferrer"
                aria-label="Download APK AllOne Net Firewall melalui Google Drive">
@@ -1498,6 +1598,65 @@ footer strong {
 
         <p class="hero-note">
             Android • Tanpa root • Trial gratis 7 hari • Lisensi sekali beli
+        </p>
+    </section>
+
+    <!-- [BARU] Bagikan halaman. WhatsApp, Facebook, dan X memakai tautan share resmi.
+         Instagram dan TikTok tidak menyediakan tautan share web, jadi tombolnya
+         menyalin link lalu membuka situsnya (lihat skrip di bawah). -->
+    <section class="section share-box" id="bagikan" aria-labelledby="judul-bagikan">
+        <h2 id="judul-bagikan">Bagikan AllOne Net Firewall</h2>
+
+        <p>
+            Kenal teman atau keluarga yang butuh firewall Android tanpa root?
+            Bagikan halaman ini lewat media sosial favorit Anda.
+        </p>
+
+        <div class="share-buttons">
+            <button type="button" class="share-btn" id="share-native" hidden>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 16.1c-.8 0-1.5.3-2 .8l-7.1-4.2c.1-.2.1-.5.1-.7s0-.5-.1-.7L16 7.2c.5.5 1.2.8 2 .8a3 3 0 1 0-3-3c0 .2 0 .5.1.7L8 9.8A3 3 0 1 0 6 15c.8 0 1.5-.3 2-.8l7.1 4.2c-.1.2-.1.4-.1.6a2.9 2.9 0 1 0 3-2.9z"/></svg> Bagikan…
+            </button>
+
+            <a class="share-btn share-wa" href="https://wa.me/?text=AllOne%20Net%20Firewall%3A%20firewall%20Android%20tanpa%20root%20untuk%20blokir%20internet%20per%20aplikasi%20%26%20filter%20host%20iklan.%20Coba%20gratis%207%20hari%21%20https%3A%2F%2Fallone-cyber.github.io%2FAllOne-Net-Firewall%2F%3Futm_source%3Dwhatsapp"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Bagikan ke WhatsApp">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-1.5-.7-2.5-1.3-3.4-2.9-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.6-.9 2.6.3 1.3 1 2.5 2 3.5 1.4 1.4 3.2 2.3 5.2 2.6 1 .1 2-.3 2.5-1.1.2-.4.2-.8.1-1-.1-.1-.3-.2-.6-.3z"/></svg> WhatsApp
+            </a>
+
+            <a class="share-btn share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fallone-cyber.github.io%2FAllOne-Net-Firewall%2F%3Futm_source%3Dfacebook"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Bagikan ke Facebook">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-.9.4-1.7 1.8-1.7h1.6V3.8c-.3 0-1.3-.2-2.4-.2-2.5 0-4.1 1.5-4.1 4.2v2.7H7.6v3.3h2.8V22h3.1z"/></svg> Facebook
+            </a>
+
+            <a class="share-btn share-x" href="https://x.com/intent/post?text=AllOne%20Net%20Firewall%3A%20firewall%20Android%20tanpa%20root%20untuk%20blokir%20internet%20per%20aplikasi%20%26%20filter%20host%20iklan.%20Coba%20gratis%207%20hari%21&url=https%3A%2F%2Fallone-cyber.github.io%2FAllOne-Net-Firewall%2F%3Futm_source%3Dx"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Bagikan ke X (Twitter)">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.3L5.3 21H2.2l7.3-8.3L2 3h6.4l4.4 5.8L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg> X / Twitter
+            </a>
+
+            <a class="share-btn share-ig" href="https://www.instagram.com/"
+               data-copy="instagram" target="_blank" rel="noopener noreferrer"
+               aria-label="Salin link lalu buka Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 1.8A3.7 3.7 0 0 0 3.8 7.5v9a3.7 3.7 0 0 0 3.7 3.7h9a3.7 3.7 0 0 0 3.7-3.7v-9a3.7 3.7 0 0 0-3.7-3.7h-9zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.8a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 0 0 0-6.4zm5.2-2.6a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg> Instagram
+            </a>
+
+            <a class="share-btn share-tt" href="https://www.tiktok.com/"
+               data-copy="tiktok" target="_blank" rel="noopener noreferrer"
+               aria-label="Salin link lalu buka TikTok">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 2h-3.2v13.3a2.7 2.7 0 1 1-2.7-2.7c.3 0 .5 0 .8.1V9.4a6 6 0 1 0 5.1 5.9V8.6a7 7 0 0 0 4 1.3V6.7a4.2 4.2 0 0 1-4-4.7z"/></svg> TikTok
+            </a>
+
+            <button type="button" class="share-btn share-cp" data-copy="salin"
+                    aria-label="Salin link halaman">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"/></svg> Salin Link
+            </button>
+        </div>
+
+        <p class="share-hint">
+            Instagram dan TikTok tidak menyediakan tautan berbagi dari web.
+            Tombolnya menyalin link halaman, lalu tinggal tempel di bio,
+            story, atau deskripsi video Anda.
         </p>
     </section>
 
@@ -1511,7 +1670,7 @@ footer strong {
 
         <div class="buttons">
             <a class="btn btn-green"
-               href="https://drive.google.com/file/d/1Di9zAt82bh9VQFFxrmejPYjbqX2Wpr1F/view?usp=drivesdk"
+               href="https://drive.google.com/file/d/1ephwXXWHveWHkGbahITk5fcHfbnZFJqF/view?usp=drivesdk"
                target="_blank"
                rel="noopener noreferrer">
                 ⬇ Download AllOne Net Firewall
@@ -1550,6 +1709,84 @@ footer strong {
 
     <p>© 2026 AllOne Cyber. All rights reserved.</p>
 </footer>
+
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* [BARU] Fitur bagikan halaman */
+(function () {
+    "use strict";
+
+    var BASE  = "https://allone-cyber.github.io/AllOne-Net-Firewall/";
+    var TITLE = "AllOne Net Firewall — Firewall Android Tanpa Root";
+    var TEXT  = "Firewall Android tanpa root: blokir internet per aplikasi dan filter host iklan. Coba gratis 7 hari!";
+    var toast = document.getElementById("toast");
+    var timer = null;
+
+    function showToast(msg) {
+        toast.textContent = msg;
+        toast.classList.add("show");
+        clearTimeout(timer);
+        timer = setTimeout(function () { toast.classList.remove("show"); }, 3200);
+    }
+
+    function copyText(text) {
+        if (navigator.clipboard && window.isSecureContext) {
+            return navigator.clipboard.writeText(text);
+        }
+        return new Promise(function (resolve, reject) {
+            var ta = document.createElement("textarea");
+            ta.value = text;
+            ta.setAttribute("readonly", "");
+            ta.style.position = "fixed";
+            ta.style.opacity = "0";
+            document.body.appendChild(ta);
+            ta.select();
+            try {
+                document.execCommand("copy") ? resolve() : reject();
+            } catch (e) {
+                reject(e);
+            }
+            document.body.removeChild(ta);
+        });
+    }
+
+    function linkFor(source) {
+        return BASE + "?utm_source=" + encodeURIComponent(source);
+    }
+
+    // Instagram, TikTok, dan Salin Link
+    var copyButtons = document.querySelectorAll("[data-copy]");
+    for (var i = 0; i < copyButtons.length; i++) {
+        copyButtons[i].addEventListener("click", function () {
+            var target = this.getAttribute("data-copy");
+            var isCopyOnly = target === "salin";
+            var link = linkFor(isCopyOnly ? "salin" : target);
+            var label = isCopyOnly ? "" : (target === "instagram" ? "Instagram" : "TikTok");
+
+            copyText(link).then(function () {
+                showToast(isCopyOnly
+                    ? "Link disalin. Silakan tempel di mana saja."
+                    : "Link disalin. Tempel di " + label + " Anda.");
+            }, function () {
+                showToast("Gagal menyalin otomatis. Salin dari: " + BASE);
+            });
+            // Tautan Instagram/TikTok tetap dibuka lewat atribut href + target="_blank".
+        });
+    }
+
+    // Menu bagikan bawaan HP (mencakup Instagram, TikTok, dan aplikasi lain yang terpasang)
+    var nativeBtn = document.getElementById("share-native");
+    if (nativeBtn && navigator.share) {
+        nativeBtn.hidden = false;
+        nativeBtn.addEventListener("click", function () {
+            navigator.share({ title: TITLE, text: TEXT, url: linkFor("share") })
+                .catch(function () { /* dibatalkan pengguna */ });
+        });
+    }
+})();
+</script>
 
 </body>
 </html>
