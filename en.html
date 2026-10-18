@@ -1,0 +1,1978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+=====================================================================
+en.html — English version of the AllOne Net Firewall landing page
+(Indonesian version: index.html). Matches app v1.3.0.
+=====================================================================
+- Separate page per language (not a JS toggle) so Google indexes it as
+  an English page. hreflang: id -> index.html, en -> en.html,
+  x-default -> en.html.
+- Same structure as the Indonesian page: hero, what it does, features,
+  screenshots, how it works, user guide, comparison with a regular VPN,
+  privacy, license, who it's for, 15-question FAQ (HTML and JSON-LD are
+  generated from one list so they always match), download, share, CTA.
+- No ad-filter / DNS content (feature removed in v1.3.0).
+- Screenshots: allone-net-firewall-en-*.jpg in the repo root. Replace
+  them with screenshots taken with the app language set to English;
+  keep the same file names and no HTML change is needed.
+=====================================================================
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>AllOne Net Firewall: Block Internet Per App on Android, No Root</title>
+
+<meta name="description" content="AllOne Net Firewall cuts internet access for the Android apps you choose, no root needed, via a local VPN. Save data, stop background use. 7-day free trial.">
+
+<meta name="keywords" content="AllOne Net Firewall, Android firewall no root, block internet per app Android, per-app internet blocker, stop apps using data, save mobile data Android, no root firewall app, local VPN firewall, block background data Android">
+
+<meta name="author" content="AllOne Cyber">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#07111f">
+<meta name="color-scheme" content="dark">
+<meta name="format-detection" content="telephone=no">
+
+<link rel="canonical" href="https://allone-cyber.github.io/AllOne-Net-Firewall/en.html">
+<link rel="alternate" hreflang="id" href="https://allone-cyber.github.io/AllOne-Net-Firewall/">
+<link rel="alternate" hreflang="en" href="https://allone-cyber.github.io/AllOne-Net-Firewall/en.html">
+<link rel="alternate" hreflang="x-default" href="https://allone-cyber.github.io/AllOne-Net-Firewall/en.html">
+<link rel="icon" type="image/png" href="https://allone-cyber.github.io/AllOne-Net-Firewall/favicon.png">
+<link rel="apple-touch-icon" href="https://allone-cyber.github.io/AllOne-Net-Firewall/favicon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AllOne Cyber">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="id_ID">
+<meta property="og:url" content="https://allone-cyber.github.io/AllOne-Net-Firewall/en.html">
+<meta property="og:title" content="AllOne Net Firewall — Block Internet Per App on Android, No Root">
+<meta property="og:description" content="Tap an app, cut its internet. Save data and stop background use with no root and no external VPN server.">
+<meta property="og:image" content="https://allone-cyber.github.io/AllOne-Net-Firewall/preview.png">
+<meta property="og:image:alt" content="AllOne Net Firewall for Android">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AllOne Net Firewall — Android Firewall, No Root">
+<meta name="twitter:description" content="Block internet per app on Android with one tap, no root needed.">
+<meta name="twitter:image" content="https://allone-cyber.github.io/AllOne-Net-Firewall/preview.png">
+<meta name="twitter:image:alt" content="AllOne Net Firewall for Android">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "@id": "https://allone-cyber.github.io/AllOne-Net-Firewall/#software",
+  "name": "AllOne Net Firewall",
+  "applicationCategory": "SecurityApplication",
+  "applicationSubCategory": "Per-app firewall",
+  "operatingSystem": "Android",
+  "softwareVersion": "1.3.0",
+  "inLanguage": [
+    "en",
+    "id-ID"
+  ],
+  "description": "A no-root Android firewall app that cuts internet access for selected apps, one app at a time, through Android's built-in local VPN Service.",
+  "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/en.html",
+  "image": "https://allone-cyber.github.io/AllOne-Net-Firewall/preview.png",
+  "downloadUrl": "https://drive.google.com/file/d/1998Up0ugZqedrHo7-F9bjELG88krd8Ac/view?usp=drivesdk",
+  "featureList": [
+    "Block internet per app (WiFi and mobile data)",
+    "Blocked label and changes apply instantly",
+    "App search",
+    "Show system apps",
+    "Start automatically when the device turns on",
+    "Status notification with a turn-off button",
+    "In-app user guide",
+    "English and Indonesian language, light, dark, or system theme",
+    "No root required",
+    "No ads inside the app"
+  ],
+  "screenshot": [
+    {
+      "@type": "ImageObject",
+      "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-en-1-app-list.jpg",
+      "caption": "App list with checkboxes and a blocked label"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-en-2-activation.jpg",
+      "caption": "License activation screen and Device ID"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-en-3-user-guide.jpg",
+      "caption": "In-app user guide"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-en-4-settings.jpg",
+      "caption": "Language, theme, guide, and about settings"
+    }
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "AllOne Cyber",
+    "url": "https://allone-cyber.github.io/"
+  },
+  "creator": {
+    "@type": "Person",
+    "name": "Wawan Alwani"
+  },
+  "offers": {
+    "@type": "Offer",
+    "description": "A 7-day free trial and a one-time license for activation on one device, subject to the license terms."
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://allone-cyber.github.io/AllOne-Net-Firewall/en.html#website",
+  "name": "AllOne Net Firewall",
+  "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/en.html",
+  "inLanguage": "en",
+  "publisher": {
+    "@type": "Organization",
+    "name": "AllOne Cyber"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://allone-cyber.github.io/AllOne-Net-Firewall/en.html#webpage",
+  "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/en.html",
+  "name": "AllOne Net Firewall: Block Internet Per App on Android, No Root",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@id": "https://allone-cyber.github.io/AllOne-Net-Firewall/en.html#website"
+  },
+  "about": {
+    "@id": "https://allone-cyber.github.io/AllOne-Net-Firewall/#software"
+  },
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/preview.png"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is AllOne Net Firewall?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AllOne Net Firewall is a no-root Android app that cuts internet access for the apps you choose, one app at a time, using Android's built-in local VPN Service."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does AllOne Net Firewall require root?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The app uses Android's built-in VPN Service to run the firewall, so no root access is needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it a VPN that changes my IP address or location?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The VPN Service is used only as a local firewall mechanism. It does not connect your device to an external VPN server and does not change your IP address or location."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is there a key or VPN icon in the status bar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "That is normal. Android marks every VPN, including the local VPN used by AllOne Net Firewall. According to the in-app guide, no data leaves your device."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I block internet access for one app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In the app list, tap the app you want to block until its checkbox is ticked and a blocked label appears, then turn the firewall on. The first time, accept the explanation and allow Android's VPN request."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are apps I haven't selected affected?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Apps you have not ticked are not affected, and their internet works as normal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can AllOne Net Firewall block ads?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AllOne Net Firewall has no ad filter. It cuts all internet access for the apps you select, so a blocked app cannot load online content, including ads, while it is blocked."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use it together with another VPN?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not at the same time. Android allows only one active VPN. If you turn on another VPN, this firewall stops and must be turned on again."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which apps should I avoid blocking?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Do not block important system apps, such as Google Play Services, unless you understand the consequences."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why did the firewall turn off by itself?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most likely another VPN took over, or your trial or activation period has ended."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is a certain app still online?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Make sure the app is ticked and the firewall status shows Active."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my data sent to the developer's servers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By design, the app has no accounts, telemetry, or developer backend, app data is stored on your device, and according to the in-app guide no data leaves your device."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the license a subscription?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The license is a one-time purchase that is valid for life on the activated device, subject to the license terms. A 7-day free trial is available."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get an activation code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Copy the Device ID from the app and send it to the seller or admin through the contact channels provided to receive an activation code."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the firewall start automatically after a reboot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There is an option to start automatically when the device turns on. Actual behavior may depend on Android settings and system permissions."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+:root {
+    color-scheme: dark;
+    --bg: #07111f;
+    --panel: #0e1a2d;
+    --card: #101d30;
+    --border: #20304a;
+    --green: #00ff88;
+    --text: #f5f7fa;
+    --muted: #aeb9ca;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Roboto, Arial, sans-serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+}
+
+a:focus-visible,
+summary:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 4px;
+}
+
+/* [BARU] Skip link untuk aksesibilitas keyboard */
+.skip-link {
+    position: absolute;
+    left: 12px;
+    top: -60px;
+    z-index: 100;
+    padding: 10px 16px;
+    border-radius: 10px;
+    background: var(--green);
+    color: #00150b;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 12px;
+}
+
+code {
+    padding: 1px 6px;
+    border-radius: 6px;
+    background: rgba(255,255,255,.07);
+    color: var(--text);
+    font-size: .92em;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(7, 17, 31, .95);
+    border-bottom: 1px solid rgba(255,255,255,.07);
+    backdrop-filter: blur(14px);
+    padding: 13px 20px;
+}
+
+.nav-inner {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 900;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.logo span,
+.highlight {
+    color: var(--green);
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    font-size: 14px;
+}
+
+.nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: var(--green);
+}
+
+.hero {
+    text-align: center;
+    padding: 82px 20px 68px;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(0,255,136,.15), transparent 44%),
+        linear-gradient(180deg, #0c1b30 0%, var(--bg) 100%);
+    border-bottom: 1px solid rgba(255,255,255,.05);
+}
+
+.badge {
+    display: inline-block;
+    padding: 7px 15px;
+    border-radius: 30px;
+    background: var(--green);
+    color: #00150b;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .4px;
+}
+
+.hero h1 {
+    max-width: 900px;
+    margin: 20px auto 16px;
+    font-size: clamp(32px, 6.4vw, 54px);
+    line-height: 1.14;
+    letter-spacing: -1.4px;
+}
+
+.hero h1 span {
+    color: var(--green);
+}
+
+.hero-description {
+    max-width: 780px;
+    margin: auto;
+    color: #c3ccda;
+    font-size: 18px;
+}
+
+.hero-note {
+    margin-top: 15px;
+    color: #8d99aa;
+    font-size: 13px;
+}
+
+.buttons,
+.download-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 11px;
+    margin-top: 25px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 49px;
+    padding: 12px 23px;
+    border-radius: 12px;
+    font-weight: 850;
+    text-decoration: none;
+    transition: transform .2s, opacity .2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    opacity: .92;
+}
+
+.btn-green {
+    background: var(--green);
+    color: #00150b;
+}
+
+.btn-dark {
+    background: var(--card);
+    border: 1px solid #2a3950;
+    color: white;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 1px 0 30px;
+}
+
+.section {
+    background: var(--panel);
+    border: 1px solid #1c2a40;
+    border-radius: 20px;
+    padding: 32px 25px;
+    margin: 24px 16px;
+}
+
+.section h2 {
+    font-size: clamp(23px, 4vw, 29px);
+    line-height: 1.3;
+    margin-bottom: 13px;
+    letter-spacing: -.4px;
+}
+
+.section-intro,
+.section p {
+    color: var(--muted);
+}
+
+.section p + p {
+    margin-top: 13px;
+}
+
+.section strong {
+    color: var(--text);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    gap: 14px;
+    margin-top: 22px;
+}
+
+.card,
+.license-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.card {
+    transition: transform .2s, border-color .2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    border-color: #00af66;
+}
+
+.card-icon {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.card h3,
+.license-card h3 {
+    font-size: 17px;
+    line-height: 1.4;
+    margin-bottom: 7px;
+}
+
+.card p,
+.license-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* [BARU] Galeri screenshot */
+.shots {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.shot {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 12px 12px 16px;
+    text-align: center;
+    transition: transform .2s, border-color .2s;
+}
+
+.shot:hover {
+    transform: translateY(-3px);
+    border-color: #00af66;
+}
+
+.shot a {
+    display: block;
+    text-decoration: none;
+}
+
+.shot img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 9 / 20;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: #0a1424;
+}
+
+.shot figcaption {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.shot figcaption strong {
+    display: block;
+    margin-bottom: 2px;
+    color: var(--text);
+    font-size: 14px;
+}
+
+.vpn-box {
+    background: linear-gradient(135deg, rgba(0,255,136,.08), rgba(0,120,255,.06));
+    border: 1px solid rgba(0,255,136,.18);
+    border-radius: 16px;
+    padding: 22px;
+    margin: 20px 0;
+}
+
+.vpn-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .7px;
+    text-transform: uppercase;
+}
+
+.steps {
+    counter-reset: step;
+}
+
+.step {
+    position: relative;
+    padding: 18px 20px 18px 65px;
+    margin: 12px 0;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+}
+
+.step::before {
+    counter-increment: step;
+    content: counter(step);
+    position: absolute;
+    left: 19px;
+    top: 18px;
+    width: 31px;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--green);
+    color: #00150b;
+    font-weight: 900;
+}
+
+.step strong {
+    display: block;
+    margin-bottom: 3px;
+}
+
+/* [BARU] Tabel perbandingan */
+.table-wrap {
+    overflow-x: auto;
+    margin-top: 20px;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+}
+
+.compare {
+    width: 100%;
+    min-width: 560px;
+    border-collapse: collapse;
+    background: var(--card);
+    font-size: 14px;
+}
+
+.compare th,
+.compare td {
+    padding: 14px 16px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border);
+    color: var(--muted);
+}
+
+.compare thead th {
+    color: var(--text);
+    background: #0c1829;
+    font-size: 14px;
+}
+
+.compare thead th.us {
+    color: var(--green);
+}
+
+.compare tbody th {
+    color: var(--text);
+    font-weight: 800;
+}
+
+.compare tr:last-child th,
+.compare tr:last-child td {
+    border-bottom: 0;
+}
+
+.license {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.download-box {
+    text-align: center;
+    background:
+        radial-gradient(circle at top, rgba(0,255,136,.12), transparent 60%),
+        var(--panel);
+}
+
+.faq details {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    margin: 10px 0;
+    padding: 16px 18px;
+}
+
+.faq summary {
+    cursor: pointer;
+    list-style: none;
+    padding-right: 25px;
+    font-weight: 800;
+}
+
+.faq summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq summary::after {
+    content: "+";
+    float: right;
+    color: var(--green);
+    font-size: 20px;
+    margin-right: -22px;
+}
+
+.faq details[open] summary::after {
+    content: "−";
+}
+
+.faq details p {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+.cta {
+    text-align: center;
+    background: linear-gradient(135deg, #10243a, #0c182a);
+}
+
+.cta p {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+footer {
+    padding: 34px 20px;
+    text-align: center;
+    color: #7e8a9d;
+    font-size: 13px;
+    border-top: 1px solid rgba(255,255,255,.05);
+}
+
+footer strong {
+    color: #c3ccda;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin: 13px 0;
+}
+
+.footer-links a {
+    color: var(--green);
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* [BARU] Bagikan halaman */
+.share-box {
+    text-align: center;
+}
+
+.share-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    min-height: 46px;
+    padding: 10px 18px;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--brand, var(--green));
+    border-radius: 12px;
+    background: var(--card);
+    color: var(--text);
+    font: inherit;
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform .2s, border-color .2s;
+}
+
+.share-btn:hover {
+    transform: translateY(-2px);
+    border-color: var(--brand, var(--green));
+}
+
+.share-btn svg {
+    width: 18px;
+    height: 18px;
+    flex: none;
+    fill: currentColor;
+}
+
+.share-btn[hidden] {
+    display: none;
+}
+
+.share-wa  { --brand: #25d366; }
+.share-fb  { --brand: #1877f2; }
+.share-ig  { --brand: #e1306c; }
+.share-tt  { --brand: #25f4ee; }
+.share-x   { --brand: #e7e9ea; }
+.share-cp  { --brand: var(--green); }
+
+.share-hint {
+    max-width: 640px;
+    margin: 14px auto 0;
+    color: #8d99aa;
+    font-size: 12.5px;
+}
+
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: 24px;
+    z-index: 50;
+    max-width: calc(100% - 32px);
+    padding: 12px 18px;
+    border-radius: 12px;
+    background: var(--green);
+    color: #00150b;
+    font-size: 14px;
+    font-weight: 800;
+    text-align: center;
+    transform: translate(-50%, 24px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s, transform .25s;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+
+/* [BARU] Panduan & fungsi */
+.sub-title {
+    margin: 30px 0 4px;
+    font-size: 20px;
+    line-height: 1.35;
+}
+
+.card h4 {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 7px;
+}
+
+.card .tag {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 2px 10px;
+    border-radius: 20px;
+    background: rgba(255,255,255,.07);
+    color: var(--green);
+    font-size: 11.5px;
+    font-weight: 900;
+    letter-spacing: .4px;
+    text-transform: uppercase;
+}
+
+.card .tag.warn {
+    background: rgba(255,90,90,.14);
+    color: #ff8f8f;
+}
+
+.analogy {
+    margin-top: 18px;
+    padding: 18px 20px;
+    border: 1px solid rgba(0,255,136,.2);
+    border-radius: 15px;
+    background: linear-gradient(135deg, rgba(0,255,136,.08), rgba(0,120,255,.05));
+    color: var(--text);
+    font-size: 17px;
+}
+
+
+/* [BARU] Tombol ganti bahasa */
+.lang-switch {
+    flex: none;
+    padding: 6px 13px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--card);
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.lang-switch:hover {
+    border-color: var(--green);
+    color: var(--green);
+}
+
+@media (max-width: 700px) {
+    .lang-switch {
+        position: absolute;
+        top: 11px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 980px) {
+    .shots {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        padding: 12px 15px;
+    }
+
+    .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    /* [DIUBAH] Sebelumnya display:none. Kini bar horizontal yang bisa digeser
+       agar link internal tetap terlihat & bisa dirayapi di mobile. */
+    .nav-links {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+        gap: 16px;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .nav-links::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-links a {
+        white-space: nowrap;
+    }
+
+    .hero {
+        padding: 58px 18px 52px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .section {
+        margin: 16px 10px;
+        padding: 25px 18px;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .step {
+        padding-left: 58px;
+    }
+
+    /* Galeri jadi carousel geser horizontal di HP */
+    .shots {
+        display: flex;
+        overflow-x: auto;
+        gap: 14px;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .shot {
+        flex: 0 0 68%;
+        scroll-snap-align: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<a class="skip-link" href="#content">Skip to main content</a>
+
+<nav class="navbar" aria-label="Main navigation">
+    <div class="nav-inner">
+        <a class="logo" href="#top" aria-label="AllOne Net Firewall">
+            AllOne <span>Net Firewall</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#screenshots">Screenshots</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#guide">User Guide</a>
+            <a href="#privacy">Privacy</a>
+            <a href="#license">License</a>
+            <a href="#faq">FAQ</a>
+            <a href="#download">Download</a>
+        </div>
+
+        <a class="lang-switch" href="./" hreflang="id" lang="id"
+           title="Baca dalam Bahasa Indonesia" aria-label="Baca halaman ini dalam Bahasa Indonesia">🌐 ID</a>
+    </div>
+</nav>
+
+<header class="hero" id="top">
+    <div class="badge">ANDROID FIREWALL • NO ROOT</div>
+
+    <h1>
+        Android Firewall, No Root:
+        <span>Block Internet Per App With One Tap</span>
+    </h1>
+
+    <p class="hero-description">
+        <strong>AllOne Net Firewall</strong> cuts internet access for the
+        apps you choose, one app at a time, with no root. Ideal for stopping
+        apps that eat your data, show too many ads, or send data in the
+        background. No external VPN server and no ads inside the app.
+    </p>
+
+    <div class="buttons">
+        <a class="btn btn-green"
+           href="https://drive.google.com/file/d/1998Up0ugZqedrHo7-F9bjELG88krd8Ac/view?usp=drivesdk"
+           target="_blank"
+           rel="noopener noreferrer">
+            ⬇ Download APK
+        </a>
+
+        <a class="btn btn-dark" href="#features">
+            Explore Features
+        </a>
+    </div>
+
+    <p class="hero-note">
+        No root • 7-day free trial • One-time license
+    </p>
+</header>
+
+<main class="container" id="content">
+
+    <section class="section" aria-labelledby="what-is">
+        <h2 id="what-is">What Is AllOne Net Firewall?</h2>
+
+        <p>
+            AllOne Net Firewall is an Android firewall app that lets you
+            choose which apps are allowed to use the internet. Apps you tick
+            are cut off, on both WiFi and mobile data.
+        </p>
+
+        <p>
+            Everything is set up on the device itself, with no root access
+            and no external VPN server. Just pick your apps, then turn on
+            the firewall.
+        </p>
+
+        <p>
+            <strong>Note:</strong> AllOne Net Firewall does not filter ads
+            inside apps. It cuts all internet access for the apps you tick.
+        </p>
+    </section>
+
+    <section class="section" id="function" aria-labelledby="what-it-does">
+        <h2 id="what-it-does">What Does AllOne Net Firewall Do?</h2>
+
+        <p class="section-intro">
+            It does one simple thing: it cuts internet access for the apps
+            you choose, one by one, with no root.
+        </p>
+
+        <p class="analogy">
+            💡 Think of it as an <strong>internet switch for every app</strong>.
+            Ticked means the internet is off. Apps you don't tick keep working
+            as normal.
+        </p>
+
+        <div class="grid">
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">📶</div>
+                <h3>Save Mobile Data</h3>
+                <p>
+                    Stop data-hungry apps so your data plan doesn't run out without you noticing.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">🚫</div>
+                <h3>Silence Ad-Heavy Apps</h3>
+                <p>
+                    Cut internet for apps that show lots of ads. While blocked, an app cannot load online content.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">🔕</div>
+                <h3>Stop Background Data</h3>
+                <p>
+                    Keep apps from sending or receiving data behind your back when you aren't using them.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <section class="section" id="features" aria-labelledby="features-title">
+        <h2 id="features-title">AllOne Net Firewall Features</h2>
+
+        <p class="section-intro">
+            Per-app internet control in a single Android app.
+        </p>
+
+        <div class="grid">
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">🛡️</div>
+                <h3>Block Internet Per App</h3>
+                <p>
+                    Pick the apps you want to block. While the firewall is on, those apps lose internet access on both WiFi and mobile data. Apps you don't block stay connected.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">🏷️</div>
+                <h3>Clear Blocked Label</h3>
+                <p>
+                    Blocked apps are marked with a ticked checkbox and a blocked label, so you can see at a glance which apps are cut off.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">⚡</div>
+                <h3>Changes Apply Instantly</h3>
+                <p>
+                    Tap an app to block or unblock it. Changes apply automatically, with no need to turn the firewall off first.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">🔍</div>
+                <h3>App Search</h3>
+                <p>
+                    Find apps faster so you can decide which ones should lose internet access.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">⚙️</div>
+                <h3>System Apps</h3>
+                <p>
+                    Show system apps if you want to manage built-in Android apps that appear in the list.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">🔄</div>
+                <h3>Auto Start</h3>
+                <p>
+                    An option to bring the firewall back after the device turns on or finishes rebooting.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">🔔</div>
+                <h3>Status Notification</h3>
+                <p>
+                    See a notification while the firewall is running, including a button to turn it off.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">📖</div>
+                <h3>In-App User Guide</h3>
+                <p>
+                    A full user guide is available in Settings: what it does, how to use it, good to know, and troubleshooting.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">🌙</div>
+                <h3>Language and Theme</h3>
+                <p>
+                    Choose English or Indonesian, plus a light, dark, or system theme.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">ℹ️</div>
+                <h3>Version and Developer Info</h3>
+                <p>
+                    The Settings and About screens show the installed version and the developer's name.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">📵</div>
+                <h3>No Ads Inside the App</h3>
+                <p>
+                    The AllOne Net Firewall interface itself shows no ads.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">🔐</div>
+                <h3>No Root Required</h3>
+                <p>
+                    Uses Android's built-in VPN Service as a local firewall mechanism, with no root needed.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <section class="section" id="screenshots" aria-labelledby="screenshots-title">
+        <h2 id="screenshots-title">AllOne Net Firewall Screenshots</h2>
+
+        <p class="section-intro">
+            See the AllOne Net Firewall interface on Android: the app list
+            with blocked labels, license activation, the user guide, and
+            settings.
+        </p>
+
+        <div class="shots">
+            <figure class="shot">
+                <a href="allone-net-firewall-en-1-app-list.jpg"
+                   target="_blank" rel="noopener">
+                    <img src="allone-net-firewall-en-1-app-list.jpg"
+                         alt="AllOne Net Firewall app list with checkboxes, a blocked label, and the turn-off-firewall button"
+                         width="720" height="1600"
+                         loading="lazy" decoding="async">
+                </a>
+                <figcaption>
+                    <strong>App List</strong>
+                    Tap an app to block it. A blocked label appears.
+                </figcaption>
+            </figure>
+
+            <figure class="shot">
+                <a href="allone-net-firewall-en-2-activation.jpg"
+                   target="_blank" rel="noopener">
+                    <img src="allone-net-firewall-en-2-activation.jpg"
+                         alt="AllOne Net Firewall activation screen: one-time lifetime license, Device ID, and seller contact"
+                         width="720" height="1600"
+                         loading="lazy" decoding="async">
+                </a>
+                <figcaption>
+                    <strong>License Activation</strong>
+                    Copy your Device ID, contact the seller, one-time license.
+                </figcaption>
+            </figure>
+
+            <figure class="shot">
+                <a href="allone-net-firewall-en-3-user-guide.jpg"
+                   target="_blank" rel="noopener">
+                    <img src="allone-net-firewall-en-3-user-guide.jpg"
+                         alt="AllOne Net Firewall user guide dialog: what it does, how to use it, good to know, and troubleshooting"
+                         width="720" height="1600"
+                         loading="lazy" decoding="async">
+                </a>
+                <figcaption>
+                    <strong>In-App Guide</strong>
+                    What it does, how to use it, and fixes for common problems.
+                </figcaption>
+            </figure>
+
+            <figure class="shot">
+                <a href="allone-net-firewall-en-4-settings.jpg"
+                   target="_blank" rel="noopener">
+                    <img src="allone-net-firewall-en-4-settings.jpg"
+                         alt="AllOne Net Firewall v1.3.0 settings: language, theme, user guide, about the app, and privacy policy"
+                         width="720" height="1600"
+                         loading="lazy" decoding="async">
+                </a>
+                <figcaption>
+                    <strong>Settings</strong>
+                    Language, theme, guide, and about the app.
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="section" id="how-it-works" aria-labelledby="how-title">
+        <h2 id="how-title">How Does It Work?</h2>
+
+        <div class="vpn-box">
+            <div class="vpn-label">Local Android VPN</div>
+
+            <p>
+                Android provides a <strong>VPN Service</strong> that apps can
+                use to filter network traffic on the device. AllOne Net
+                Firewall uses this capability to cut the connection of the
+                apps you tick.
+            </p>
+
+            <p>
+                This is not a VPN service for changing your IP address or
+                location. Traffic is not routed through any external VPN
+                server run by the developer. According to the in-app guide,
+                it is a local VPN and no data leaves your device.
+            </p>
+        </div>
+
+        <h3 class="sub-title">What Each Part of the App Does</h3>
+
+        <div class="table-wrap">
+            <table class="compare">
+                <thead>
+                    <tr>
+                        <th scope="col">Part of the app</th>
+                        <th scope="col">What it does</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Firewall status</th>
+                        <td>Shows the firewall is running, along with how many apps have internet and how many are selected for blocking.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Turn on / turn off button</th>
+                        <td>Starts or stops the firewall.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Checkbox + blocked label</th>
+                        <td>Marks apps whose internet is cut. Tap again to unblock.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Search apps</th>
+                        <td>Quickly finds an app in the list.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Show system apps</th>
+                        <td>Adds built-in Android apps to the list.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Start automatically on boot</th>
+                        <td>Turns the firewall back on after the phone restarts.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Activation banner / Device ID</th>
+                        <td>Shows your license status. Tap it to view and copy your Device ID.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Settings</th>
+                        <td>Choose language and theme, and open the user guide, About, and Privacy Policy.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="section" id="guide" aria-labelledby="guide-title">
+        <h2 id="guide-title">AllOne Net Firewall User Guide</h2>
+
+        <p class="section-intro">
+            Follow these 6 steps to start blocking internet access for apps.
+            The same guide is also available inside the app under Settings,
+            User guide.
+        </p>
+
+        <div class="steps">
+            <div class="step">
+                <strong>Install the app</strong>
+                Download the APK from the official Google Drive link on this page, then install it on your Android device.
+            </div>
+
+            <div class="step">
+                <strong>Start the 7-day free trial</strong>
+                Open the app and start the trial period following the on-screen instructions.
+            </div>
+
+            <div class="step">
+                <strong>Tap the apps you want to block</strong>
+                In the app list, tap the app you want to block. A checkbox and a blocked label appear. Use the search box to find apps faster.
+            </div>
+
+            <div class="step">
+                <strong>Turn the firewall on</strong>
+                The first time, accept the explanation and allow Android's VPN request. This permission is needed because the firewall uses a local VPN Service.
+            </div>
+
+            <div class="step">
+                <strong>Done: blocked apps can't go online</strong>
+                Apps you ticked can't use the internet, on WiFi or mobile data.
+            </div>
+
+            <div class="step">
+                <strong>Unblock anytime</strong>
+                Tap the app again (the tick disappears) or turn the firewall off. Changes apply automatically without turning the firewall off.
+            </div>
+
+        </div>
+
+        <h3 class="sub-title">Good to Know</h3>
+
+        <div class="grid">
+            <article class="card">
+                <h4>The key/VPN icon is normal</h4>
+                <p>Android marks every VPN with a key icon in the status bar. This is a local VPN, and no data leaves your device.</p>
+            </article>
+
+            <article class="card">
+                <h4>Other apps are not affected</h4>
+                <p>Apps you haven't ticked are not affected, and their internet works as normal.</p>
+            </article>
+
+            <article class="card">
+                <h4>Only one VPN at a time</h4>
+                <p>Android allows only one active VPN. If you turn on another VPN, this firewall stops and must be turned on again.</p>
+            </article>
+
+            <article class="card">
+                <h4>A “no connection” message is expected</h4>
+                <p>A blocked app will show a no-connection message. That is exactly the point.</p>
+            </article>
+
+            <article class="card">
+                <h4>Be careful with system apps</h4>
+                <p>Don't block important system apps (such as Google Play Services) unless you understand the consequences.</p>
+            </article>
+
+            <article class="card">
+                <h4>Auto start</h4>
+                <p>The auto-start option turns the firewall back on after your phone restarts.</p>
+            </article>
+
+        </div>
+
+        <h3 class="sub-title">Troubleshooting</h3>
+
+        <div class="grid">
+            <article class="card">
+                <span class="tag warn">Problem</span>
+                <h4>The turn-on button only shows a message</h4>
+                <p><strong>Fix:</strong> Tick at least one app first, then try turning the firewall on again.</p>
+            </article>
+
+            <article class="card">
+                <span class="tag warn">Problem</span>
+                <h4>The firewall turns off by itself</h4>
+                <p><strong>Fix:</strong> Another VPN may have taken over, or your trial or activation period has ended.</p>
+            </article>
+
+            <article class="card">
+                <span class="tag warn">Problem</span>
+                <h4>A certain app is still online</h4>
+                <p><strong>Fix:</strong> Make sure the app is ticked and the firewall status shows Active.</p>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="section" id="vs-vpn" aria-labelledby="vs-vpn-title">
+        <h2 id="vs-vpn-title">AllOne Net Firewall vs a Regular VPN</h2>
+
+        <p class="section-intro">
+            Both use Android's VPN Service, but they have different goals.
+            AllOne Net Firewall is a local firewall, not a VPN service for
+            changing your IP address.
+        </p>
+
+        <div class="table-wrap">
+            <table class="compare">
+                <thead>
+                    <tr>
+                        <th scope="col">Aspect</th>
+                        <th scope="col" class="us">AllOne Net Firewall</th>
+                        <th scope="col">Regular VPN</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Main purpose</th>
+                        <td>Cut internet per selected app</td>
+                        <td>Connect the device to a VPN server</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">External VPN server</th>
+                        <td>Not required</td>
+                        <td>Required</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Changes IP / location</th>
+                        <td>No</td>
+                        <td>Usually yes</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Per-app control</th>
+                        <td>Choose which apps lose access</td>
+                        <td>Depends on the VPN service</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Root</th>
+                        <td>Not required</td>
+                        <td>Not required</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="section" id="privacy" aria-labelledby="privacy-title">
+        <h2 id="privacy-title">Privacy and Data Protection</h2>
+
+        <p>
+            By design, AllOne Net Firewall has no user accounts, telemetry,
+            or developer backend. App data is stored on your device, and
+            Android backup is disabled through the
+            <code>allowBackup</code> setting.
+        </p>
+
+        <p>
+            The app uses a local VPN Service for the firewall and does not
+            need an external VPN server. According to the in-app guide, no
+            data leaves your device, and apps you don't tick are not
+            affected.
+        </p>
+
+        <p>
+            For more details, please read the
+            <a href="https://sites.google.com/view/allonenetfirewall/halaman-muka"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="highlight">AllOne Net Firewall Privacy Policy</a>.
+        </p>
+    </section>
+
+    <section class="section" id="license" aria-labelledby="license-title">
+        <h2 id="license-title">7-Day Free Trial and One-Time License</h2>
+
+        <p class="section-intro">
+            Try the app first. If you want to keep using it, activate it with
+            a one-time license.
+        </p>
+
+        <div class="license">
+            <div class="license-card">
+                <h3>🆓 Free Trial</h3>
+                <p>
+                    Use the app for 7 days to try the available features before activating.
+                </p>
+            </div>
+
+            <div class="license-card">
+                <h3>🔑 One-Time Purchase</h3>
+                <p>
+                    The license is not a subscription. After purchase and activation, it is valid for life on the activated device, subject to the license terms.
+                </p>
+            </div>
+
+            <div class="license-card">
+                <h3>📱 Device Activation</h3>
+                <p>
+                    Copy the Device ID from the app and send it to the seller or admin through the contact channels provided to receive an activation code.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section" aria-labelledby="who-title">
+        <h2 id="who-title">Who Is It For?</h2>
+
+        <div class="grid">
+            <article class="card">
+                <h3>Control Internet Access</h3>
+                <p>
+                    Limit specific apps without cutting the internet for every other app.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Limit Background Connections</h3>
+                <p>
+                    Block internet for apps that don't need a network connection while you use them offline.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Save Mobile Data</h3>
+                <p>
+                    Cut internet for data-hungry or ad-heavy apps to make your data plan last longer.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Shared Devices</h3>
+                <p>
+                    Help manage app internet access on a shared device. For children, combine it with proper supervision and family settings.
+                </p>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <details>
+            <summary>What is AllOne Net Firewall?</summary>
+            <p>
+                AllOne Net Firewall is a no-root Android app that cuts internet access for the apps you choose, one app at a time, using Android's built-in local VPN Service.
+            </p>
+        </details>
+
+        <details>
+            <summary>Does AllOne Net Firewall require root?</summary>
+            <p>
+                No. The app uses Android's built-in VPN Service to run the firewall, so no root access is needed.
+            </p>
+        </details>
+
+        <details>
+            <summary>Is it a VPN that changes my IP address or location?</summary>
+            <p>
+                No. The VPN Service is used only as a local firewall mechanism. It does not connect your device to an external VPN server and does not change your IP address or location.
+            </p>
+        </details>
+
+        <details>
+            <summary>Why is there a key or VPN icon in the status bar?</summary>
+            <p>
+                That is normal. Android marks every VPN, including the local VPN used by AllOne Net Firewall. According to the in-app guide, no data leaves your device.
+            </p>
+        </details>
+
+        <details>
+            <summary>How do I block internet access for one app?</summary>
+            <p>
+                In the app list, tap the app you want to block until its checkbox is ticked and a blocked label appears, then turn the firewall on. The first time, accept the explanation and allow Android's VPN request.
+            </p>
+        </details>
+
+        <details>
+            <summary>Are apps I haven't selected affected?</summary>
+            <p>
+                No. Apps you have not ticked are not affected, and their internet works as normal.
+            </p>
+        </details>
+
+        <details>
+            <summary>Can AllOne Net Firewall block ads?</summary>
+            <p>
+                AllOne Net Firewall has no ad filter. It cuts all internet access for the apps you select, so a blocked app cannot load online content, including ads, while it is blocked.
+            </p>
+        </details>
+
+        <details>
+            <summary>Can I use it together with another VPN?</summary>
+            <p>
+                Not at the same time. Android allows only one active VPN. If you turn on another VPN, this firewall stops and must be turned on again.
+            </p>
+        </details>
+
+        <details>
+            <summary>Which apps should I avoid blocking?</summary>
+            <p>
+                Do not block important system apps, such as Google Play Services, unless you understand the consequences.
+            </p>
+        </details>
+
+        <details>
+            <summary>Why did the firewall turn off by itself?</summary>
+            <p>
+                Most likely another VPN took over, or your trial or activation period has ended.
+            </p>
+        </details>
+
+        <details>
+            <summary>Why is a certain app still online?</summary>
+            <p>
+                Make sure the app is ticked and the firewall status shows Active.
+            </p>
+        </details>
+
+        <details>
+            <summary>Is my data sent to the developer's servers?</summary>
+            <p>
+                By design, the app has no accounts, telemetry, or developer backend, app data is stored on your device, and according to the in-app guide no data leaves your device. See also the <a href="https://sites.google.com/view/allonenetfirewall/halaman-muka" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
+            </p>
+        </details>
+
+        <details>
+            <summary>Is the license a subscription?</summary>
+            <p>
+                No. The license is a one-time purchase that is valid for life on the activated device, subject to the license terms. A 7-day free trial is available.
+            </p>
+        </details>
+
+        <details>
+            <summary>How do I get an activation code?</summary>
+            <p>
+                Copy the Device ID from the app and send it to the seller or admin through the contact channels provided to receive an activation code.
+            </p>
+        </details>
+
+        <details>
+            <summary>Does the firewall start automatically after a reboot?</summary>
+            <p>
+                There is an option to start automatically when the device turns on. Actual behavior may depend on Android settings and system permissions.
+            </p>
+        </details>
+    </section>
+
+    <section class="section download-box" id="download" aria-labelledby="download-title">
+        <h2 id="download-title">Download AllOne Net Firewall</h2>
+
+        <p>
+            Get the AllOne Net Firewall APK from the Google Drive link below.
+            Make sure you download the file from the official source.
+        </p>
+
+        <div class="download-buttons">
+            <a class="btn btn-green"
+               href="https://drive.google.com/file/d/1998Up0ugZqedrHo7-F9bjELG88krd8Ac/view?usp=drivesdk"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Download the AllOne Net Firewall APK from Google Drive">
+                ⬇ Download APK from Google Drive
+            </a>
+        </div>
+
+        <p class="hero-note">
+            Android • No root • 7-day free trial • One-time license
+        </p>
+    </section>
+
+    <section class="section share-box" id="bagikan" aria-labelledby="judul-bagikan">
+        <h2 id="judul-bagikan">Share AllOne Net Firewall</h2>
+
+        <p>
+            Know someone who needs a no-root Android firewall?
+            Share this page on your favorite social network.
+        </p>
+
+        <div class="share-buttons">
+            <button type="button" class="share-btn" id="share-native" hidden>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 16.1c-.8 0-1.5.3-2 .8l-7.1-4.2c.1-.2.1-.5.1-.7s0-.5-.1-.7L16 7.2c.5.5 1.2.8 2 .8a3 3 0 1 0-3-3c0 .2 0 .5.1.7L8 9.8A3 3 0 1 0 6 15c.8 0 1.5-.3 2-.8l7.1 4.2c-.1.2-.1.4-.1.6a2.9 2.9 0 1 0 3-2.9z"/></svg> Share…
+            </button>
+
+            <a class="share-btn share-wa" href="https://wa.me/?text=AllOne%20Net%20Firewall%3A%20no-root%20Android%20firewall%20to%20block%20internet%20per%20app%20with%20one%20tap.%20Save%20data%2C%20try%20it%20free%20for%207%20days%21%20https%3A%2F%2Fallone-cyber.github.io%2FAllOne-Net-Firewall%2Fen.html%3Futm_source%3Dwhatsapp"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Share on WhatsApp">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-1.5-.7-2.5-1.3-3.4-2.9-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.6-.9 2.6.3 1.3 1 2.5 2 3.5 1.4 1.4 3.2 2.3 5.2 2.6 1 .1 2-.3 2.5-1.1.2-.4.2-.8.1-1-.1-.1-.3-.2-.6-.3z"/></svg> WhatsApp
+            </a>
+
+            <a class="share-btn share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fallone-cyber.github.io%2FAllOne-Net-Firewall%2Fen.html%3Futm_source%3Dfacebook"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Share on Facebook">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-.9.4-1.7 1.8-1.7h1.6V3.8c-.3 0-1.3-.2-2.4-.2-2.5 0-4.1 1.5-4.1 4.2v2.7H7.6v3.3h2.8V22h3.1z"/></svg> Facebook
+            </a>
+
+            <a class="share-btn share-x" href="https://x.com/intent/post?text=AllOne%20Net%20Firewall%3A%20no-root%20Android%20firewall%20to%20block%20internet%20per%20app%20with%20one%20tap.%20Save%20data%2C%20try%20it%20free%20for%207%20days%21&url=https%3A%2F%2Fallone-cyber.github.io%2FAllOne-Net-Firewall%2Fen.html%3Futm_source%3Dx"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Share on X (Twitter)">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.3L5.3 21H2.2l7.3-8.3L2 3h6.4l4.4 5.8L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg> X / Twitter
+            </a>
+
+            <a class="share-btn share-ig" href="https://www.instagram.com/"
+               data-copy="instagram" target="_blank" rel="noopener noreferrer"
+               aria-label="Copy link, then open Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 1.8A3.7 3.7 0 0 0 3.8 7.5v9a3.7 3.7 0 0 0 3.7 3.7h9a3.7 3.7 0 0 0 3.7-3.7v-9a3.7 3.7 0 0 0-3.7-3.7h-9zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.8a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 0 0 0-6.4zm5.2-2.6a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg> Instagram
+            </a>
+
+            <a class="share-btn share-tt" href="https://www.tiktok.com/"
+               data-copy="tiktok" target="_blank" rel="noopener noreferrer"
+               aria-label="Copy link, then open TikTok">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 2h-3.2v13.3a2.7 2.7 0 1 1-2.7-2.7c.3 0 .5 0 .8.1V9.4a6 6 0 1 0 5.1 5.9V8.6a7 7 0 0 0 4 1.3V6.7a4.2 4.2 0 0 1-4-4.7z"/></svg> TikTok
+            </a>
+
+            <button type="button" class="share-btn share-cp" data-copy="salin"
+                    aria-label="Copy page link">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"/></svg> Copy Link
+            </button>
+        </div>
+
+        <p class="share-hint">
+            Instagram and TikTok don't offer a share link for websites.
+            Those buttons copy the page link, then you can paste it into your
+            bio, story, or video description.
+        </p>
+    </section>
+
+    <section class="section cta" aria-labelledby="cta-title">
+        <h2 id="cta-title">Take Control of Your Apps' Connections</h2>
+
+        <p>
+            Tap the apps whose internet you want to cut, turn on the
+            firewall, and save your mobile data, no root needed.
+        </p>
+
+        <div class="buttons">
+            <a class="btn btn-green"
+               href="https://drive.google.com/file/d/1998Up0ugZqedrHo7-F9bjELG88krd8Ac/view?usp=drivesdk"
+               target="_blank"
+               rel="noopener noreferrer">
+                ⬇ Download AllOne Net Firewall
+            </a>
+
+            <a class="btn btn-dark"
+               href="https://wa.me/628176007215?text=Hello%20Admin%2C%20I%20have%20a%20question%20about%20AllOne%20Net%20Firewall"
+               target="_blank"
+               rel="noopener noreferrer">
+                💬 Contact Admin
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p><strong>AllOne Net Firewall</strong></p>
+
+    <p>
+        No-root Android firewall with per-app internet control.
+        Version 1.3.0 • Developer: Wawan Alwani.
+    </p>
+
+    <div class="footer-links">
+        <a href="https://sites.google.com/view/allonenetfirewall/halaman-muka"
+           target="_blank"
+           rel="noopener noreferrer">
+            Privacy Policy
+        </a>
+
+        <a href="#features">Features</a>
+        <a href="#screenshots">Screenshots</a>
+        <a href="#download">Download</a>
+        <a href="./" hreflang="id" lang="id">Bahasa Indonesia</a>
+    </div>
+
+    <p>© 2026 AllOne Cyber. All rights reserved.</p>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* Share this page */
+(function () {
+    "use strict";
+
+    var BASE  = "https://allone-cyber.github.io/AllOne-Net-Firewall/en.html";
+    var TITLE = "AllOne Net Firewall — Android Firewall, No Root";
+    var TEXT  = "No-root Android firewall: block internet per app with one tap. Save data, try it free for 7 days!";
+    var toast = document.getElementById("toast");
+    var timer = null;
+
+    function showToast(msg) {
+        toast.textContent = msg;
+        toast.classList.add("show");
+        clearTimeout(timer);
+        timer = setTimeout(function () { toast.classList.remove("show"); }, 3200);
+    }
+
+    function copyText(text) {
+        if (navigator.clipboard && window.isSecureContext) {
+            return navigator.clipboard.writeText(text);
+        }
+        return new Promise(function (resolve, reject) {
+            var ta = document.createElement("textarea");
+            ta.value = text;
+            ta.setAttribute("readonly", "");
+            ta.style.position = "fixed";
+            ta.style.opacity = "0";
+            document.body.appendChild(ta);
+            ta.select();
+            try {
+                document.execCommand("copy") ? resolve() : reject();
+            } catch (e) {
+                reject(e);
+            }
+            document.body.removeChild(ta);
+        });
+    }
+
+    function linkFor(source) {
+        return BASE + "?utm_source=" + encodeURIComponent(source);
+    }
+
+    var copyButtons = document.querySelectorAll("[data-copy]");
+    for (var i = 0; i < copyButtons.length; i++) {
+        copyButtons[i].addEventListener("click", function () {
+            var target = this.getAttribute("data-copy");
+            var isCopyOnly = target === "salin";
+            var link = linkFor(isCopyOnly ? "copy" : target);
+            var label = isCopyOnly ? "" : (target === "instagram" ? "Instagram" : "TikTok");
+
+            copyText(link).then(function () {
+                showToast(isCopyOnly
+                    ? "Link copied. Paste it anywhere."
+                    : "Link copied. Paste it in " + label + ".");
+            }, function () {
+                showToast("Couldn't copy automatically. Copy it from: " + BASE);
+            });
+            // Instagram/TikTok links still open via the href + target="_blank" attributes.
+        });
+    }
+
+    var nativeBtn = document.getElementById("share-native");
+    if (nativeBtn && navigator.share) {
+        nativeBtn.hidden = false;
+        nativeBtn.addEventListener("click", function () {
+            navigator.share({ title: TITLE, text: TEXT, url: linkFor("share") })
+                .catch(function () { /* cancelled by the user */ });
+        });
+    }
+})();
+</script>
+
+</body>
+</html>
