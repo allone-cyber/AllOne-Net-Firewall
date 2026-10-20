@@ -4,17 +4,19 @@
 <!--
 =====================================================================
 en.html — English version of the AllOne Net Firewall landing page
-(Indonesian version: index.html). Matches app v1.3.0.
+(Indonesian version: index.html). Matches app v1.5.0.
 =====================================================================
 - Separate page per language (not a JS toggle) so Google indexes it as
   an English page. hreflang: id -> index.html, en -> en.html,
   x-default -> en.html.
 - Same structure as the Indonesian page: hero, what it does, features,
   screenshots, how it works, user guide, comparison with a regular VPN,
-  privacy, license, who it's for, 15-question FAQ (HTML and JSON-LD are
+  privacy, license, who it's for, 19-question FAQ (HTML and JSON-LD are
   generated from one list so they always match), download, share, CTA.
 - No ad-filter / DNS content (feature removed in v1.3.0).
-- Screenshots: allone-net-firewall-en-*.jpg in the repo root. Replace
+- Updated for v1.5.0 (progressive-disclosure UI, Quick Block, Temporary
+  Block, report) with the new Google Drive download link.
+- Screenshots: allone-net-firewall-en-*.jpg in the repo root (6 files). Replace
   them with screenshots taken with the app language set to English;
   keep the same file names and no HTML change is needed.
 =====================================================================
@@ -24,9 +26,9 @@ en.html — English version of the AllOne Net Firewall landing page
 
 <title>AllOne Net Firewall: Block Internet Per App on Android, No Root</title>
 
-<meta name="description" content="AllOne Net Firewall cuts internet access for the Android apps you choose, no root needed, via a local VPN. Save data, stop background use. 7-day free trial.">
+<meta name="description" content="Block internet per app on Android, no root, with AllOne Net Firewall. Easy to use, with quick block, temporary block, and reports. 7-day free trial.">
 
-<meta name="keywords" content="AllOne Net Firewall, Android firewall no root, block internet per app Android, per-app internet blocker, stop apps using data, save mobile data Android, no root firewall app, local VPN firewall, block background data Android">
+<meta name="keywords" content="AllOne Net Firewall, Android firewall no root, block internet per app Android, per-app internet blocker, stop apps using data, save mobile data Android, no root firewall app, local VPN firewall, block background data Android, temporary app blocker, quick block apps by category, blocked connection report">
 
 <meta name="author" content="AllOne Cyber">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -47,7 +49,7 @@ en.html — English version of the AllOne Net Firewall landing page
 <meta property="og:locale:alternate" content="id_ID">
 <meta property="og:url" content="https://allone-cyber.github.io/AllOne-Net-Firewall/en.html">
 <meta property="og:title" content="AllOne Net Firewall — Block Internet Per App on Android, No Root">
-<meta property="og:description" content="Tap an app, cut its internet. Save data and stop background use with no root and no external VPN server.">
+<meta property="og:description" content="Tap an app, cut its internet. Easy to use, with quick block, temporary block, and reports. No root and no external VPN server.">
 <meta property="og:image" content="https://allone-cyber.github.io/AllOne-Net-Firewall/preview.png">
 <meta property="og:image:alt" content="AllOne Net Firewall for Android">
 
@@ -66,7 +68,7 @@ en.html — English version of the AllOne Net Firewall landing page
   "applicationCategory": "SecurityApplication",
   "applicationSubCategory": "Per-app firewall",
   "operatingSystem": "Android",
-  "softwareVersion": "1.3.0",
+  "softwareVersion": "1.5.0",
   "inLanguage": [
     "en",
     "id-ID"
@@ -74,15 +76,20 @@ en.html — English version of the AllOne Net Firewall landing page
   "description": "A no-root Android firewall app that cuts internet access for selected apps, one app at a time, through Android's built-in local VPN Service.",
   "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/en.html",
   "image": "https://allone-cyber.github.io/AllOne-Net-Firewall/preview.png",
-  "downloadUrl": "https://drive.google.com/file/d/1998Up0ugZqedrHo7-F9bjELG88krd8Ac/view?usp=drivesdk",
+  "downloadUrl": "https://drive.google.com/file/d/13iBTNznctksPBgD6BxQjJLRvtM8u1tvJ/view?usp=drivesdk",
   "featureList": [
     "Block internet per app (WiFi and mobile data)",
-    "Blocked label and changes apply instantly",
+    "Simple home screen with step-by-step hints and a 3-step tutorial",
+    "Quick block by category (games, social media, streaming, online shopping)",
+    "Saved lists",
+    "Temporary block from 30 minutes to 8 hours",
+    "Blocked connection report (stored only on the device)",
+    "Confirmation before blocking important phone apps",
+    "Full mode for power users",
     "App search",
     "Show system apps",
     "Start automatically when the device turns on",
     "Status notification with a turn-off button",
-    "In-app user guide",
     "English and Indonesian language, light, dark, or system theme",
     "No root required",
     "No ads inside the app"
@@ -91,22 +98,32 @@ en.html — English version of the AllOne Net Firewall landing page
     {
       "@type": "ImageObject",
       "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-en-1-app-list.jpg",
-      "caption": "App list with checkboxes and a blocked label"
+      "caption": "Status, Blocked tab, and a note under each app."
     },
     {
       "@type": "ImageObject",
-      "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-en-2-activation.jpg",
-      "caption": "License activation screen and Device ID"
+      "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-en-2-more-features.jpg",
+      "caption": "Four extra features, each with a one-line explanation."
     },
     {
       "@type": "ImageObject",
-      "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-en-3-user-guide.jpg",
-      "caption": "In-app user guide"
+      "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-en-3-quick-block.jpg",
+      "caption": "Block a whole category with one tap, save favorite lists."
     },
     {
       "@type": "ImageObject",
-      "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-en-4-settings.jpg",
-      "caption": "Language, theme, guide, and about settings"
+      "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-en-4-report.jpg",
+      "caption": "See which connection attempts were stopped."
+    },
+    {
+      "@type": "ImageObject",
+      "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-en-5-settings.jpg",
+      "caption": "Full mode, language, theme, and guide."
+    },
+    {
+      "@type": "ImageObject",
+      "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-en-6-activation.jpg",
+      "caption": "Copy your Device ID, contact the seller, one-time license."
     }
   ],
   "author": {
@@ -195,7 +212,7 @@ en.html — English version of the AllOne Net Firewall landing page
       "name": "Why is there a key or VPN icon in the status bar?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "That is normal. Android marks every VPN, including the local VPN used by AllOne Net Firewall. According to the in-app guide, no data leaves your device."
+        "text": "That is normal. Android marks every VPN, including the local VPN AllOne Net Firewall uses to run the firewall on your device."
       }
     },
     {
@@ -203,7 +220,7 @@ en.html — English version of the AllOne Net Firewall landing page
       "name": "How do I block internet access for one app?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "In the app list, tap the app you want to block until its checkbox is ticked and a blocked label appears, then turn the firewall on. The first time, accept the explanation and allow Android's VPN request."
+        "text": "Tap the app you want to block until its checkbox is ticked and a blocked label appears. The main button changes to a start-blocking button showing the number of apps; tap it. The first time, accept the explanation and allow Android's VPN request."
       }
     },
     {
@@ -216,10 +233,50 @@ en.html — English version of the AllOne Net Firewall landing page
     },
     {
       "@type": "Question",
+      "name": "Is AllOne Net Firewall easy for beginners?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, that is the goal of version 1.5.0. The home screen shows only what you need: hints that follow your progress tell you the next step, the main button explains itself, and a 3-step tutorial appears once on first launch (it can be skipped and reopened). Advanced features live behind a More Features button, and Full mode in Settings is for power users."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are Quick Block and saved lists?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Quick Block blocks every app in a category (games, social media, video and music streaming, or online shopping) with one tap. The category is added to your selection. You can also save your current selection as a saved list and reuse it anytime."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Temporary Block?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Temporary Block turns blocking on for 30 minutes up to 8 hours, then switches itself off."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the blocked connection report show?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The report shows how many connection attempts were stopped today and in total, plus the sites (DNS) that blocked apps tried to reach. Per-app details are available only on Android 10 and later. Site names and counts are stored only on your device and can be deleted with Reset statistics."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Can AllOne Net Firewall block ads?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "AllOne Net Firewall has no ad filter. It cuts all internet access for the apps you select, so a blocked app cannot load online content, including ads, while it is blocked."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will I be warned before blocking important apps?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The app asks for confirmation before you block important phone apps, such as Google services, the Play Store, SystemUI, and the phone app, so you don't break your phone by accident. Still avoid blocking important system apps unless you understand the consequences."
       }
     },
     {
@@ -232,18 +289,10 @@ en.html — English version of the AllOne Net Firewall landing page
     },
     {
       "@type": "Question",
-      "name": "Which apps should I avoid blocking?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Do not block important system apps, such as Google Play Services, unless you understand the consequences."
-      }
-    },
-    {
-      "@type": "Question",
       "name": "Why did the firewall turn off by itself?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Most likely another VPN took over, or your trial or activation period has ended."
+        "text": "Most likely another VPN took over, your trial or activation period has ended, or a Temporary Block finished its set duration."
       }
     },
     {
@@ -251,7 +300,7 @@ en.html — English version of the AllOne Net Firewall landing page
       "name": "Why is a certain app still online?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Make sure the app is ticked and the firewall status shows Active."
+        "text": "Make sure the app is ticked (check the Blocked tab) and the firewall status shows Active."
       }
     },
     {
@@ -259,7 +308,7 @@ en.html — English version of the AllOne Net Firewall landing page
       "name": "Is my data sent to the developer's servers?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "By design, the app has no accounts, telemetry, or developer backend, app data is stored on your device, and according to the in-app guide no data leaves your device."
+        "text": "By design, the app has no accounts, telemetry, or developer backend. App data, including the statistics report, is stored only on your device."
       }
     },
     {
@@ -283,13 +332,12 @@ en.html — English version of the AllOne Net Firewall landing page
       "name": "Does the firewall start automatically after a reboot?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "There is an option to start automatically when the device turns on. Actual behavior may depend on Android settings and system permissions."
+        "text": "There is an option in Settings to start automatically when the device turns on. Actual behavior may depend on Android settings and system permissions."
       }
     }
   ]
 }
 </script>
-
 <style>
 :root {
     color-scheme: dark;
@@ -567,7 +615,7 @@ code {
 /* [BARU] Galeri screenshot */
 .shots {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 16px;
     margin-top: 24px;
 }
@@ -1086,14 +1134,15 @@ footer strong {
 
     <p class="hero-description">
         <strong>AllOne Net Firewall</strong> cuts internet access for the
-        apps you choose, one app at a time, with no root. Ideal for stopping
-        apps that eat your data, show too many ads, or send data in the
+        apps you choose, one app at a time, with no root. The screen is
+        simple: tap an app, then press one button. Ideal for stopping apps
+        that eat your data, show too many ads, or send data in the
         background. No external VPN server and no ads inside the app.
     </p>
 
     <div class="buttons">
         <a class="btn btn-green"
-           href="https://drive.google.com/file/d/1998Up0ugZqedrHo7-F9bjELG88krd8Ac/view?usp=drivesdk"
+           href="https://drive.google.com/file/d/13iBTNznctksPBgD6BxQjJLRvtM8u1tvJ/view?usp=drivesdk"
            target="_blank"
            rel="noopener noreferrer">
             ⬇ Download APK
@@ -1154,7 +1203,6 @@ footer strong {
                     Stop data-hungry apps so your data plan doesn't run out without you noticing.
                 </p>
             </article>
-
             <article class="card">
                 <div class="card-icon" aria-hidden="true">🚫</div>
                 <h3>Silence Ad-Heavy Apps</h3>
@@ -1162,7 +1210,6 @@ footer strong {
                     Cut internet for apps that show lots of ads. While blocked, an app cannot load online content.
                 </p>
             </article>
-
             <article class="card">
                 <div class="card-icon" aria-hidden="true">🔕</div>
                 <h3>Stop Background Data</h3>
@@ -1171,6 +1218,73 @@ footer strong {
                 </p>
             </article>
         </div>
+    </section>
+
+    <section class="section" id="easy" aria-labelledby="easy-title">
+        <h2 id="easy-title">Easy for Beginners, Complete for Power Users</h2>
+
+        <p class="section-intro">
+            Version 1.5.0 shows only what you need on the home screen. Every
+            advanced feature is still there, neatly tucked behind one button.
+        </p>
+
+        <div class="grid">
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">🧭</div>
+                <h3>Hints That Follow Your Progress</h3>
+                <p>
+                    The screen tells you what to do next: tap an app, then press the button below, then an Active status with the number of apps that can't use the internet.
+                </p>
+            </article>
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">🔘</div>
+                <h3>A Button That Explains Itself</h3>
+                <p>
+                    The main button's label changes with the situation: a gray select-an-app-first state, then start blocking with the number of apps, then turn off the firewall.
+                </p>
+            </article>
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">🎓</div>
+                <h3>3-Step Tutorial</h3>
+                <p>
+                    It appears once on first launch, can be skipped, and can be reopened from the menu.
+                </p>
+            </article>
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">🗂️</div>
+                <h3>One More Features Button</h3>
+                <p>
+                    A row of buttons is replaced by one button containing Quick Block, Temporary Block, Report, and How to Use, each with a one-line explanation.
+                </p>
+            </article>
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">💬</div>
+                <h3>Everyday Language</h3>
+                <p>
+                    Technical terms are replaced with plain ones: Quick Block, Saved Lists, Report, and Temporary Block. Package names are replaced with a note saying normal internet or internet cut off.
+                </p>
+            </article>
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">📋</div>
+                <h3>Blocked Tab</h3>
+                <p>
+                    The Blocked tab lists every blocked app in one place, so it's easy to review and unblock them.
+                </p>
+            </article>
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">🛑</div>
+                <h3>Confirmation for Important Apps</h3>
+                <p>
+                    Before you block important phone apps (Google services, the Play Store, SystemUI, the phone app, and similar), the app asks for confirmation so you don't break your phone by accident.
+                </p>
+            </article>
+        </div>
+
+        <p class="analogy">
+            🛠️ <strong>For power users:</strong> turn on Full mode in Settings
+            to show app package names and feature buttons right on the home
+            screen.
+        </p>
     </section>
 
     <section class="section" id="features" aria-labelledby="features-title">
@@ -1188,15 +1302,13 @@ footer strong {
                     Pick the apps you want to block. While the firewall is on, those apps lose internet access on both WiFi and mobile data. Apps you don't block stay connected.
                 </p>
             </article>
-
             <article class="card">
                 <div class="card-icon" aria-hidden="true">🏷️</div>
-                <h3>Clear Blocked Label</h3>
+                <h3>Clear Labels and Notes</h3>
                 <p>
-                    Blocked apps are marked with a ticked checkbox and a blocked label, so you can see at a glance which apps are cut off.
+                    Blocked apps are marked with a ticked checkbox, a blocked label, and a note that their internet is cut. Other apps show normal internet.
                 </p>
             </article>
-
             <article class="card">
                 <div class="card-icon" aria-hidden="true">⚡</div>
                 <h3>Changes Apply Instantly</h3>
@@ -1204,7 +1316,6 @@ footer strong {
                     Tap an app to block or unblock it. Changes apply automatically, with no need to turn the firewall off first.
                 </p>
             </article>
-
             <article class="card">
                 <div class="card-icon" aria-hidden="true">🔍</div>
                 <h3>App Search</h3>
@@ -1212,23 +1323,20 @@ footer strong {
                     Find apps faster so you can decide which ones should lose internet access.
                 </p>
             </article>
-
             <article class="card">
                 <div class="card-icon" aria-hidden="true">⚙️</div>
                 <h3>System Apps</h3>
                 <p>
-                    Show system apps if you want to manage built-in Android apps that appear in the list.
+                    Show system apps from Settings if you want to manage built-in Android apps that appear in the list.
                 </p>
             </article>
-
             <article class="card">
                 <div class="card-icon" aria-hidden="true">🔄</div>
                 <h3>Auto Start</h3>
                 <p>
-                    An option to bring the firewall back after the device turns on or finishes rebooting.
+                    An option in Settings to bring the firewall back after the device turns on or finishes rebooting.
                 </p>
             </article>
-
             <article class="card">
                 <div class="card-icon" aria-hidden="true">🔔</div>
                 <h3>Status Notification</h3>
@@ -1236,15 +1344,20 @@ footer strong {
                     See a notification while the firewall is running, including a button to turn it off.
                 </p>
             </article>
-
             <article class="card">
                 <div class="card-icon" aria-hidden="true">📖</div>
-                <h3>In-App User Guide</h3>
+                <h3>Tutorial and Guide</h3>
                 <p>
-                    A full user guide is available in Settings: what it does, how to use it, good to know, and troubleshooting.
+                    A 3-step tutorial and a full guide are available inside the app and can be reopened anytime.
                 </p>
             </article>
-
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">🛠️</div>
+                <h3>Full Mode for Power Users</h3>
+                <p>
+                    Turn on Full mode in Settings to show app package names and feature buttons right on the home screen.
+                </p>
+            </article>
             <article class="card">
                 <div class="card-icon" aria-hidden="true">🌙</div>
                 <h3>Language and Theme</h3>
@@ -1252,7 +1365,6 @@ footer strong {
                     Choose English or Indonesian, plus a light, dark, or system theme.
                 </p>
             </article>
-
             <article class="card">
                 <div class="card-icon" aria-hidden="true">ℹ️</div>
                 <h3>Version and Developer Info</h3>
@@ -1260,7 +1372,6 @@ footer strong {
                     The Settings and About screens show the installed version and the developer's name.
                 </p>
             </article>
-
             <article class="card">
                 <div class="card-icon" aria-hidden="true">📵</div>
                 <h3>No Ads Inside the App</h3>
@@ -1268,7 +1379,6 @@ footer strong {
                     The AllOne Net Firewall interface itself shows no ads.
                 </p>
             </article>
-
             <article class="card">
                 <div class="card-icon" aria-hidden="true">🔐</div>
                 <h3>No Root Required</h3>
@@ -1279,34 +1389,135 @@ footer strong {
         </div>
     </section>
 
+    <section class="section" id="more-features" aria-labelledby="more-features-title">
+        <h2 id="more-features-title">More Features: Quick Block, Temporary Block, and Reports</h2>
+
+        <p class="section-intro">
+            Everything lives behind one <strong>More Features</strong> button
+            on the home screen, each with a one-line explanation.
+        </p>
+
+        <div class="grid">
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">⚡</div>
+                <h3>Quick Block</h3>
+                <p>
+                    Block all games, social media, video and music streaming, or online shopping apps with one tap. The category is added to your selection, and the number of installed apps in each category is shown.
+                </p>
+            </article>
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">💾</div>
+                <h3>Saved Lists</h3>
+                <p>
+                    Save your current selection as a favorite list (for example, Save Data), reuse it anytime, or delete it. There is also a button to clear all ticks.
+                </p>
+            </article>
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">⏱️</div>
+                <h3>Temporary Block</h3>
+                <p>
+                    Turn blocking on for 30 minutes up to 8 hours, then it switches itself off. Handy when you want a break from certain apps for a while.
+                </p>
+            </article>
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">📊</div>
+                <h3>Blocked Connection Report</h3>
+                <p>
+                    See how many connection attempts were stopped today and in total, plus the sites (DNS) that blocked apps tried to reach. Per-app details are available on Android 10 and later. Data is stored only on your device and can be deleted with Reset statistics.
+                </p>
+            </article>
+        </div>
+
+        <p>
+            <strong>Note:</strong> the report only records connection attempts
+            that were stopped. It is not an ad filter.
+        </p>
+    </section>
+
     <section class="section" id="screenshots" aria-labelledby="screenshots-title">
         <h2 id="screenshots-title">AllOne Net Firewall Screenshots</h2>
 
         <p class="section-intro">
-            See the AllOne Net Firewall interface on Android: the app list
-            with blocked labels, license activation, the user guide, and
-            settings.
+            See the AllOne Net Firewall v1.5.0 interface on Android: the home
+            screen, More Features, Quick Block, the report, settings, and
+            license activation.
         </p>
 
         <div class="shots">
             <figure class="shot">
-                <a href="allone-net-firewall-en-1-app-list.jpg"
+                <a href="allone-net-firewall-en-1-app-list.jpg?v=150"
                    target="_blank" rel="noopener">
-                    <img src="allone-net-firewall-en-1-app-list.jpg"
-                         alt="AllOne Net Firewall app list with checkboxes, a blocked label, and the turn-off-firewall button"
+                    <img src="allone-net-firewall-en-1-app-list.jpg?v=150"
+                         alt="AllOne Net Firewall v1.5.0 home screen: firewall active status, More Features button, All and Blocked tabs, and an app list showing normal or cut-off internet"
                          width="720" height="1600"
                          loading="lazy" decoding="async">
                 </a>
                 <figcaption>
-                    <strong>App List</strong>
-                    Tap an app to block it. A blocked label appears.
+                    <strong>Home Screen</strong>
+                    Status, Blocked tab, and a note under each app.
                 </figcaption>
             </figure>
 
             <figure class="shot">
-                <a href="allone-net-firewall-en-2-activation.jpg"
+                <a href="allone-net-firewall-en-2-more-features.jpg?v=150"
                    target="_blank" rel="noopener">
-                    <img src="allone-net-firewall-en-2-activation.jpg"
+                    <img src="allone-net-firewall-en-2-more-features.jpg?v=150"
+                         alt="AllOne Net Firewall More Features dialog: quick block, temporary block, report, and how to use"
+                         width="720" height="1600"
+                         loading="lazy" decoding="async">
+                </a>
+                <figcaption>
+                    <strong>More Features</strong>
+                    Four extra features, each with a one-line explanation.
+                </figcaption>
+            </figure>
+
+            <figure class="shot">
+                <a href="allone-net-firewall-en-3-quick-block.jpg?v=150"
+                   target="_blank" rel="noopener">
+                    <img src="allone-net-firewall-en-3-quick-block.jpg?v=150"
+                         alt="AllOne Net Firewall quick block dialog: games, social media, video and music streaming, online shopping, and saved lists"
+                         width="720" height="1600"
+                         loading="lazy" decoding="async">
+                </a>
+                <figcaption>
+                    <strong>Quick Block</strong>
+                    Block a whole category with one tap, save favorite lists.
+                </figcaption>
+            </figure>
+
+            <figure class="shot">
+                <a href="allone-net-firewall-en-4-report.jpg?v=150"
+                   target="_blank" rel="noopener">
+                    <img src="allone-net-firewall-en-4-report.jpg?v=150"
+                         alt="AllOne Net Firewall blocked connection report: attempts today and sites that blocked apps tried to reach"
+                         width="720" height="1600"
+                         loading="lazy" decoding="async">
+                </a>
+                <figcaption>
+                    <strong>Report</strong>
+                    See which connection attempts were stopped.
+                </figcaption>
+            </figure>
+
+            <figure class="shot">
+                <a href="allone-net-firewall-en-5-settings.jpg?v=150"
+                   target="_blank" rel="noopener">
+                    <img src="allone-net-firewall-en-5-settings.jpg?v=150"
+                         alt="AllOne Net Firewall v1.5.0 settings: show system apps, auto start, full mode, language, theme, and guide"
+                         width="720" height="1600"
+                         loading="lazy" decoding="async">
+                </a>
+                <figcaption>
+                    <strong>Settings</strong>
+                    Full mode, language, theme, and guide.
+                </figcaption>
+            </figure>
+
+            <figure class="shot">
+                <a href="allone-net-firewall-en-6-activation.jpg?v=150"
+                   target="_blank" rel="noopener">
+                    <img src="allone-net-firewall-en-6-activation.jpg?v=150"
                          alt="AllOne Net Firewall activation screen: one-time lifetime license, Device ID, and seller contact"
                          width="720" height="1600"
                          loading="lazy" decoding="async">
@@ -1314,34 +1525,6 @@ footer strong {
                 <figcaption>
                     <strong>License Activation</strong>
                     Copy your Device ID, contact the seller, one-time license.
-                </figcaption>
-            </figure>
-
-            <figure class="shot">
-                <a href="allone-net-firewall-en-3-user-guide.jpg"
-                   target="_blank" rel="noopener">
-                    <img src="allone-net-firewall-en-3-user-guide.jpg"
-                         alt="AllOne Net Firewall user guide dialog: what it does, how to use it, good to know, and troubleshooting"
-                         width="720" height="1600"
-                         loading="lazy" decoding="async">
-                </a>
-                <figcaption>
-                    <strong>In-App Guide</strong>
-                    What it does, how to use it, and fixes for common problems.
-                </figcaption>
-            </figure>
-
-            <figure class="shot">
-                <a href="allone-net-firewall-en-4-settings.jpg"
-                   target="_blank" rel="noopener">
-                    <img src="allone-net-firewall-en-4-settings.jpg"
-                         alt="AllOne Net Firewall v1.3.0 settings: language, theme, user guide, about the app, and privacy policy"
-                         width="720" height="1600"
-                         loading="lazy" decoding="async">
-                </a>
-                <figcaption>
-                    <strong>Settings</strong>
-                    Language, theme, guide, and about the app.
                 </figcaption>
             </figure>
         </div>
@@ -1363,8 +1546,7 @@ footer strong {
             <p>
                 This is not a VPN service for changing your IP address or
                 location. Traffic is not routed through any external VPN
-                server run by the developer. According to the in-app guide,
-                it is a local VPN and no data leaves your device.
+                server run by the developer. Blocking happens on your device.
             </p>
         </div>
 
@@ -1381,27 +1563,27 @@ footer strong {
                 <tbody>
                     <tr>
                         <th scope="row">Firewall status</th>
-                        <td>Shows the firewall is running, along with how many apps have internet and how many are selected for blocking.</td>
+                        <td>Shows the firewall is running, how many apps can't use the internet, and how many connection attempts were stopped today.</td>
                     </tr>
                     <tr>
-                        <th scope="row">Turn on / turn off button</th>
-                        <td>Starts or stops the firewall.</td>
+                        <th scope="row">Main button (start blocking / turn off)</th>
+                        <td>Its label follows your progress. Starts or stops the firewall.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">More Features</th>
+                        <td>Opens Quick Block, Temporary Block, Report, and How to Use.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">All and Blocked (N) tabs</th>
+                        <td>Switch between all apps and a list of apps that are already blocked.</td>
                     </tr>
                     <tr>
                         <th scope="row">Checkbox + blocked label</th>
-                        <td>Marks apps whose internet is cut. Tap again to unblock.</td>
+                        <td>Marks apps whose internet is cut. Other apps show normal internet. Tap again to unblock.</td>
                     </tr>
                     <tr>
                         <th scope="row">Search apps</th>
                         <td>Quickly finds an app in the list.</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Show system apps</th>
-                        <td>Adds built-in Android apps to the list.</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Start automatically on boot</th>
-                        <td>Turns the firewall back on after the phone restarts.</td>
                     </tr>
                     <tr>
                         <th scope="row">Activation banner / Device ID</th>
@@ -1409,7 +1591,7 @@ footer strong {
                     </tr>
                     <tr>
                         <th scope="row">Settings</th>
-                        <td>Choose language and theme, and open the user guide, About, and Privacy Policy.</td>
+                        <td>Options (show system apps, auto start, Full mode), language, theme, How to Use, About, and Privacy Policy.</td>
                     </tr>
                 </tbody>
             </table>
@@ -1421,8 +1603,7 @@ footer strong {
 
         <p class="section-intro">
             Follow these 6 steps to start blocking internet access for apps.
-            The same guide is also available inside the app under Settings,
-            User guide.
+            The same tutorial and guide are also available inside the app.
         </p>
 
         <div class="steps">
@@ -1433,27 +1614,27 @@ footer strong {
 
             <div class="step">
                 <strong>Start the 7-day free trial</strong>
-                Open the app and start the trial period following the on-screen instructions.
+                Open the app and start the trial period following the on-screen instructions. A 3-step tutorial appears once on first launch.
             </div>
 
             <div class="step">
-                <strong>Tap the apps you want to block</strong>
-                In the app list, tap the app you want to block. A checkbox and a blocked label appear. Use the search box to find apps faster.
+                <strong>Step 1: tap the apps you want to block</strong>
+                A checkbox and a blocked label appear, and the note under the app name changes to show its internet is cut. Use the search box to find apps faster, or use Quick Block in More Features to block a whole category at once.
             </div>
 
             <div class="step">
-                <strong>Turn the firewall on</strong>
-                The first time, accept the explanation and allow Android's VPN request. This permission is needed because the firewall uses a local VPN Service.
+                <strong>Step 2: press the button below</strong>
+                The button changes from a gray select-an-app-first state to start blocking, with the number of apps. The first time, accept the explanation and allow Android's VPN request. This permission is needed because the firewall uses a local VPN Service.
             </div>
 
             <div class="step">
                 <strong>Done: blocked apps can't go online</strong>
-                Apps you ticked can't use the internet, on WiFi or mobile data.
+                The status shows Active with the number of apps that can't use the internet, on WiFi or mobile data.
             </div>
 
             <div class="step">
                 <strong>Unblock anytime</strong>
-                Tap the app again (the tick disappears) or turn the firewall off. Changes apply automatically without turning the firewall off.
+                Tap the app again (the tick disappears), open the Blocked tab to review everything that is blocked, or turn the firewall off. Changes apply automatically without turning the firewall off.
             </div>
 
         </div>
@@ -1463,7 +1644,7 @@ footer strong {
         <div class="grid">
             <article class="card">
                 <h4>The key/VPN icon is normal</h4>
-                <p>Android marks every VPN with a key icon in the status bar. This is a local VPN, and no data leaves your device.</p>
+                <p>Android marks every VPN with a key icon in the status bar. This is a local VPN that runs the firewall on your device.</p>
             </article>
 
             <article class="card">
@@ -1482,13 +1663,18 @@ footer strong {
             </article>
 
             <article class="card">
-                <h4>Be careful with system apps</h4>
-                <p>Don't block important system apps (such as Google Play Services) unless you understand the consequences.</p>
+                <h4>Confirmation for important apps</h4>
+                <p>Before you block important phone apps (Google services, the Play Store, SystemUI, the phone app), the app asks for confirmation. Don't block important system apps unless you understand the consequences.</p>
             </article>
 
             <article class="card">
                 <h4>Auto start</h4>
-                <p>The auto-start option turns the firewall back on after your phone restarts.</p>
+                <p>The auto-start option in Settings turns the firewall back on after your phone restarts.</p>
+            </article>
+
+            <article class="card">
+                <h4>The tutorial can be reopened</h4>
+                <p>Open More Features, then How to Use, or go through Settings, to see the 3-step tutorial and guide again.</p>
             </article>
 
         </div>
@@ -1498,20 +1684,20 @@ footer strong {
         <div class="grid">
             <article class="card">
                 <span class="tag warn">Problem</span>
-                <h4>The turn-on button only shows a message</h4>
-                <p><strong>Fix:</strong> Tick at least one app first, then try turning the firewall on again.</p>
+                <h4>The main button says to select an app first</h4>
+                <p><strong>Fix:</strong> Tap at least one app first. The button label will change to start blocking.</p>
             </article>
 
             <article class="card">
                 <span class="tag warn">Problem</span>
                 <h4>The firewall turns off by itself</h4>
-                <p><strong>Fix:</strong> Another VPN may have taken over, or your trial or activation period has ended.</p>
+                <p><strong>Fix:</strong> Another VPN may have taken over, your trial or activation period has ended, or a Temporary Block has finished its set duration.</p>
             </article>
 
             <article class="card">
                 <span class="tag warn">Problem</span>
                 <h4>A certain app is still online</h4>
-                <p><strong>Fix:</strong> Make sure the app is ticked and the firewall status shows Active.</p>
+                <p><strong>Fix:</strong> Make sure the app is ticked (check the Blocked tab) and the firewall status shows Active.</p>
             </article>
 
         </div>
@@ -1578,9 +1764,14 @@ footer strong {
 
         <p>
             The app uses a local VPN Service for the firewall and does not
-            need an external VPN server. According to the in-app guide, no
-            data leaves your device, and apps you don't tick are not
+            need an external VPN server. Apps you don't tick are not
             affected.
+        </p>
+
+        <p>
+            The blocked connection report stores only site names and attempt
+            counts on your device. You can delete this data anytime with the
+            Reset statistics button.
         </p>
 
         <p>
@@ -1687,14 +1878,14 @@ footer strong {
         <details>
             <summary>Why is there a key or VPN icon in the status bar?</summary>
             <p>
-                That is normal. Android marks every VPN, including the local VPN used by AllOne Net Firewall. According to the in-app guide, no data leaves your device.
+                That is normal. Android marks every VPN, including the local VPN AllOne Net Firewall uses to run the firewall on your device.
             </p>
         </details>
 
         <details>
             <summary>How do I block internet access for one app?</summary>
             <p>
-                In the app list, tap the app you want to block until its checkbox is ticked and a blocked label appears, then turn the firewall on. The first time, accept the explanation and allow Android's VPN request.
+                Tap the app you want to block until its checkbox is ticked and a blocked label appears. The main button changes to a start-blocking button showing the number of apps; tap it. The first time, accept the explanation and allow Android's VPN request.
             </p>
         </details>
 
@@ -1706,9 +1897,44 @@ footer strong {
         </details>
 
         <details>
+            <summary>Is AllOne Net Firewall easy for beginners?</summary>
+            <p>
+                Yes, that is the goal of version 1.5.0. The home screen shows only what you need: hints that follow your progress tell you the next step, the main button explains itself, and a 3-step tutorial appears once on first launch (it can be skipped and reopened). Advanced features live behind a More Features button, and Full mode in Settings is for power users.
+            </p>
+        </details>
+
+        <details>
+            <summary>What are Quick Block and saved lists?</summary>
+            <p>
+                Quick Block blocks every app in a category (games, social media, video and music streaming, or online shopping) with one tap. The category is added to your selection. You can also save your current selection as a saved list and reuse it anytime.
+            </p>
+        </details>
+
+        <details>
+            <summary>What is Temporary Block?</summary>
+            <p>
+                Temporary Block turns blocking on for 30 minutes up to 8 hours, then switches itself off.
+            </p>
+        </details>
+
+        <details>
+            <summary>What does the blocked connection report show?</summary>
+            <p>
+                The report shows how many connection attempts were stopped today and in total, plus the sites (DNS) that blocked apps tried to reach. Per-app details are available only on Android 10 and later. Site names and counts are stored only on your device and can be deleted with Reset statistics.
+            </p>
+        </details>
+
+        <details>
             <summary>Can AllOne Net Firewall block ads?</summary>
             <p>
                 AllOne Net Firewall has no ad filter. It cuts all internet access for the apps you select, so a blocked app cannot load online content, including ads, while it is blocked.
+            </p>
+        </details>
+
+        <details>
+            <summary>Will I be warned before blocking important apps?</summary>
+            <p>
+                Yes. The app asks for confirmation before you block important phone apps, such as Google services, the Play Store, SystemUI, and the phone app, so you don't break your phone by accident. Still avoid blocking important system apps unless you understand the consequences.
             </p>
         </details>
 
@@ -1720,30 +1946,23 @@ footer strong {
         </details>
 
         <details>
-            <summary>Which apps should I avoid blocking?</summary>
-            <p>
-                Do not block important system apps, such as Google Play Services, unless you understand the consequences.
-            </p>
-        </details>
-
-        <details>
             <summary>Why did the firewall turn off by itself?</summary>
             <p>
-                Most likely another VPN took over, or your trial or activation period has ended.
+                Most likely another VPN took over, your trial or activation period has ended, or a Temporary Block finished its set duration.
             </p>
         </details>
 
         <details>
             <summary>Why is a certain app still online?</summary>
             <p>
-                Make sure the app is ticked and the firewall status shows Active.
+                Make sure the app is ticked (check the Blocked tab) and the firewall status shows Active.
             </p>
         </details>
 
         <details>
             <summary>Is my data sent to the developer's servers?</summary>
             <p>
-                By design, the app has no accounts, telemetry, or developer backend, app data is stored on your device, and according to the in-app guide no data leaves your device. See also the <a href="https://sites.google.com/view/allonenetfirewall/halaman-muka" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
+                By design, the app has no accounts, telemetry, or developer backend. App data, including the statistics report, is stored only on your device. See also the <a href="https://sites.google.com/view/allonenetfirewall/halaman-muka" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
             </p>
         </details>
 
@@ -1764,7 +1983,7 @@ footer strong {
         <details>
             <summary>Does the firewall start automatically after a reboot?</summary>
             <p>
-                There is an option to start automatically when the device turns on. Actual behavior may depend on Android settings and system permissions.
+                There is an option in Settings to start automatically when the device turns on. Actual behavior may depend on Android settings and system permissions.
             </p>
         </details>
     </section>
@@ -1779,7 +1998,7 @@ footer strong {
 
         <div class="download-buttons">
             <a class="btn btn-green"
-               href="https://drive.google.com/file/d/1998Up0ugZqedrHo7-F9bjELG88krd8Ac/view?usp=drivesdk"
+               href="https://drive.google.com/file/d/13iBTNznctksPBgD6BxQjJLRvtM8u1tvJ/view?usp=drivesdk"
                target="_blank"
                rel="noopener noreferrer"
                aria-label="Download the AllOne Net Firewall APK from Google Drive">
@@ -1858,7 +2077,7 @@ footer strong {
 
         <div class="buttons">
             <a class="btn btn-green"
-               href="https://drive.google.com/file/d/1998Up0ugZqedrHo7-F9bjELG88krd8Ac/view?usp=drivesdk"
+               href="https://drive.google.com/file/d/13iBTNznctksPBgD6BxQjJLRvtM8u1tvJ/view?usp=drivesdk"
                target="_blank"
                rel="noopener noreferrer">
                 ⬇ Download AllOne Net Firewall
@@ -1880,7 +2099,7 @@ footer strong {
 
     <p>
         No-root Android firewall with per-app internet control.
-        Version 1.3.0 • Developer: Wawan Alwani.
+        Version 1.5.0 • Developer: Wawan Alwani.
     </p>
 
     <div class="footer-links">
