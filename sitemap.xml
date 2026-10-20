@@ -2,28 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://allone-cyber.github.io/AllOne-Net-Firewall/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="id" href="https://allone-cyber.github.io/AllOne-Net-Firewall/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://allone-cyber.github.io/AllOne-Net-Firewall/en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://allone-cyber.github.io/AllOne-Net-Firewall/en.html"/>
     <image:image><image:loc>https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-1-daftar-aplikasi.jpg</image:loc></image:image>
-    <image:image><image:loc>https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-2-aktivasi-lisensi.jpg</image:loc></image:image>
-    <image:image><image:loc>https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-3-panduan-penggunaan.jpg</image:loc></image:image>
-    <image:image><image:loc>https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-4-pengaturan.jpg</image:loc></image:image>
+    <image:image><image:loc>https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-2-fitur-lainnya.jpg</image:loc></image:image>
+    <image:image><image:loc>https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-3-blokir-cepat.jpg</image:loc></image:image>
+    <image:image><image:loc>https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-4-laporan.jpg</image:loc></image:image>
+    <image:image><image:loc>https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-5-pengaturan.jpg</image:loc></image:image>
+    <image:image><image:loc>https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-6-aktivasi-lisensi.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://allone-cyber.github.io/AllOne-Net-Firewall/en.html</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="id" href="https://allone-cyber.github.io/AllOne-Net-Firewall/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://allone-cyber.github.io/AllOne-Net-Firewall/en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://allone-cyber.github.io/AllOne-Net-Firewall/en.html"/>
     <image:image><image:loc>https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-en-1-app-list.jpg</image:loc></image:image>
-    <image:image><image:loc>https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-en-2-activation.jpg</image:loc></image:image>
-    <image:image><image:loc>https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-en-3-user-guide.jpg</image:loc></image:image>
-    <image:image><image:loc>https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-en-4-settings.jpg</image:loc></image:image>
+    <image:image><image:loc>https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-en-2-more-features.jpg</image:loc></image:image>
+    <image:image><image:loc>https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-en-3-quick-block.jpg</image:loc></image:image>
+    <image:image><image:loc>https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-en-4-report.jpg</image:loc></image:image>
+    <image:image><image:loc>https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-en-5-settings.jpg</image:loc></image:image>
+    <image:image><image:loc>https://allone-cyber.github.io/AllOne-Net-Firewall/allone-net-firewall-en-6-activation.jpg</image:loc></image:image>
   </url>
 </urlset>
