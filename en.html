@@ -16,6 +16,10 @@ en.html — English version of the AllOne Net Firewall landing page
 - No ad-filter / DNS content (feature removed in v1.3.0).
 - Updated for v1.5.0 (progressive-disclosure UI, Quick Block, Temporary
   Block, report) with the new Google Drive download link.
+- Added "How to Use AllOne Net Firewall (Video)" section (#how-to-video)
+  after the User Guide: English YouTube Short and TikTok (same lazy-loaded
+  iframe pattern, text-link fallbacks), plus a "Watch how to use it" link
+  in the User Guide intro.
 - Added "How to Activate AllOne Net Firewall (Video)" section (#video)
   after License: English YouTube Short (youtube-nocookie.com/embed) and
   TikTok (tiktok.com/embed/v2), lazy-loaded iframes with text-link
@@ -1668,7 +1672,7 @@ footer strong {
 
         <p class="section-intro">
             Follow these 6 steps to start blocking internet access for apps.
-            The same tutorial and guide are also available inside the app.
+            The same tutorial and guide are also available inside the app. Prefer video? <a href="#how-to-video" class="highlight">Watch how to use it</a>.
         </p>
 
         <div class="steps">
@@ -1765,6 +1769,52 @@ footer strong {
                 <p><strong>Fix:</strong> Make sure the app is ticked (check the Blocked tab) and the firewall status shows Active.</p>
             </article>
 
+        </div>
+    </section>
+
+    <!-- How-to-use videos (YouTube Shorts + TikTok), English versions.
+         Same lazy-loaded iframe pattern as the activation videos. -->
+    <section class="section" id="how-to-video" aria-labelledby="how-to-video-title">
+        <h2 id="how-to-video-title">How to Use AllOne Net Firewall (Video)</h2>
+
+        <p class="section-intro">
+            Prefer to see it in action? Watch the short videos below on how
+            to use AllOne Net Firewall to block internet access for apps.
+        </p>
+
+        <div class="videos">
+            <figure class="video-card">
+                <div class="video-frame">
+                    <iframe src="https://www.youtube-nocookie.com/embed/shNlX7mvaMQ?rel=0&amp;playsinline=1"
+                            title="How to use AllOne Net Firewall (YouTube video)"
+                            loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                </div>
+                <figcaption>
+                    <h3>On YouTube</h3>
+                    <p>How to use AllOne Net Firewall.</p>
+                    <a class="video-link" href="https://www.youtube.com/shorts/shNlX7mvaMQ"
+                       target="_blank" rel="noopener noreferrer">▶ Watch on YouTube</a>
+                </figcaption>
+            </figure>
+
+            <figure class="video-card">
+                <div class="video-frame tiktok">
+                    <iframe src="https://www.tiktok.com/embed/v2/7701221598816111893"
+                            title="How to use AllOne Net Firewall (TikTok video)"
+                            loading="lazy"
+                            allow="fullscreen"
+                            allowfullscreen></iframe>
+                </div>
+                <figcaption>
+                    <h3>On TikTok</h3>
+                    <p>How to use AllOne Net Firewall.</p>
+                    <a class="video-link" href="https://www.tiktok.com/@bruteall0/video/7701221598816111893"
+                       target="_blank" rel="noopener noreferrer">▶ Watch on TikTok</a>
+                </figcaption>
+            </figure>
         </div>
     </section>
 
