@@ -99,6 +99,13 @@ CHANGELOG (v2 — optimasi SEO + screenshot)
   karena teks panduan v1.5.0 belum terverifikasi; diganti "pemblokiran
   dilakukan di perangkat Anda" dan "laporan hanya disimpan di perangkat".
 
+[Revisi 8 — video cara menggunakan (khusus versi Indonesia)]
+- Section baru "Video Cara Menggunakan AllOne Net Firewall"
+  (#video-cara-pakai) setelah Panduan Penggunaan: YouTube Shorts
+  (youtube-nocookie.com/embed) dan TikTok (tiktok.com/embed/v2), iframe
+  lazy-load, tautan teks cadangan, plus tautan "Tonton cara memakainya"
+  di pengantar Panduan. Video cara aktivasi (#video) tidak diubah.
+
 [Revisi 7 — video cara aktivasi (khusus versi Indonesia)]
 - Section baru "Video Cara Aktivasi" (#video) setelah Lisensi: YouTube
   Shorts (youtube-nocookie.com/embed) dan TikTok (tiktok.com/embed/v2),
@@ -1758,7 +1765,7 @@ footer strong {
 
         <p class="section-intro">
             Ikuti 6 langkah ini untuk mulai memblokir internet aplikasi.
-            Tutorial dan panduan yang sama juga tersedia di dalam aplikasi.
+            Tutorial dan panduan yang sama juga tersedia di dalam aplikasi. Lebih suka video? <a href="#video-cara-pakai" class="highlight">Tonton cara memakainya</a>.
         </p>
 
         <div class="steps">
@@ -1855,6 +1862,53 @@ footer strong {
                 <p><strong>Solusi:</strong> Pastikan aplikasinya tercentang (cek di tab Diblokir) dan status firewall Aktif.</p>
             </article>
 
+        </div>
+    </section>
+
+    <!-- [BARU] Video cara menggunakan (YouTube Shorts + TikTok). Pola iframe
+         lazy-load yang sama dengan video cara aktivasi. -->
+    <section class="section" id="video-cara-pakai" aria-labelledby="judul-video-cara-pakai">
+        <h2 id="judul-video-cara-pakai">Video Cara Menggunakan AllOne Net Firewall</h2>
+
+        <p class="section-intro">
+            Lebih mudah belajar lewat video? Tonton video singkat berikut
+            tentang cara memakai AllOne Net Firewall untuk memblokir internet
+            aplikasi.
+        </p>
+
+        <div class="videos">
+            <figure class="video-card">
+                <div class="video-frame">
+                    <iframe src="https://www.youtube-nocookie.com/embed/nKWvx3iShEE?rel=0&amp;playsinline=1"
+                            title="Video cara menggunakan AllOne Net Firewall di YouTube"
+                            loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                </div>
+                <figcaption>
+                    <h3>Di YouTube</h3>
+                    <p>Cara menggunakan AllOne Net Firewall.</p>
+                    <a class="video-link" href="https://www.youtube.com/shorts/nKWvx3iShEE"
+                       target="_blank" rel="noopener noreferrer">▶ Tonton di YouTube</a>
+                </figcaption>
+            </figure>
+
+            <figure class="video-card">
+                <div class="video-frame tiktok">
+                    <iframe src="https://www.tiktok.com/embed/v2/7702451267020360980"
+                            title="Video cara menggunakan AllOne Net Firewall di TikTok"
+                            loading="lazy"
+                            allow="fullscreen"
+                            allowfullscreen></iframe>
+                </div>
+                <figcaption>
+                    <h3>Di TikTok</h3>
+                    <p>Cara menggunakan AllOne Net Firewall.</p>
+                    <a class="video-link" href="https://www.tiktok.com/@bruteall0/video/7702451267020360980"
+                       target="_blank" rel="noopener noreferrer">▶ Tonton di TikTok</a>
+                </figcaption>
+            </figure>
         </div>
     </section>
 
