@@ -99,6 +99,16 @@ CHANGELOG (v2 — optimasi SEO + screenshot)
   karena teks panduan v1.5.0 belum terverifikasi; diganti "pemblokiran
   dilakukan di perangkat Anda" dan "laporan hanya disimpan di perangkat".
 
+[Revisi 9 — harga lisensi Rp30.000 + pembayaran QRIS]
+- Section baru "Beli Lisensi Seumur Hidup Hanya Rp30.000" (#beli) setelah
+  Lisensi: kotak harga, 6 alasan membeli lisensi, 5 langkah cara membeli,
+  gambar QRIS (qris-allone-store.jpg di root repo, bisa diklik/disimpan),
+  tombol WhatsApp dengan pesan terisi, tombol coba gratis, catatan keamanan.
+- Menu "Harga"; harga di catatan hero/download, meta description, pengantar
+  Lisensi, dan kartu "Sekali Beli".
+- FAQ +3 (harga, cara beli, setelah trial berakhir); HTML = JSON-LD (22).
+  Offer pada SoftwareApplication kini berisi harga 30000 IDR.
+
 [Revisi 8 — video cara menggunakan (khusus versi Indonesia)]
 - Section baru "Video Cara Menggunakan AllOne Net Firewall"
   (#video-cara-pakai) setelah Panduan Penggunaan: YouTube Shorts
@@ -125,7 +135,7 @@ CHANGELOG (v2 — optimasi SEO + screenshot)
 
 <title>AllOne Net Firewall: Blokir Internet Per Aplikasi Tanpa Root</title>
 
-<meta name="description" content="Blokir internet aplikasi Android tanpa root dengan AllOne Net Firewall. Mudah dipakai, ada blokir cepat, blokir sementara, dan laporan. Trial gratis 7 hari.">
+<meta name="description" content="Blokir internet aplikasi Android tanpa root dengan AllOne Net Firewall. Mudah dipakai, ada blokir cepat dan laporan. Trial gratis 7 hari, lisensi Rp30.000.">
 
 <meta name="keywords" content="AllOne Net Firewall, firewall Android tanpa root, blokir internet per aplikasi, putus internet aplikasi Android, hemat kuota Android, cegah data latar belakang, blokir sementara aplikasi, blokir cepat aplikasi, laporan koneksi diblokir, firewall mudah dipakai, firewall VPN lokal">
 
@@ -236,7 +246,11 @@ CHANGELOG (v2 — optimasi SEO + screenshot)
   },
   "offers": {
     "@type": "Offer",
-    "description": "Tersedia trial gratis 7 hari dan lisensi sekali beli untuk aktivasi pada satu perangkat sesuai ketentuan lisensi."
+    "price": "30000",
+    "priceCurrency": "IDR",
+    "availability": "https://schema.org/InStock",
+    "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/#beli",
+    "description": "Lisensi sekali beli untuk satu perangkat, berlaku seumur hidup sesuai ketentuan lisensi. Tersedia trial gratis 7 hari terlebih dahulu."
   }
 }
 </script>
@@ -416,6 +430,30 @@ CHANGELOG (v2 — optimasi SEO + screenshot)
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Tidak. Lisensi menggunakan sistem sekali beli dan berlaku seumur hidup pada perangkat yang diaktivasi sesuai ketentuan lisensi. Trial gratis tersedia selama 7 hari."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Berapa harga lisensi AllOne Net Firewall?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lisensi seharga Rp30.000 dengan sekali bayar dan berlaku seumur hidup pada perangkat yang diaktivasi sesuai ketentuan lisensi. Tidak ada biaya langganan, dan tersedia trial gratis 7 hari terlebih dahulu."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bagaimana cara membeli lisensi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bayar Rp30.000 lewat QRIS (scan kode QR di halaman ini dengan aplikasi bank atau e-wallet yang mendukung QRIS), lalu kirim bukti pembayaran dan Device ID dari aplikasi ke WhatsApp +628176007215. Setelah pembayaran diterima, lisensi dibuatkan dan kode aktivasi dikirim kepada Anda."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apa yang terjadi setelah masa trial berakhir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Saat masa trial 7 hari berakhir, firewall mati sampai Anda mengaktivasi perangkat dengan lisensi. Setiap lisensi diaktivasi untuk satu perangkat, terikat pada Device ID-nya."
       }
     },
     {
@@ -1168,6 +1206,92 @@ footer strong {
     text-decoration: underline;
 }
 
+
+/* [BARU] Harga lisensi & pembelian via QRIS */
+.price-box {
+    max-width: 520px;
+    margin: 24px auto;
+    padding: 26px 20px;
+    border: 1px solid rgba(0,255,136,.3);
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(0,255,136,.1), rgba(0,120,255,.06));
+    text-align: center;
+}
+
+.price-amount {
+    color: var(--green);
+    font-size: clamp(42px, 9vw, 62px);
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+.price-amount small {
+    color: var(--muted);
+    font-size: .36em;
+    font-weight: 700;
+}
+
+.price-note {
+    margin-top: 6px;
+    color: var(--text);
+    font-weight: 800;
+}
+
+.price-sub {
+    margin-top: 4px;
+    font-size: 14px;
+}
+
+.pay-box {
+    margin: 18px 0 6px;
+    padding: 20px;
+    border: 1px dashed #2f4468;
+    border-radius: 14px;
+    background: var(--card);
+    text-align: center;
+}
+
+.pay-box p {
+    font-size: 14px;
+}
+
+.qris-frame {
+    display: block;
+    max-width: 340px;
+    margin: 14px auto 10px;
+    padding: 8px;
+    border-radius: 14px;
+    background: #fff;
+}
+
+.qris-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.qris-save {
+    display: inline-block;
+    margin-top: 4px;
+    color: var(--green);
+    font-size: 13.5px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.qris-save:hover {
+    text-decoration: underline;
+}
+
+.trust-note {
+    max-width: 640px;
+    margin: 16px auto 0;
+    color: #8d99aa;
+    font-size: 12.5px;
+    text-align: center;
+}
+
 @media (max-width: 980px) {
     .shots {
         grid-template-columns: repeat(2, 1fr);
@@ -1275,6 +1399,7 @@ footer strong {
             <a href="#panduan">Panduan</a>
             <a href="#privasi">Privasi</a>
             <a href="#lisensi">Lisensi</a>
+            <a href="#beli">Harga</a>
             <a href="#faq">FAQ</a>
             <a href="#download">Download</a>
         </div>
@@ -1314,7 +1439,7 @@ footer strong {
     </div>
 
     <p class="hero-note">
-        Tanpa root • Trial gratis 7 hari • Lisensi sekali beli
+        Tanpa root • Trial gratis 7 hari • Lisensi Rp30.000 seumur hidup
     </p>
 </header>
 
@@ -1998,7 +2123,8 @@ footer strong {
 
         <p class="section-intro">
             Coba aplikasi terlebih dahulu. Jika ingin melanjutkan penggunaan,
-            tersedia aktivasi dengan lisensi sekali beli.
+            tersedia aktivasi dengan lisensi sekali beli hanya Rp30.000.
+            <a href="#beli" class="highlight">Lihat harga dan cara membeli</a>.
         </p>
 
         <div class="license">
@@ -2013,9 +2139,10 @@ footer strong {
             <div class="license-card">
                 <h3>🔑 Sekali Beli</h3>
                 <p>
-                    Lisensi bukan langganan. Setelah pembelian dan aktivasi,
-                    lisensi berlaku seumur hidup pada perangkat yang
-                    diaktivasi sesuai ketentuan lisensi.
+                    Lisensi bukan langganan. Cukup bayar Rp30.000 sekali.
+                    Setelah pembelian dan aktivasi, lisensi berlaku seumur
+                    hidup pada perangkat yang diaktivasi sesuai ketentuan
+                    lisensi.
                 </p>
             </div>
 
@@ -2029,6 +2156,144 @@ footer strong {
                 </p>
             </div>
         </div>
+    </section>
+
+    <!-- [BARU] Harga lisensi Rp30.000 sekali bayar seumur hidup. Pembayaran via QRIS
+         (gambar qris-allone-store.jpg di root repo), aktivasi via WhatsApp. -->
+    <section class="section" id="beli" aria-labelledby="judul-beli">
+        <h2 id="judul-beli">Beli Lisensi Seumur Hidup Hanya Rp30.000</h2>
+
+        <p class="section-intro">
+            Cocok dengan trial 7 harinya? Lanjutkan pemakaian AllOne Net
+            Firewall dengan lisensi sekali beli. Tanpa langganan.
+        </p>
+
+        <div class="price-box">
+            <div class="price-amount">Rp30.000 <small>sekali bayar</small></div>
+            <p class="price-note">Berlaku seumur hidup di perangkat yang diaktivasi</p>
+            <p class="price-sub">Tanpa langganan • Tanpa biaya berulang • Trial gratis 7 hari dulu</p>
+        </div>
+
+        <h3 class="sub-title">Kenapa Perlu Lisensi?</h3>
+
+        <div class="grid">
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">🔓</div>
+                <h3>Tetap Bisa Dipakai Setelah Trial</h3>
+                <p>
+                    Saat trial 7 hari berakhir, firewall mati sampai perangkat diaktivasi. Lisensi membuatnya terus berjalan.
+                </p>
+            </article>
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">♾️</div>
+                <h3>Bayar Sekali, Pakai Selamanya</h3>
+                <p>
+                    Cukup sekali bayar Rp30.000. Tanpa langganan dan tanpa biaya berulang. Berlaku seumur hidup di perangkat yang diaktivasi, sesuai ketentuan lisensi.
+                </p>
+            </article>
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">🛡️</div>
+                <h3>Semua Fitur Tetap Tersedia</h3>
+                <p>
+                    Blokir per aplikasi, Blokir cepat, Daftar tersimpan, Blokir sementara, dan Laporan koneksi diblokir di perangkat yang sudah diaktivasi.
+                </p>
+            </article>
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">🔑</div>
+                <h3>Aktivasi Khusus Perangkat Anda</h3>
+                <p>
+                    Kode aktivasi dibuat untuk Device ID yang Anda kirim, jadi terikat ke perangkat Anda sendiri.
+                </p>
+            </article>
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">📵</div>
+                <h3>Tanpa Iklan, Tanpa Root</h3>
+                <p>
+                    Tidak ada iklan di dalam aplikasi dan tidak perlu root. Anda membayar lisensinya, bukan pengalaman penuh iklan.
+                </p>
+            </article>
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">💬</div>
+                <h3>Aktivasi Personal via WhatsApp</h3>
+                <p>
+                    Hubungi penjual langsung. Setelah pembayaran diterima, lisensi dibuatkan dan kode aktivasi dikirim kepada Anda.
+                </p>
+            </article>
+        </div>
+
+        <h3 class="sub-title">Cara Membeli</h3>
+
+        <div class="steps">
+            <div class="step">
+                <strong>Coba trial gratis dulu</strong>
+                Instal aplikasi dan pakai selama 7 hari untuk memastikan cocok dengan kebutuhan Anda.
+            </div>
+
+            <div class="step">
+                <strong>Salin Device ID</strong>
+                Di aplikasi, ketuk banner aktivasi untuk melihat Device ID, lalu ketuk Salin ID.
+            </div>
+
+            <div class="step">
+                <strong>Bayar Rp30.000 lewat QRIS</strong>
+                Scan kode QRIS di bawah dengan aplikasi bank atau e-wallet Anda, masukkan nominal Rp30.000, lalu simpan bukti pembayaran.
+            </div>
+
+            <div class="step">
+                <strong>Kirim Device ID dan bukti bayar lewat WhatsApp</strong>
+                Ketuk tombol WhatsApp di bawah, lalu kirim Device ID beserta bukti pembayaran ke +628176007215.
+            </div>
+
+            <div class="step">
+                <strong>Terima kode aktivasi</strong>
+                Setelah pembayaran diterima, lisensi dibuatkan untuk Device ID Anda dan kode aktivasi dikirim kepada Anda. Setelah itu, aktivasi aplikasinya.
+            </div>
+
+        </div>
+
+        <div class="pay-box">
+            <p><strong>Bayar dengan QRIS</strong></p>
+            <p>Scan dengan aplikasi bank atau e-wallet apa pun yang mendukung QRIS. Nominal: <strong>Rp30.000</strong></p>
+
+            <a class="qris-frame" href="qris-allone-store.jpg?v=1" target="_blank" rel="noopener"
+               aria-label="Buka gambar QRIS ukuran penuh">
+                <img src="qris-allone-store.jpg?v=1"
+                     alt="Kode QRIS AllOne Store untuk membayar lisensi AllOne Net Firewall Rp30.000"
+                     width="900" height="1267"
+                     loading="lazy" decoding="async">
+            </a>
+
+            <a class="qris-save" href="qris-allone-store.jpg?v=1" download="qris-allone-store.jpg">
+                ⬇ Simpan gambar QRIS
+            </a>
+            <p style="margin-top: 8px;">
+                Membayar dari HP yang sama? Simpan gambar QRIS, lalu unggah dari galeri di aplikasi bank atau e-wallet Anda.
+                Pastikan nama merchant yang tampil adalah <strong>AllOne Store</strong> sebelum membayar.
+            </p>
+        </div>
+
+        <div class="buttons">
+            <a class="btn btn-green"
+               href="https://wa.me/628176007215?text=Halo%2C%20saya%20ingin%20membeli%20lisensi%20AllOne%20Net%20Firewall%20%28Rp30.000%29.%20Device%20ID%20saya%3A%20"
+               target="_blank"
+               rel="noopener noreferrer">
+                💬 Beli Lisensi via WhatsApp
+            </a>
+
+            <a class="btn btn-dark"
+               href="https://drive.google.com/file/d/13iBTNznctksPBgD6BxQjJLRvtM8u1tvJ/view?usp=drivesdk"
+               target="_blank"
+               rel="noopener noreferrer">
+                ⬇ Coba Gratis 7 Hari
+            </a>
+        </div>
+
+        <p class="trust-note">
+            Bayar hanya lewat QRIS atas nama AllOne Store di halaman ini, dan
+            hubungi penjual hanya lewat nomor WhatsApp di halaman ini. Yang
+            dibutuhkan untuk aktivasi hanya Device ID. Jangan pernah
+            membagikan PIN atau OTP rekening Anda.
+        </p>
     </section>
 
     <!-- [BARU] Video cara aktivasi (YouTube Shorts + TikTok). Iframe dimuat
@@ -2241,6 +2506,27 @@ footer strong {
         </details>
 
         <details>
+            <summary>Berapa harga lisensi AllOne Net Firewall?</summary>
+            <p>
+                Lisensi seharga Rp30.000 dengan sekali bayar dan berlaku seumur hidup pada perangkat yang diaktivasi sesuai ketentuan lisensi. Tidak ada biaya langganan, dan tersedia trial gratis 7 hari terlebih dahulu.
+            </p>
+        </details>
+
+        <details>
+            <summary>Bagaimana cara membeli lisensi?</summary>
+            <p>
+                Bayar Rp30.000 lewat QRIS (scan kode QR di halaman ini dengan aplikasi bank atau e-wallet yang mendukung QRIS), lalu kirim bukti pembayaran dan Device ID dari aplikasi ke WhatsApp +628176007215. Setelah pembayaran diterima, lisensi dibuatkan dan kode aktivasi dikirim kepada Anda.
+            </p>
+        </details>
+
+        <details>
+            <summary>Apa yang terjadi setelah masa trial berakhir?</summary>
+            <p>
+                Saat masa trial 7 hari berakhir, firewall mati sampai Anda mengaktivasi perangkat dengan lisensi. Setiap lisensi diaktivasi untuk satu perangkat, terikat pada Device ID-nya.
+            </p>
+        </details>
+
+        <details>
             <summary>Bagaimana cara mendapatkan kode aktivasi?</summary>
             <p>
                 Salin Device ID dari aplikasi dan kirimkan kepada penjual atau admin melalui saluran kontak yang tersedia untuk memperoleh kode aktivasi.
@@ -2274,7 +2560,7 @@ footer strong {
         </div>
 
         <p class="hero-note">
-            Android • Tanpa root • Trial gratis 7 hari • Lisensi sekali beli
+            Android • Tanpa root • Trial gratis 7 hari • Lisensi Rp30.000 seumur hidup
         </p>
     </section>
 
