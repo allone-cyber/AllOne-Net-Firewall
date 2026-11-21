@@ -24,6 +24,15 @@ en.html — English version of the AllOne Net Firewall landing page
   after License: English YouTube Short (youtube-nocookie.com/embed) and
   TikTok (tiktok.com/embed/v2), lazy-loaded iframes with text-link
   fallbacks, plus a "Watch the how-to video" link in the Device Activation card.
+- Added pricing: "Get Your Lifetime License for Just US$3" section (#buy)
+  after License: price box, 6 license benefits, 5-step how-to-buy (PayPal
+  payment to the seller's PayPal email, Device ID + proof via WhatsApp,
+  activation code created after payment), WhatsApp buy button with a
+  prefilled message, copy-PayPal-email button, scam-safety note, "Pricing"
+  nav link, price in the hero/download notes and meta description.
+- FAQ: +3 questions (price, how to buy, what happens after the trial);
+  HTML and JSON-LD are kept in sync (22). SoftwareApplication Offer now
+  has price 3.00 USD.
 - Screenshots: allone-net-firewall-en-*.jpg in the repo root (6 files). Replace
   them with screenshots taken with the app language set to English;
   keep the same file names and no HTML change is needed.
@@ -34,7 +43,7 @@ en.html — English version of the AllOne Net Firewall landing page
 
 <title>AllOne Net Firewall: Block Internet Per App on Android, No Root</title>
 
-<meta name="description" content="Block internet per app on Android, no root, with AllOne Net Firewall. Easy to use, with quick block, temporary block, and reports. 7-day free trial.">
+<meta name="description" content="Block internet per app on Android, no root, with AllOne Net Firewall. Easy to use, quick block, reports. Free 7-day trial, lifetime license US$3.">
 
 <meta name="keywords" content="AllOne Net Firewall, Android firewall no root, block internet per app Android, per-app internet blocker, stop apps using data, save mobile data Android, no root firewall app, local VPN firewall, block background data Android, temporary app blocker, quick block apps by category, blocked connection report">
 
@@ -145,7 +154,11 @@ en.html — English version of the AllOne Net Firewall landing page
   },
   "offers": {
     "@type": "Offer",
-    "description": "A 7-day free trial and a one-time license for activation on one device, subject to the license terms."
+    "price": "3.00",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://allone-cyber.github.io/AllOne-Net-Firewall/en.html#buy",
+    "description": "One-time lifetime license for one device, subject to the license terms. A 7-day free trial is available first."
   }
 }
 </script>
@@ -325,6 +338,30 @@ en.html — English version of the AllOne Net Firewall landing page
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "No. The license is a one-time purchase that is valid for life on the activated device, subject to the license terms. A 7-day free trial is available."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does an AllOne Net Firewall license cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A license costs US$3 as a one-time payment and is valid for life on the activated device, subject to the license terms. There are no subscription fees, and a 7-day free trial is available first."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I buy a license?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Send US$3 through PayPal to wawanalwani3@gmail.com, then message the seller on WhatsApp at +628176007215 with your payment proof and the Device ID copied from the app. After the payment is received, your license is created and your activation code is sent to you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens when the free trial ends?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When the 7-day trial period ends, the firewall turns off until you activate the device with a license. Each license is activated for one device, tied to its Device ID."
       }
     },
     {
@@ -1077,6 +1114,76 @@ footer strong {
     text-decoration: underline;
 }
 
+
+/* License pricing / buy */
+.price-box {
+    max-width: 520px;
+    margin: 24px auto;
+    padding: 26px 20px;
+    border: 1px solid rgba(0,255,136,.3);
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(0,255,136,.1), rgba(0,120,255,.06));
+    text-align: center;
+}
+
+.price-amount {
+    color: var(--green);
+    font-size: clamp(46px, 9vw, 66px);
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+.price-amount small {
+    color: var(--muted);
+    font-size: .36em;
+    font-weight: 700;
+}
+
+.price-note {
+    margin-top: 6px;
+    color: var(--text);
+    font-weight: 800;
+}
+
+.price-sub {
+    margin-top: 4px;
+    font-size: 14px;
+}
+
+.pay-box {
+    margin: 18px 0 6px;
+    padding: 18px 20px;
+    border: 1px dashed #2f4468;
+    border-radius: 14px;
+    background: var(--card);
+    text-align: center;
+}
+
+.pay-box p {
+    font-size: 14px;
+}
+
+.pay-email {
+    display: inline-block;
+    margin: 6px 0 12px;
+    padding: 6px 12px;
+    border-radius: 10px;
+    background: rgba(255,255,255,.07);
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 800;
+    word-break: break-all;
+    user-select: all;
+}
+
+.trust-note {
+    max-width: 640px;
+    margin: 16px auto 0;
+    color: #8d99aa;
+    font-size: 12.5px;
+    text-align: center;
+}
+
 @media (max-width: 980px) {
     .shots {
         grid-template-columns: repeat(2, 1fr);
@@ -1184,6 +1291,7 @@ footer strong {
             <a href="#guide">User Guide</a>
             <a href="#privacy">Privacy</a>
             <a href="#license">License</a>
+            <a href="#buy">Pricing</a>
             <a href="#faq">FAQ</a>
             <a href="#download">Download</a>
         </div>
@@ -1223,7 +1331,7 @@ footer strong {
     </div>
 
     <p class="hero-note">
-        No root • 7-day free trial • One-time license
+        No root • 7-day free trial • US$3 lifetime license
     </p>
 </header>
 
@@ -1903,7 +2011,8 @@ footer strong {
 
         <p class="section-intro">
             Try the app first. If you want to keep using it, activate it with
-            a one-time license.
+            a one-time license of just US$3.
+            <a href="#buy" class="highlight">See pricing and how to buy</a>.
         </p>
 
         <div class="license">
@@ -1917,7 +2026,7 @@ footer strong {
             <div class="license-card">
                 <h3>🔑 One-Time Purchase</h3>
                 <p>
-                    The license is not a subscription. After purchase and activation, it is valid for life on the activated device, subject to the license terms.
+                    The license is not a subscription. Pay US$3 once. After purchase and activation, it is valid for life on the activated device, subject to the license terms.
                 </p>
             </div>
 
@@ -1930,6 +2039,136 @@ footer strong {
             </div>
 
         </div>
+    </section>
+
+    <!-- Pricing: US$3 one-time lifetime license. Payment via PayPal, activation via WhatsApp. -->
+    <section class="section" id="buy" aria-labelledby="buy-title">
+        <h2 id="buy-title">Get Your Lifetime License for Just US$3</h2>
+
+        <p class="section-intro">
+            Love the 7-day trial? Keep AllOne Net Firewall running with a
+            one-time license. No subscription, ever.
+        </p>
+
+        <div class="price-box">
+            <div class="price-amount">US$3 <small>one-time</small></div>
+            <p class="price-note">Valid for life on the activated device</p>
+            <p class="price-sub">No subscription • No recurring charges • 7-day free trial first</p>
+        </div>
+
+        <h3 class="sub-title">Why Get a License?</h3>
+
+        <div class="grid">
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">🔓</div>
+                <h3>Keep Using It After the Trial</h3>
+                <p>
+                    When the 7-day trial ends, the firewall turns off until the device is activated. A license keeps it running.
+                </p>
+            </article>
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">♾️</div>
+                <h3>Pay Once, Use for Life</h3>
+                <p>
+                    A single US$3 payment. No subscription and no recurring charges. Valid for life on the activated device, subject to the license terms.
+                </p>
+            </article>
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">🛡️</div>
+                <h3>Every Feature Stays Available</h3>
+                <p>
+                    Per-app blocking, Quick Block, saved lists, Temporary Block, and the blocked connection report, all on your activated device.
+                </p>
+            </article>
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">🔑</div>
+                <h3>Activation Made for Your Device</h3>
+                <p>
+                    Your activation code is created for the Device ID you send, so it is tied to your own device.
+                </p>
+            </article>
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">📵</div>
+                <h3>No Ads, No Root</h3>
+                <p>
+                    No ads inside the app and no root needed. You pay for the license, not for an ad-filled experience.
+                </p>
+            </article>
+            <article class="card">
+                <div class="card-icon" aria-hidden="true">💬</div>
+                <h3>Personal Activation via WhatsApp</h3>
+                <p>
+                    Message the seller directly. Once your payment is received, your license is created and your activation code is sent to you.
+                </p>
+            </article>
+        </div>
+
+        <h3 class="sub-title">How to Buy</h3>
+
+        <div class="steps">
+            <div class="step">
+                <strong>Try the free trial first</strong>
+                Install the app and use it for 7 days to make sure it fits your needs.
+            </div>
+
+            <div class="step">
+                <strong>Copy your Device ID</strong>
+                In the app, tap the activation banner to view your Device ID, then tap Copy ID.
+            </div>
+
+            <div class="step">
+                <strong>Pay US$3 through PayPal</strong>
+                Send US$3 to the PayPal email <strong>wawanalwani3@gmail.com</strong>. Keep your payment receipt or a screenshot.
+            </div>
+
+            <div class="step">
+                <strong>Send your Device ID and payment proof on WhatsApp</strong>
+                Tap the WhatsApp button below and send your Device ID together with your payment proof to +628176007215.
+            </div>
+
+            <div class="step">
+                <strong>Receive your activation code</strong>
+                After your payment is received, your license is created for your Device ID and your activation code is sent to you. Then activate the app.
+            </div>
+
+        </div>
+
+        <div class="pay-box">
+            <p><strong>PayPal payment email</strong></p>
+            <div class="pay-email" id="paypal-email">wawanalwani3@gmail.com</div>
+            <div>
+                <button type="button" class="share-btn share-cp" id="copy-paypal"
+                        aria-label="Copy the PayPal payment email">
+                    Copy PayPal Email
+                </button>
+            </div>
+            <p style="margin-top: 12px;">
+                Amount to send: <strong>US$3</strong>
+            </p>
+        </div>
+
+        <div class="buttons">
+            <a class="btn btn-green"
+               href="https://wa.me/628176007215?text=Hello%2C%20I%27d%20like%20to%20buy%20an%20AllOne%20Net%20Firewall%20license%20%28US%243%29.%20My%20Device%20ID%3A%20"
+               target="_blank"
+               rel="noopener noreferrer">
+                💬 Buy License via WhatsApp
+            </a>
+
+            <a class="btn btn-dark"
+               href="https://drive.google.com/file/d/13iBTNznctksPBgD6BxQjJLRvtM8u1tvJ/view?usp=drivesdk"
+               target="_blank"
+               rel="noopener noreferrer">
+                ⬇ Try Free for 7 Days
+            </a>
+        </div>
+
+        <p class="trust-note">
+            Only pay to the PayPal email shown on this page, and only contact
+            the seller through the WhatsApp number on this page. Never share
+            your PayPal password. Your Device ID is all that is needed for
+            activation.
+        </p>
     </section>
 
     <!-- Activation how-to videos (YouTube Shorts + TikTok), English versions.
@@ -2138,6 +2377,27 @@ footer strong {
         </details>
 
         <details>
+            <summary>How much does an AllOne Net Firewall license cost?</summary>
+            <p>
+                A license costs US$3 as a one-time payment and is valid for life on the activated device, subject to the license terms. There are no subscription fees, and a 7-day free trial is available first.
+            </p>
+        </details>
+
+        <details>
+            <summary>How do I buy a license?</summary>
+            <p>
+                Send US$3 through PayPal to wawanalwani3@gmail.com, then message the seller on WhatsApp at +628176007215 with your payment proof and the Device ID copied from the app. After the payment is received, your license is created and your activation code is sent to you.
+            </p>
+        </details>
+
+        <details>
+            <summary>What happens when the free trial ends?</summary>
+            <p>
+                When the 7-day trial period ends, the firewall turns off until you activate the device with a license. Each license is activated for one device, tied to its Device ID.
+            </p>
+        </details>
+
+        <details>
             <summary>How do I get an activation code?</summary>
             <p>
                 Copy the Device ID from the app and send it to the seller or admin through the contact channels provided to receive an activation code.
@@ -2171,7 +2431,7 @@ footer strong {
         </div>
 
         <p class="hero-note">
-            Android • No root • 7-day free trial • One-time license
+            Android • No root • 7-day free trial • US$3 lifetime license
         </p>
     </section>
 
@@ -2354,6 +2614,57 @@ footer strong {
                 .catch(function () { /* cancelled by the user */ });
         });
     }
+})();
+</script>
+
+
+<script>
+/* Copy the PayPal email */
+(function () {
+    "use strict";
+    var btn = document.getElementById("copy-paypal");
+    var box = document.getElementById("paypal-email");
+    var toast = document.getElementById("toast");
+    if (!btn || !box) { return; }
+    var timer = null;
+
+    function showToast(msg) {
+        if (!toast) { return; }
+        toast.textContent = msg;
+        toast.classList.add("show");
+        clearTimeout(timer);
+        timer = setTimeout(function () { toast.classList.remove("show"); }, 3200);
+    }
+
+    function legacyCopy(text) {
+        return new Promise(function (resolve, reject) {
+            var ta = document.createElement("textarea");
+            ta.value = text;
+            ta.setAttribute("readonly", "");
+            ta.style.position = "fixed";
+            ta.style.opacity = "0";
+            document.body.appendChild(ta);
+            ta.select();
+            try {
+                document.execCommand("copy") ? resolve() : reject();
+            } catch (e) {
+                reject(e);
+            }
+            document.body.removeChild(ta);
+        });
+    }
+
+    btn.addEventListener("click", function () {
+        var text = box.textContent.trim();
+        var p = (navigator.clipboard && window.isSecureContext)
+            ? navigator.clipboard.writeText(text)
+            : legacyCopy(text);
+        p.then(function () {
+            showToast("PayPal email copied.");
+        }, function () {
+            showToast("Couldn't copy automatically. Please copy it manually.");
+        });
+    });
 })();
 </script>
 
